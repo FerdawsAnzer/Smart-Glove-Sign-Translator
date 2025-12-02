@@ -23,14 +23,14 @@ The Sign Language Translator is a real-time system that translates hand gestures
 ---
 
 ## Technology-stack
-
-| Component / Role                 Technology / Tool                            |
-|--------------------------------|----------------------------------------------|
-| Sensor Glove (hardware)        | Custom sensors / IMU / flex sensors          |
-| Gesture Recognition (AI)       | Python + TensorFlow or PyTorch               |
-| Real‑time communication        | WebSocket (Python server ↔ React frontend)   |
-| Frontend UI                    | React + Vite + TypeScript                    |
-| Database & Auth & Storage      | Supabase                                     |
+    ``` bash
+    | Component / Role                 Technology / Tool                            |
+    |--------------------------------|----------------------------------------------|
+    | Sensor Glove (hardware)        | Custom sensors / IMU / flex sensors          |
+    | Gesture Recognition (AI)       | Python + TensorFlow or PyTorch               |
+    | Real‑time communication        | WebSocket (Python server ↔ React frontend)   |
+    | Frontend UI                    | React + Vite + TypeScript                    |
+    | Database & Auth & Storage      | Supabase                                     |
 
 
 
@@ -44,20 +44,21 @@ The Sign Language Translator is a real-time system that translates hand gestures
   - Display recognized gestures live
  
 ### Folder-structure
-smart-glove-sign-translator/
-│
-├── frontend/                # React + Vite + TS app
-│   ├── src/
-│   │   ├── client.ts       # Supabase client
-│   │   ├── App.tsx
-│   │   └── components/
-│   └── package.json
-│
-├── ai/                     # AI script + model
-│   ├── gesture_ai.py       # Reads glove, predicts gestures, sends to frontend & Supabase
-│   └── model/              # Trained AI model files
-│
-└── README.md               # Project documentation
+    ```
+    smart-glove-sign-translator/
+    │
+    ├── frontend/                # React + Vite + TS app
+    │   ├── src/
+    │   │   ├── client.ts       # Supabase client
+    │   │   ├── App.tsx
+    │   │   └── components/
+    │   └── package.json
+    │
+    ├── ai/                     # AI script + model
+    │   ├── gesture_ai.py       # Reads glove, predicts gestures, sends to frontend & Supabase
+    │   └── model/              # Trained AI model files
+    │
+    └── README.md               # Project documentation
 
 
 
