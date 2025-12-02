@@ -1,16 +1,6 @@
 # Smart-Glove-Sign-Translator
 Project Overview
 The Sign Language Translator is a real-time system that translates hand gestures captured by a sensor glove into text. It is designed to assist people who communicate through sign language by converting gestures into written words. Recognized gestures are displayed instantly on the frontend and stored in a database for history and logging.
-
-## 📖 Table of Contents
-
-- [Overview](#-DetailedSteps)
-- [Technology Stack](#-Technology-stack)
-- [Getting Started](#-Getting-started)
-- [Folder Structure](#-Folder-structure)
-- [License](#-license)
-
-  
   
 ### DetailedSteps
 1. **Glove Sensors**  
