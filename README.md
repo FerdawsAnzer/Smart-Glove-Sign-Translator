@@ -57,14 +57,16 @@ The Sign Language Translator is a real-time system that translates hand gestures
    cd Smart-Glove-Sign-Translator
 
 2.Setup frontend
--cd frontend
--npm install
--npm run dev
+cd frontend
+npm install
+npm run dev
+
 
 3.Setup AI script
--cd ../ai
--pip install -r requirements.txt  # your dependencies
--python gesture_ai.py
+
+cd ../ai
+pip install -r requirements.txt
+python gesture_ai.py
 
 ### License & Contribution
 Feel free to contribute! Open an issue or a pull request.
