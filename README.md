@@ -9,6 +9,8 @@ The Sign Language Translator is a real-time system that translates hand gestures
 - [Getting Started](#-Getting-started)
 - [Folder Structure](#-Folder-structure)
 - [License](#-license)
+
+  
   
 ### DetailedSteps
 1. **Glove Sensors**  
@@ -39,6 +41,8 @@ The Sign Language Translator is a real-time system that translates hand gestures
 | Real‑time communication        | WebSocket (Python server ↔ React frontend)   |
 | Frontend UI                    | React + Vite + TypeScript                    |
 | Database & Auth & Storage      | Supabase                                     |
+
+
 
 ## What (Software) Will Do
 
