@@ -41,7 +41,7 @@ The Sign Language Translator is a real-time system that translates hand gestures
 - Send recognized text immediately to the frontend (WebSocket)  
 - Insert recognized text into Supabase asynchronously for history/logging  
 - Build a frontend UI to:  
-  - Display recognized gestures live
+-Displays recognized gestures in real-time as text and/or speech.
  
 ### Folder-structure
     ```
