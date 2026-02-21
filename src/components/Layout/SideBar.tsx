@@ -18,7 +18,7 @@ type NavItem = {
 };
 
 const topNavItems: NavItem[] = [
-  { to: "/", icon: Home, label: "Dashboard", end: true },
+  { to: "/dashboard", icon: Home, label: "Dashboard", end: true },
   { to: "/learning", icon: BookOpen, label: "Learning" },
   { to: "/history", icon: RefreshCw, label: "History" },
 ];
