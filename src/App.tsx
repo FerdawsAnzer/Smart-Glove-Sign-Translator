@@ -2,6 +2,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { SideBar } from "./components/Layout/SideBar";
 import { DashboardPage } from "./features/dashboard/components/dashboardPage";
 import { Header } from "./components/Layout/Header";
+import { AlphabetCard } from "./features/learningsP/AlphabetCard";
+import { SentencesCard } from "./features/learningsP/sentencesCrad";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           </header>
           <div className="p-6">
             <DashboardPage />
+            <AlphabetCard />
+            <SentencesCard />
           </div>
         </div>
       </div>

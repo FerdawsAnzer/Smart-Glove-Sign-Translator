@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="w-full h-20 border border-blue-200 rounded-xl px-4 py-3 flex items-center justify-between bg-white">
       {
-        /* Left side - empty or logo/nav can go here */
+        /* Left side -here we need teh userName depends on teh authentication  */
         <h1 className="text-xl font-semibold ml-8"> Welcome Back , User</h1>
       }
       <div />
