@@ -8,7 +8,7 @@ import {
   Moon,
   LogOut,
 } from "lucide-react";
-import Logo from "@/assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 
 type NavItem = {
   to: string;
