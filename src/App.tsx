@@ -4,6 +4,7 @@ import { SideBar } from "./components/Layout/SideBar";
 import { Header } from "./components/Layout/Header";
 import { DashboardPage } from "./features/dashboard/components/dashboardPage";
 import { LearnPage } from "./features/learningsP/learnPage";
+import { AlphabetLearningPage } from "./features/learningAlphabet/AlphabetLearningPage";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
           <header className="flex items-center gap-4 p-4">
             <Header />
-          </header>
+          </header>{" "}
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
@@ -21,6 +22,10 @@ function App() {
               <Route path="/dashboard" element={<DashboardPage />} />
               {/* learning route */}
               <Route path="/learning" element={<LearnPage />} />
+              <Route
+                path="/learning/alphabet"
+                element={<AlphabetLearningPage />}
+              />
               <Route path="/history" element={<div>History Page</div>} />
               {/* Add routes*/}
             </Routes>

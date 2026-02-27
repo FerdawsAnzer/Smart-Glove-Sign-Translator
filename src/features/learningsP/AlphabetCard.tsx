@@ -8,9 +8,10 @@ export function AlphabetCard() {
   return (
     <Card
       className="border border-gray-200 shadow-sm w-92 rounded-2xl cursor-pointer hover:shadow-md transition-shadow duration-300 "
-      onClick={() => navigate("")}
+      onClick={() => navigate("/learning/alphabet")}
     >
-      {/* will work on the navigation for the card when we click it */}
+      {/* when you clik teh card will navigate you to the learning Alphabet Page*/}
+
       {/* Card Content container */}
       <CardContent className="flex flex-col items-center gap-3 p-4">
         {/* Blue box with hand icon */}
