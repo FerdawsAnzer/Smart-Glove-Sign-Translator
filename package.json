@@ -28,11 +28,14 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
     "autoprefixer": "^10.4.25",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "playwright": "^1.58.2",
     "postcss": "^8.5.6",
     "shadcn": "^3.8.4",
     "tailwindcss": "^3.4.17",
@@ -41,17 +44,6 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vite-tsconfig-paths": "^6.1.1",
-    "storybook": "^10.2.12",
-    "@storybook/react-vite": "^10.2.12",
-    "@chromatic-com/storybook": "^5.0.1",
-    "@storybook/addon-vitest": "^10.2.12",
-    "@storybook/addon-a11y": "^10.2.12",
-    "@storybook/addon-docs": "^10.2.12",
-    "@storybook/addon-onboarding": "^10.2.12",
-    "eslint-plugin-storybook": "^10.2.12",
-    "vitest": "^4.0.18",
-    "playwright": "^1.58.2",
-    "@vitest/browser-playwright": "^4.0.18",
-    "@vitest/coverage-v8": "^4.0.18"
+    "vitest": "^4.0.18"
   }
 }
