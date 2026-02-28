@@ -10,7 +10,11 @@ type SignInForm = {
   remember: boolean;
 };
 
-export default function SignIn() {
+type Props = {
+  onLogin: () => void;
+};
+
+export default function SignIn({ onLogin }: Props) {
   const [form, setForm] = useState<SignInForm>({
     email: "",
     password: "",
@@ -29,6 +33,8 @@ export default function SignIn() {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log("Sign in data:", form);
+    //call the onLogin prop to notify App.tsx
+    onLogin();
   }
 
   return (
