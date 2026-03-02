@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ModeSelector } from "./ModeSelector";
 import { ProgressBar } from "./ProgressBar";
 import { MainLetterCard } from "./MainLetterCard";
+import { QuickAlphReference } from "./QuickAlphReference";
 export function AlphabetLearningPage() {
   const [curentIndex, setCurrentIndex] = useState(0);
   const [learnedLetters, setLearnedLetters] = useState<boolean[]>(
@@ -76,6 +77,13 @@ export function AlphabetLearningPage() {
           total={AlpahbetData.length}
         />
         {/* QuickReference goes here after */}
+        <div className="max-w-6xl mx-auto w-full">
+          <QuickAlphReference
+            currentIndex={curentIndex}
+            learned={learnedLetters}
+            onSelect={handleSelectLetter}
+          />
+        </div>
       </div>
     </div>
   );
