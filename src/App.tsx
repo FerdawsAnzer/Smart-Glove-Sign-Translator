@@ -5,6 +5,7 @@ import { Header } from "./components/Layout/Header";
 import { DashboardPage } from "./features/dashboard/components/dashboardPage";
 import { LearnPage } from "./features/learningsP/learnPage";
 import { AlphabetLearningPage } from "./features/learningAlphabet/AlphabetLearningPage";
+import { PronounLearningPage } from "./features/LearningPronouns/PronounLearningPage";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
               <Route
                 path="/learning/alphabet"
                 element={<AlphabetLearningPage />}
+              />
+              <Route
+                path="/learning/pronouns"
+                element={<PronounLearningPage />}
               />
               <Route path="/history" element={<div>History Page</div>} />
               {/* Add routes*/}

@@ -1,4 +1,4 @@
-import { AlphabetCard } from "./AlphabetCard";
+import { BasicsCard } from "./BasicsCard";
 import { SentencesCard } from "./SentencesCrad";
 import { WhyLearnCard } from "./WhyLearncard";
 
@@ -18,7 +18,7 @@ export function LearnPage() {
 
       {/* The 2 cards container*/}
       <div className="grid grid-cols-2 gap-6 ">
-        <AlphabetCard />
+        <BasicsCard />
         <SentencesCard />
       </div>
 

@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Hand } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export function AlphabetCard() {
+export function BasicsCard() {
   const navigate = useNavigate();
 
   return (
@@ -20,16 +20,16 @@ export function AlphabetCard() {
         </div>
 
         {/* middle Title of card*/}
-        <p className="text-gray-900 font-bold text-xl">Alphabet</p>
+        <p className="text-gray-900 font-bold text-xl">Basics</p>
 
         {/* Description of card */}
         <p className="text-gray-500 text-sm text-center">
-          Learn the ASL alphabet from A to Z
+          Alphabet , Numbers and Pronouns
         </p>
 
         {/* Badge */}
         <span className="bg-blue-50 text-blue-500 text-sm font-medium px-4 py-1 rounded-full">
-          26 Letters
+          3 Categories
         </span>
       </CardContent>
     </Card>

@@ -8,7 +8,7 @@ export function SentencesCard() {
   return (
     <Card
       className="border border-gray-200 shadow-sm w-92 rounded-2xl  cursor-pointer hover:shadow-md transition-shadow duration-300"
-      onClick={() => navigate("")}
+      onClick={() => navigate("/learning/pronouns")}
     >
       {" "}
       {/* will work on the navigation for the card when we click it */}

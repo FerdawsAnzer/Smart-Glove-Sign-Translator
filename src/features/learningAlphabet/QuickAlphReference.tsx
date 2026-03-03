@@ -1,4 +1,3 @@
-import { AlpahbetData } from "@/Data/alphabetData";
 import type { QuickAlphReferenceProps } from "@/Types/QuickAlphReference";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +6,7 @@ export function QuickAlphReference({
   currentIndex,
   learned,
   onSelect,
+  data,
 }: QuickAlphReferenceProps) {
   return (
     <Card className="w-full bg-white rounded-2xl shadow-sm border border-gray-100">
@@ -21,7 +21,7 @@ export function QuickAlphReference({
           className="grid gap-2"
           style={{ gridTemplateColumns: "repeat(13, 1fr)" }}
         >
-          {AlpahbetData.map((letter, index) => (
+          {data.map((letter, index) => (
             <button
               key={index}
               className={` h-10 rounded-lg text-sm font-semibold transition-all duration-200

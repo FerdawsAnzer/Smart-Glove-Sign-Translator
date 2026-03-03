@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { AlpahbetData } from "@/Data/alphabetData";
 import { ChevronLeft, ChevronRight, Lightbulb, Check } from "lucide-react";
 import type { MainLetterCardProps } from "@/Types/MainCardProps";
 {
@@ -10,8 +9,9 @@ export function MainLetterCard({
   onNext,
   onPrevious,
   total,
+  data,
 }: MainLetterCardProps) {
-  const currentLetter = AlpahbetData[currentIndex];
+  const currentLetter = data[currentIndex];
 
   return (
     <Card className="w-full flex flex-col items-center gap-5 p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
