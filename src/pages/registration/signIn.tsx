@@ -7,7 +7,7 @@ import SideImage from "@/assets/signIn.jpg";
 type SignInForm = {
   email: string;
   password: string;
-  remember: boolean;
+
 };
 
 type Props = {
@@ -18,7 +18,7 @@ export default function SignIn({ onLogin }: Props) {
   const [form, setForm] = useState<SignInForm>({
     email: "",
     password: "",
-    remember: false,
+   
   });
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -58,7 +58,7 @@ export default function SignIn({ onLogin }: Props) {
               Connect Without Barriers
             </h2>
 
-            <p className="text-sm opacity-90">
+            <p className="text-1.5xl leading-relaxed">
               Join thousands of users communicating freely with our advanced
               sign language translation tools.
             </p>
@@ -143,7 +143,7 @@ export default function SignIn({ onLogin }: Props) {
             Don't have an account?{" "}
 
             <Link
-              to="/signup"
+              to="/signUp"
               className="text-blue-600 hover:underline"
             >
               Sign Up

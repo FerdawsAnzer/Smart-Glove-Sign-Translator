@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import authImage from "@/assets/signUP.jpg";
 import Logo from "@/assets/Logo.png"; 
+type Props = {
+  onLogin: () => void;
+};
 
-export default function SignUp() {
+export default function SignUp({ onLogin }: Props) {
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  onLogin();
+}
   return (
-    <div className="flex h-screen bg-gray-200 p-6">
+<div className="min-h-screen flex items-center justify-center bg-gray-200 p-6">
 
-      <div className="flex w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden flex">
 
         {/* LEFT SIDE */}
-        <div className="w-1/2 flex items-center justify-center p-12">
+        <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
 
           <div className="w-full max-w-md">
 
@@ -20,7 +27,7 @@ export default function SignUp() {
   <img
     src={Logo}
     alt="SignBridge Logo"
-    className="h-12 mb-3"
+    className="w-10 mb-2"
   />
 
   <h1 className="text-2xl font-semibold text-gray-900">
@@ -39,7 +46,7 @@ export default function SignUp() {
             </p>
 
             {/* FORM */}
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
 
               {/* First + Last */}
               <div className="flex gap-4">
@@ -95,19 +102,18 @@ export default function SignUp() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-1/2 relative">
-
-          <img
-            src={authImage}
-            alt="signup visual"
-            className="w-full h-full object-cover"
-          />
+      <div className="w-1/2 relative hidden md:block">
+<img
+  src={authImage}
+  alt="signup visual"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
 
           <div className="absolute bottom-10 left-10 text-white max-w-sm">
-            <h2 className="text-2xl font-semibold mb-3">
+            <h2 className="text-4xl font-bold mb-2">
               Start Your Journey
             </h2>
-            <p className="text-sm leading-relaxed">
+            <p className=" text-1.5xl leading-relaxed">
               Create an account to access real-time translation and
               seamless communication features.
             </p>
