@@ -8,6 +8,7 @@ import { AlphabetLearningPage } from "./features/learningAlphabet/AlphabetLearni
 import { PronounLearningPage } from "./features/LearningPronouns/PronounLearningPage";
 import { CategoryCardsPage } from "./features/learningsP/CategoryCardsPage";
 import { NumberLearningPage } from "./features/LearningNumbers/NumberLearningPage";
+import { LearningGreetingsPage } from "./features/LearningGreetings/LearningGreetingsPage";
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
               <Route
                 path="/learning/CategoryCardsPage"
                 element={<CategoryCardsPage />}
+              />
+              <Route
+                path="/learning/Greetings"
+                element={<LearningGreetingsPage />}
               />
 
               <Route path="/history" element={<div>History Page</div>} />
