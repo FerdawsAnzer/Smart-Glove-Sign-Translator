@@ -11,8 +11,6 @@ export default function SignUp({ onLogin }: Props) {
   e.preventDefault();
   console.log("Sign up success");
   onLogin(); // this tells App the user is logged in
-  
-  navigate("/dashboard"); // redirect to dashboard after sign up
 }
 
   return (

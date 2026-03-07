@@ -141,7 +141,7 @@ export default function SignIn({ onLogin }: Props) {
 
           </form>
 
-          {/* Sign up link */}
+          {/* Sign up to link */}
           <p className="text-center text-sm mt-4">
 
             Don't have an account?{" "}
