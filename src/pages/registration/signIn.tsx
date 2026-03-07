@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Logo from "@/assets/Logo.png"; 
 import SideImage from "@/assets/signIn.jpg"; 
@@ -16,10 +16,12 @@ type Props = {
 
 export default function SignIn({ onLogin }: Props) {
   const [form, setForm] = useState<SignInForm>({
+  
     email: "",
     password: "",
    
   });
+  const navigate = useNavigate();
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     const { name, value, type, checked } = e.target;
@@ -30,12 +32,14 @@ export default function SignIn({ onLogin }: Props) {
     }));
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    console.log("Sign in data:", form);
-    //call the onLogin prop to notify App.tsx
-    onLogin();
-  }
+ function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+
+  console.log("Sign in data:", form);
+
+  onLogin(); // update login state
+  navigate("/dashboard"); // redirect to dashboard
+}
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-6">
