@@ -1,0 +1,34 @@
+/* Full-screen container */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: #ffffff; /* brand background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Fade-out effect */
+.splash-screen.fade-out {
+  opacity: 0;
+}
+
+/* Logo styling */
+.logo {
+  width: 180px;
+  height: 180px;
+}
+
+/* Smooth scale + bounce animation */
+@keyframes bounceScale {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-logo {
+  animation: bounceScale 1.5s ease-in-out forwards;
+}
