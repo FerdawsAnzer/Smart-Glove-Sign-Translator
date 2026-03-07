@@ -6,7 +6,7 @@ import { Header } from "@/components/Layout/Header";
 import { SideBar } from "@/components/Layout/SideBar";
 import { DashboardPage } from "@/features/dashboard/components/dashboardPage";
 import { LearnPage } from "@/features/learningsP/learnPage";
-import SplashScreen from "@/components/SplashScreen/SplashScreen"; // make sure path is correct
+import SplashScreen from "@/components/SplashScreen/SplashScreen"; 
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
