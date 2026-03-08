@@ -9,6 +9,7 @@ import { CategoryCardsPage } from "./features/learningsP/CategoryCardsPage";
 import { NumberLearningPage } from "./features/LearningNumbers/NumberLearningPage";
 import { LearningGreetingsPage } from "./features/LearningGreetings/LearningGreetingsPage";
 import { ColorsLearningPage } from "./features/LearningColors/ColorsLearningPage";
+import { HistoryPage } from "./pages/historyPage";
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
 
               <Route path="/learning/Colors" element={<ColorsLearningPage />} />
 
-              <Route path="/history" element={<div>History Page</div>} />
+              <Route path="/history" element={<HistoryPage />} />
               {/* Add routes*/}
             </Routes>
           </main>
