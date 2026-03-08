@@ -1,5 +1,5 @@
 // ModeSelector.tsx
-import { BookOpen, RefreshCw, Trophy } from "lucide-react";
+import { BookOpen, RefreshCw } from "lucide-react";
 import { ModeSelectorCard } from "./ModeSelectorCards";
 import type { Mode } from "@/Types/indexAlphabet";
 
@@ -10,7 +10,7 @@ type ModeSelectorProps = {
 
 export function ModeSelector({ mode, onModeChange }: ModeSelectorProps) {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 gap-4">
       <ModeSelectorCard
         icon={BookOpen}
         title="Learn Mode"
@@ -26,14 +26,6 @@ export function ModeSelector({ mode, onModeChange }: ModeSelectorProps) {
         iconColor="text-green-500"
         isActive={mode === "Practice"}
         onClick={() => onModeChange("Practice")}
-      />
-      <ModeSelectorCard
-        icon={Trophy}
-        title="Quiz Mode"
-        description="Test your skills with a challenge"
-        iconColor="text-purple-500"
-        isActive={mode === "Quiz"}
-        onClick={() => onModeChange("Quiz")}
       />
     </div>
   );

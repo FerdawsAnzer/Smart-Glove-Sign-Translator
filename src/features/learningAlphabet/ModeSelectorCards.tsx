@@ -16,7 +16,7 @@ export function ModeSelectorCard({
       }`}
       onClick={onClick}
     >
-      <CardContent className="flex flex-col items-center gap-3 p-4">
+      <CardContent className="flex flex-col items-center gap-2 p-4">
         <Icon className={`w-10 h-10 ${iconColor}`} />
         <p className="text-gray-900 font-bold text-base">{title}</p>
         <p className="text-gray-500 text-sm text-center">{description}</p>

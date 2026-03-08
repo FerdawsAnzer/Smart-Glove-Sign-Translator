@@ -56,9 +56,9 @@ export function LearningGreetingsPage() {
 
         {/* Title + description */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">ASL Numbers</h1>
+          <h1 className="text-3xl font-bold text-gray-900">ASL Greetings</h1>
           <p className="text-gray-500 text-sm">
-            Master the American Sign Language numbers from 0 to 10
+            Master the American Sign Language greetings
           </p>
         </div>
 
