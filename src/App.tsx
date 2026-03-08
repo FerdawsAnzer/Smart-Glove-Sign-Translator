@@ -22,7 +22,7 @@ function App() {
         <SplashScreen onFinish={() => setSplashFinished(true)} />
       ) : (
         <Routes>
-          {/* AUTH ROUTES */}
+          {/* AUTH ROUTEs */}
           <Route
             path="/signIn"
             element={<SignIn onLogin={() => setIsLoggedIn(true)} />}
