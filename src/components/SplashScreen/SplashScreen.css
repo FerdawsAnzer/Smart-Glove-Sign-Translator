@@ -1,0 +1,45 @@
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f8;
+  z-index: 9999;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+/* Logo animation: scale + rotate +glow */
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0.6) rotate(0deg);
+    filter: drop-shadow(0 0 0px #3b82f6);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    filter: drop-shadow(0 0 20px #3b82f6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    filter: drop-shadow(0 0 10px #3b82f6);
+    opacity: 1;
+  }
+}
+
+.animate-logo {
+  animation: logoAnimation 2.5s ease-in-out forwards;
+}
