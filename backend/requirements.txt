@@ -1,0 +1,2 @@
+**The dependencies that need to be installed**
+pip install fastapi uvicorn websockets python-dotenv
