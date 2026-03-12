@@ -14,6 +14,7 @@ import { HistoryPage } from "./pages/historyPage";
 import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
+import { Settings } from "@/pages/settings";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -50,6 +51,7 @@ function App() {
                       <Route path="/learning/Greetings" element={<LearningGreetingsPage />} />
                       <Route path="/learning/Colors" element={<ColorsLearningPage />} />
                       <Route path="/history" element={<HistoryPage />} />
+                      <Route path="/settings" element={<Settings />} />
                     </Routes>
                   </main>
                 </div>

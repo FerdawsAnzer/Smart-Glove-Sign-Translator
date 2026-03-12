@@ -75,15 +75,15 @@ export default function SignIn({ onLogin }: Props) {
         <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
 
           {/* Logo */}
-          <div className="flex flex-col items-center mb-10">
+          <div className="flex flex-col items-center mb-40">
 
-            <img src={Logo} alt="Logo" className="w-20 mb-3" />
+            <img src={Logo} alt="Logo" className="w-20 mb-1" />
 
-            <h1 className="text-xl font-semibold">
+            <h1 className="text-xl font-semibold ">
               Welcome Back
             </h1>
 
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm ">
               Sign in to access your dashboard
             </p>
 
