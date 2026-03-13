@@ -14,6 +14,8 @@ import { HistoryPage } from "./pages/historyPage";
 import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
+import { CategoryCardsWordPage } from "./features/LearningWords/CategoryCardsWordPage";
+import { SocialWordLearningPage } from "./features/LearningWords/SocialWordLearningPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -72,6 +74,14 @@ function App() {
                       <Route
                         path="/learning/Colors"
                         element={<ColorsLearningPage />}
+                      />
+                      <Route
+                        path="/learning/CategoryCardsWordPage"
+                        element={<CategoryCardsWordPage />}
+                      />
+                      <Route
+                        path="/learning/SocialWordLearningPage"
+                        element={<SocialWordLearningPage />}
                       />
                       <Route path="/history" element={<HistoryPage />} />
                     </Routes>
