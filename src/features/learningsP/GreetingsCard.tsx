@@ -20,11 +20,11 @@ export function GreetingsCard() {
         </div>
 
         {/* middle Title of card*/}
-        <p className="text-gray-900 font-bold text-xl">Greetings</p>
+        <p className="text-gray-900 font-bold text-xl">Sentences</p>
 
         {/* Description of card */}
         <p className="text-gray-500 text-sm text-center">
-          Common greetings and introductions
+          Common sentences and introductions
         </p>
 
         {/* Badge */}
