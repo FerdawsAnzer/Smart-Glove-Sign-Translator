@@ -27,12 +27,10 @@ const topNavItems: NavItem[] = [
 ];
 
 const bottomNavItems: NavItem[] = [
-  { to: "/theme", icon: Moon, label: "Theme" },
   { to: "/settings", icon: Settings, label: "Settings" },
-
 ];
 
-export function SideBar( {onLogout }: Props) {
+export function SideBar({ onLogout }: Props) {
   const [hovered, setHovered] = useState(false);
   const expanded = hovered;
 
@@ -89,35 +87,35 @@ export function SideBar( {onLogout }: Props) {
 
       {/* ── Bottom nav ── */}
       <nav
-  style={{
-    padding: "8px 8px 8px 8px",
-    borderTop: "1px solid #e2e8f0",
-  }}
->
-  {bottomNavItems.map((item) => (
-    <NavItem key={item.to} item={item} expanded={expanded} />
-  ))}
+        style={{
+          padding: "8px 8px 8px 8px",
+          borderTop: "1px solid #e2e8f0",
+        }}
+      >
+        {bottomNavItems.map((item) => (
+          <NavItem key={item.to} item={item} expanded={expanded} />
+        ))}
 
-  {/* Logout button */}
-  <div
-    onClick={onLogout}
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: expanded ? "flex-start" : "center",
-      gap: expanded ? "10px" : "0",
-      padding: "9px 12px",
-      borderRadius: "10px",
-      color: "#64748b",
-      fontSize: "14px",
-      cursor: "pointer",
-      marginTop: "4px",
-    }}
-  >
-    <LogOut size={18} />
-    {expanded && <span>Logout</span>}
-  </div>
-</nav>
+        {/* Logout button */}
+        <div
+          onClick={onLogout}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: expanded ? "flex-start" : "center",
+            gap: expanded ? "10px" : "0",
+            padding: "9px 12px",
+            borderRadius: "10px",
+            color: "#64748b",
+            fontSize: "14px",
+            cursor: "pointer",
+            marginTop: "4px",
+          }}
+        >
+          <LogOut size={18} />
+          {expanded && <span>Logout</span>}
+        </div>
+      </nav>
 
       {/* ── Footer ── */}
       <div
