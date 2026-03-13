@@ -53,7 +53,7 @@ export function LanguageSettings({
           <SelectTrigger id="targetLanguage">
             <SelectValue placeholder="Select translation language" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-white text-gray-900">
             <SelectItem value="en">English</SelectItem>
             <SelectItem value="es">Spanish</SelectItem>
             <SelectItem value="fr">French</SelectItem>
