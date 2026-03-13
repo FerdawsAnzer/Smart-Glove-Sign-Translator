@@ -2,7 +2,7 @@ import { useState } from "react";
 import { User, Languages, HelpCircle } from "lucide-react";
 import { ProfileSettings } from "../components/settings/profileSettings";
 import { LanguageSettings } from "../components/settings/languageSettings";
-import { HelpSettings } from "../components/settings/helpSettings";
+import { HelpSettings} from "../components/settings/helpSettings";
 import { Button } from "../components/ui/button";
 import { toast, Toaster } from "sonner";
 
