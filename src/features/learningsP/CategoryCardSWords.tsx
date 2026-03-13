@@ -24,9 +24,7 @@ export function CategoryCardWords() {
           <p className="text-gray-900 font-bold text-xl">Social Words</p>
 
           {/* Description of the card */}
-          <p className="text-gray-500 text-sm text-center">
-            Words , Phrases and Sentences
-          </p>
+          <p className="text-gray-500 text-sm text-center">Words and verbs</p>
 
           {/* Badge of teh card */}
           <span className="bg-purple-50 text-purple-500 text-sm font-medium px-4 py-1 rounded-full">
