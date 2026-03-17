@@ -38,9 +38,9 @@ function App() {
             element={
               <div style={{ display: "flex", minHeight: "100vh" }}>
                 <SideBar onLogout={handleLogout} />
-                <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, display: "flex", flexDirection: "column",  overflowX: "hidden", }}>
                   <Header />
-                  <main style={{ flex: 1 }}>
+                  <main style={{ flex: 1, overflowX: "hidden"}}>
                     <Routes>
                       <Route path="/" element={<Navigate to="/dashboard" replace />} />
                       <Route path="/dashboard" element={<DashboardPage />} />
