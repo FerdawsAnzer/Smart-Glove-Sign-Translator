@@ -1,15 +1,7 @@
 import { Camera } from "lucide-react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
-
-interface ProfileSettingsProps {
-  firstName: string;
-  lastName: string;
-  email: string;
-  onFirstNameChange: (value: string) => void;
-  onLastNameChange: (value: string) => void;
-  onEmailChange: (value: string) => void;
-}
+import type { ProfileSettingsProps } from "@/Types/ProfileSettings";
 
 export function ProfileSettings({
   firstName,

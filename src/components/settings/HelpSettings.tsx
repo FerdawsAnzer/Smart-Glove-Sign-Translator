@@ -3,15 +3,8 @@ import { ChevronDown, Star } from "lucide-react";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
-
-interface HelpSettingsProps {
-  rating: number;
-  feedback: string;
-  onRatingChange: (value: number) => void;
-  onFeedbackChange: (value: string) => void;
-  onSubmitFeedback: () => void;
-  onCancelFeedback: () => void;
-}
+import type { HelpSettingsProps } from "@/Types/helpSettings";
+import { faqs } from "@/Data/faqs";
 
 export function HelpSettings({
   rating,
@@ -22,29 +15,6 @@ export function HelpSettings({
   onCancelFeedback,
 }: HelpSettingsProps) {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: "How do I connect the glove?",
-      answer:
-        "To connect the glove, turn on Bluetooth on your device, then press the power button on the glove for 3 seconds until the LED blinks blue. Select 'SignGlove' from your device's Bluetooth menu.",
-    },
-    {
-      question: "What if the gesture is not recognized?",
-      answer:
-        "Ensure the glove is properly fitted and charged. Try repositioning your hand or recalibrating the glove in settings. Make sure there's no interference from other Bluetooth devices.",
-    },
-    {
-      question: "How can I change the language?",
-      answer:
-        "Go to the Languages tab in Settings and select your preferred sign language and translation language from the dropdown menus.",
-    },
-    {
-      question: "How do I enable or disable voice output?",
-      answer:
-        "Voice output can be toggled in the main translator screen by tapping the speaker icon, or you can set it as default in the Notifications settings.",
-    },
-  ];
 
   const handleStarClick = (star: number) => {
     onRatingChange(rating === star ? 0 : star);
@@ -93,7 +63,9 @@ export function HelpSettings({
           {/* Star Rating */}
           <div className="space-y-2">
             <Label>Share your experience</Label>
-            <p className="text-sm text-gray-500">Rate your experience with the app</p>
+            <p className="text-sm text-gray-500">
+              Rate your experience with the app
+            </p>
             <div className="flex gap-2 mt-2">
               {[1, 2, 3, 4, 5].map((star) => (
                 <button

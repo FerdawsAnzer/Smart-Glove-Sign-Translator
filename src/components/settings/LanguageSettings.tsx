@@ -7,13 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-
-interface LanguageSettingsProps {
-  language: string;
-  targetLanguage: string;
-  onLanguageChange: (value: string) => void;
-  onTargetLanguageChange: (value: string) => void;
-}
+import type { LanguageSettingsProps } from "@/Types/LanguageSettings";
 
 export function LanguageSettings({
   language,
@@ -71,9 +65,8 @@ export function LanguageSettings({
           <div>
             <h4 className="font-medium text-blue-900 mb-1">Translation Tip</h4>
             <p className="text-sm text-blue-700">
-              For best results, ensure your glove is properly connected via
-              Wifi and fitted snugly on your hand for accurate gesture
-              recognition.
+              For best results, ensure your glove is properly connected via Wifi
+              and fitted snugly on your hand for accurate gesture recognition.
             </p>
           </div>
         </div>
