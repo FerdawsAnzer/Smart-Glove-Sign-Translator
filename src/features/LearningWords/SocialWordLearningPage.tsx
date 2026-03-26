@@ -6,40 +6,40 @@ import { useNavigate } from "react-router-dom";
 import { ModeSelector } from "../learningAlphabet/ModeSelector";
 import { ProgressBar } from "../learningAlphabet/ProgressBar";
 import { MainLetterCard } from "../learningAlphabet/MainLetterCard";
-import { GreetingsData } from "@/Data/GreetingsData";
+import { socialWords } from "@/Data/SocialWords";
 
-export function LearningGreetingsPage() {
+export function SocialWordLearningPage() {
   const [curentIndex, setCurrentIndex] = useState(0);
-  const [learnedGreetings, setLearnedGreetings] = useState<boolean[]>(
-    new Array(GreetingsData.length).fill(false),
+  const [learnedSocialWords, setLearnedSocialWords] = useState<boolean[]>(
+    new Array(socialWords.length).fill(false),
   );
   const [currentMode, setCurrentMode] = useState<Mode>("Learn");
-  // to bring the current greeting from GreetingsData.ts based on the current index
-  const currentGreeting = GreetingsData[curentIndex];
-  //this variable to store how many true boolean value we have (depedns on teh learned greetings ) so we will display it in teh progress bar
-  const learnedCount = learnedGreetings.filter(Boolean).length;
+  // to bring the current social word from socialWords.ts based on the current index
+  const currentSocialWord = socialWords[curentIndex];
+  //this variable to store how many true boolean value we have (depedns on teh learned social words ) so we will display it in teh progress bar
+  const learnedCount = learnedSocialWords.filter(Boolean).length;
   const navigate = useNavigate();
-  //teh function will handle teh state of lerend numbers to set it to true when the user has learned the number and clicked next button and also will update teh currentIndex to move to the next number
+  //teh function will handle teh state of lerend socialWords to set it to true when the user has learned the number and clicked next button and also will update teh currentIndex to move to the next number
   const handleNext = () => {
-    const updated = [...learnedGreetings];
+    const updated = [...learnedSocialWords];
     updated[curentIndex] = true;
-    setLearnedGreetings(updated);
-    if (curentIndex < GreetingsData.length - 1) {
+    setLearnedSocialWords(updated);
+    if (curentIndex < socialWords.length - 1) {
       setCurrentIndex(curentIndex + 1);
     }
   };
-  //The function will handle the back button to change teh value of the currentIndex to move to the previous Greeting
+  //The function will handle the back button to change teh value of the currentIndex to move to the previous social word
   const handleBack = () => {
     if (curentIndex > 0) {
       setCurrentIndex(curentIndex - 1);
     }
   };
-  //the function  will set the currentIndex to which number the user has selected using teh LetterGrid in the buttom
+  //the function  will set the currentIndex to which social word the user has selected using teh LetterGrid in the buttom
   const handleSelectLetter = (index: number) => {
     setCurrentIndex(index);
   };
   // just to test everything works before building UI
-  console.log("current greeting:", currentGreeting);
+  console.log("current social word:", currentSocialWord);
   console.log("learned count:", learnedCount);
   console.log("mode:", currentMode);
 
@@ -48,7 +48,7 @@ export function LearningGreetingsPage() {
       {/* Back button to retun to categories cards */}
       <div className="max-w-6xl mx-auto w-full flex flex-col gap-6">
         <button
-          onClick={() => navigate("/learning")}
+          onClick={() => navigate("/learning/CategoryCardsWordPage")}
           className="text-blue-500 text-sm hover:underline self-start"
         >
           ← Back to Categories
@@ -56,9 +56,9 @@ export function LearningGreetingsPage() {
 
         {/* Title + description */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">ASL Greetings</h1>
+          <h1 className="text-3xl font-bold text-gray-900">ASL Social Words</h1>
           <p className="text-gray-500 text-sm">
-            Master the American Sign Language greetings
+            Master the American Sign Language social words
           </p>
         </div>
 
@@ -67,25 +67,25 @@ export function LearningGreetingsPage() {
         {/* Progress Bar  will show the progerss of the user whil elearning or practicing or doing a test*/}
         <ProgressBar
           current={curentIndex + 1}
-          total={GreetingsData.length}
+          total={socialWords.length}
           learned={learnedCount}
         />
 
-        {/* Main content of greeting learning goes here */}
+        {/* Main content of number learning goes here */}
         <MainLetterCard
           currentIndex={curentIndex}
           onNext={handleNext}
           onPrevious={handleBack}
-          total={GreetingsData.length}
-          data={GreetingsData}
+          total={socialWords.length}
+          data={socialWords}
         />
         {/* QuickReference goes here after */}
         <div className="max-w-6xl mx-auto w-full">
           <QuickAlphReference
             currentIndex={curentIndex}
-            learned={learnedGreetings}
+            learned={learnedSocialWords}
             onSelect={handleSelectLetter}
-            data={GreetingsData}
+            data={socialWords}
           />
         </div>
       </div>

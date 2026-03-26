@@ -14,6 +14,7 @@ import { HistoryPage } from "./pages/historyPage";
 import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
+import { Settings } from "./pages/settings";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -43,7 +44,9 @@ function App() {
             element={
               <div className="flex min-h-screen">
                 <SideBar onLogout={handleLogout} />
-                <div className="flex flex-col flex-1 min-w-0">
+                <div
+                  style={{ flex: 1, display: "flex", flexDirection: "column" }}
+                >
                   <Header />
                   <main className="flex-1 overflow-auto">
                     <Routes>
@@ -74,6 +77,7 @@ function App() {
                         element={<ColorsLearningPage />}
                       />
                       <Route path="/history" element={<HistoryPage />} />
+                      <Route path="/settings" element={<Settings />} />
                     </Routes>
                   </main>
                 </div>
