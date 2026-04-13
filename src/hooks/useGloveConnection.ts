@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-
+import { toast } from "sonner";
 
 export const useGloveConnection = () => {
   const [connected, setConnected] = useState<boolean>(false);
   const socketRef = useRef<WebSocket | null>(null);
-  const { toast } = useToast();
 
   const connect = () => {
     if (socketRef.current) return;
@@ -13,8 +12,7 @@ export const useGloveConnection = () => {
 
     ws.onopen = () => {
       setConnected(true);
-      toast({
-        title: "Glove Connected ✅",
+      toast.success("Glove Connected", {
         description: "Successfully connected to the backend",
       });
     };
@@ -22,18 +20,14 @@ export const useGloveConnection = () => {
     ws.onclose = () => {
       setConnected(false);
       socketRef.current = null;
-      toast({
-        title: "Glove Disconnected",
+      toast.error("Glove Disconnected", {
         description: "Connection to backend closed",
-        variant: "destructive",
       });
     };
 
     ws.onerror = () => {
-      toast({
-        title: "Connection Failed ❌",
+      toast.error("Connection Failed", {
         description: "Is the backend server running?",
-        variant: "destructive",
       });
     };
 
@@ -46,7 +40,6 @@ export const useGloveConnection = () => {
     setConnected(false);
   };
 
-  // cleanup when component unmounts
   useEffect(() => {
     return () => {
       socketRef.current?.close();
