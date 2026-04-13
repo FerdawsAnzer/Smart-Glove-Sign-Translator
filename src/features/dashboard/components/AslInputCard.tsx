@@ -6,9 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useGloveConnection } from "@/hooks/useGloveConnection";
 import { Hand } from "lucide-react";
 
 export function AslInputCard() {
+  const { connected, connect, disconnect } = useGloveConnection();
+
   return (
     <Card className="border border-gray-200 shadow-sm">
       <CardHeader className="flex flex-row items-center justify-between pb-4">
@@ -31,9 +34,15 @@ export function AslInputCard() {
             <Hand className="w-7 h-7 text-white" />
           </div>
           <p className="text-gray-500 text-sm">Ready To start Translating</p>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg flex items-center gap-2">
-            <Hand className="w-4 h-4" />
-            Start Glove
+          <Button
+            onClick={connected ? disconnect : connect}
+            className={`${
+              connected
+                ? "bg-red-400 hover:bg-red-500"
+                : "bg-teal-400 hover:bg-teal-500"
+            } text-white font-medium px-5 py-2 rounded-lg`}
+          >
+            {connected ? "Disconnect" : "Connect Glove"}
           </Button>
         </div>
       </CardContent>

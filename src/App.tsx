@@ -15,6 +15,7 @@ import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
 import { Settings } from "./pages/settings";
+import { Toaster } from "sonner";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <TooltipProvider>
+      <Toaster position="top-right" />
       <Routes>
         {/* AUTH ROUTES */}
         <Route
@@ -47,7 +49,9 @@ function App() {
                 <div
                   style={{ flex: 1, display: "flex", flexDirection: "column" }}
                 >
-                  <Header />
+                  {""}
+                  {/** <Header /> */}
+
                   <main className="flex-1 overflow-auto">
                     <Routes>
                       <Route
