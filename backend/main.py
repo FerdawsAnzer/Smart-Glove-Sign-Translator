@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# store the frontend connection
+# creating endpoint to store the frontend connection
 frontend_connection: WebSocket | None = None
 
 @app.websocket("/ws/ui")
@@ -24,7 +24,8 @@ async def ui_endpoint(websocket: WebSocket):
     print("✅ Frontend connected!")
     try:
         while True:
-            await asyncio.sleep(1)  # keep connection open
+            # keep connection open
+            await asyncio.sleep(1)  
     except WebSocketDisconnect:
         frontend_connection = None
         print("❌ Frontend disconnected")
