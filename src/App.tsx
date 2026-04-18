@@ -23,63 +23,35 @@ function App() {
   const handleLogout = () => setIsLoggedIn(false);
 
   if (!splashFinished)
-    return <SplashScreen onFinish={() => setSplashFinished(true)} />;
+  return <SplashScreen onFinish={() => setSplashFinished(true)} />;
 
   return (
     <TooltipProvider>
       <Toaster position="top-right" />
       <Routes>
         {/* AUTH ROUTES */}
-        <Route
-          path="/signIn"
-          element={<SignIn onLogin={() => setIsLoggedIn(true)} />}
-        />
-        <Route
-          path="/signUp"
-          element={<SignUp onLogin={() => setIsLoggedIn(true)} />}
-        />
+        <Route path="/signIn" element={<SignIn onLogin={() => setIsLoggedIn(true)} />} />
+        <Route path="/signUp" element={<SignUp onLogin={() => setIsLoggedIn(true)} />} />
 
         {/* PROTECTED ROUTES */}
         {isLoggedIn ? (
           <Route
             path="/*"
             element={
-              <div className="flex min-h-screen">
+              <div style={{ display: "flex", minHeight: "100vh" }}>
                 <SideBar onLogout={handleLogout} />
-                <div
-                  style={{ flex: 1, display: "flex", flexDirection: "column" }}
-                >
-                  {""}
-                  {/** <Header /> */}
-
+                <div className="flex flex-col flex-1 min-w-0">
+                  <Header />
                   <main className="flex-1 overflow-auto">
                     <Routes>
-                      <Route
-                        path="/"
-                        element={<Navigate to="/dashboard" replace />}
-                      />
+                      <Route path="/" element={<Navigate to="/dashboard" replace />} />
                       <Route path="/dashboard" element={<DashboardPage />} />
                       <Route path="/learning" element={<LearnPage />} />
-                      <Route
-                        path="/learning/alphabet"
-                        element={<AlphabetLearningPage />}
-                      />
-                      <Route
-                        path="/learning/numbers"
-                        element={<NumberLearningPage />}
-                      />
-                      <Route
-                        path="/learning/CategoryCardsPage"
-                        element={<CategoryCardsPage />}
-                      />
-                      <Route
-                        path="/learning/Greetings"
-                        element={<LearningGreetingsPage />}
-                      />
-                      <Route
-                        path="/learning/Colors"
-                        element={<ColorsLearningPage />}
-                      />
+                      <Route path="/learning/alphabet" element={<AlphabetLearningPage />} />
+                      <Route path="/learning/numbers" element={<NumberLearningPage />} />
+                      <Route path="/learning/CategoryCardsPage" element={<CategoryCardsPage />} />
+                      <Route path="/learning/Greetings" element={<LearningGreetingsPage />} />
+                      <Route path="/learning/Colors" element={<ColorsLearningPage />} />
                       <Route path="/history" element={<HistoryPage />} />
                       <Route path="/settings" element={<Settings />} />
                     </Routes>

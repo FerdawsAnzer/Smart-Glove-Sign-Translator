@@ -73,10 +73,10 @@ export function Settings() {
   };
 
   return (
-    <div className="h-full bg-gray-50 p-6">
+    <div className="h-full bg-gray-50 overflow-x-hidden">
       <Toaster position="top-right" />
 
-      <div className="max-w-7xl mx-auto">
+<div className="max-w-7xl mx-auto w-full px-6 py-6">
         {/* Header */}
         <div className="relative h-40 rounded-t-3xl overflow-hidden">
           <img
@@ -142,7 +142,7 @@ export function Settings() {
           </div>
 
           {/* Tab Content */}
-          <div className="p-6 overflow-auto">
+         <div className="p-6 w-full overflow-x-hidden">
             {activeTab === "profile" && (
               <ProfileSettings
                 firstName={firstName}
