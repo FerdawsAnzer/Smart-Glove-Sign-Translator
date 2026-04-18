@@ -51,10 +51,9 @@ export function HelpSettings({
   };
 
   return (
-    
-   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+    <div className="grid grid-cols-2 gap-8">
       {/* FAQ Section */}
-      <div className="min-w-0">
+      <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-4">FAQ</h3>
         <div className="space-y-3">
           {faqs.map((faq, index) => (
@@ -86,7 +85,7 @@ export function HelpSettings({
       </div>
 
       {/* Help / Feedback Section */}
-      <div className="min-w-0">
+      <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
           Help / Feedback
         </h3>
@@ -117,14 +116,14 @@ export function HelpSettings({
           {/* Comments */}
           <div className="space-y-2">
             <Label htmlFor="feedback">Your Comments</Label>
-          <Textarea
-  id="feedback"
-  value={feedback}
-  onChange={(e) => onFeedbackChange(e.target.value)}
-  placeholder="Add your comments..."
-  rows={6}
-  className="resize-none w-full max-w-full min-w-0"
-/>
+            <Textarea
+              id="feedback"
+              value={feedback}
+              onChange={(e) => onFeedbackChange(e.target.value)}
+              placeholder="Add your comments..."
+              rows={6}
+              className="resize-none"
+            />
           </div>
 
           {/* Submit + Cancel buttons */}
