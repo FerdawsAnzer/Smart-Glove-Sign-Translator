@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { loadFull } from "tsparticles";
-import Particles from "react-tsparticles";
+import { useEffect, useState, useCallback } from "react";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import Logo from "@/assets/Logo.png";
 import "./SplashScreen.css";
 
@@ -10,65 +10,101 @@ type Props = {
 
 export default function SplashScreen({ onFinish }: Props) {
   const [fadeOut, setFadeOut] = useState(false);
+  const [init, setInit] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setFadeOut(true), 2500);
-    const removeTimer = setTimeout(onFinish, 3000);
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      onFinish();
+    }, 2500);
+
     return () => {
       clearTimeout(timer);
-      clearTimeout(removeTimer);
     };
   }, [onFinish]);
 
-  const particlesInit = async (main: any) => {
-    await loadFull(main);
-  };
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = useCallback(async (container?: any) => {
+    console.log(container);
+  }, []);
 
   return (
     <div className={`splash-screen ${fadeOut ? "fade-out" : ""}`}>
-      {/* Animated particles */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={{
-          fullScreen: { enable: false },
-          background: { color: "#f0f4f8" },
-          fpsLimit: 60,
-          interactivity: {
-            events: { onHover: { enable: true, mode: "repulse" } },
-            modes: { repulse: { distance: 150 } },
-          },
-          particles: {
-            number: { value: 50, density: { enable: true, area: 800 } },
-            color: { value: "#3b82f6" },
-            shape: { type: "circle" },
-            opacity: {
-              value: 0.5,
-              random: true,
-              anim: { enable: true, speed: 0.3, opacity_min: 0.2, sync: false },
-            },
-            size: {
-              value: { min: 10, max: 30 },
-              random: true,
-              anim: { enable: true, speed: 2, size_min: 5, sync: false },
-            },
-            move: {
-              enable: true,
-              speed: 1,
-              direction: "none",
-              random: true,
-              straight: false,
-              outModes: "out",
-            },
-            links: { enable: false },
-          },
-          detectRetina: true,
-        }}
-        style={{ position: "absolute", inset: 0, zIndex: 1 }}
-      />
+      
+      {/* MODERN PARTICLES */}
+      {init && (
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={{
+            background: { color: "#0f172a" },
 
-      {/* Logo */}
-      <img src={Logo} alt="Logo" className="logo animate-logo" />
+            fpsLimit: 60,
+
+            particles: {
+              number: { value: 40, density: { enable: true } },
+
+              color: { value: "#8b5cf6" },
+
+              shape: { type: "circle" },
+
+              opacity: {
+                value: 0.4
+              },
+
+              size: {
+                value: { min: 2, max: 6 }
+              },
+
+              move: {
+                enable: true,
+                speed: 1,
+                direction: "none",
+                outModes: "bounce"
+              },
+
+              links: {
+                enable: true,
+                color: "#8b5cf6",
+                distance: 150,
+                opacity: 0.3
+              }
+            },
+
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: "repulse"
+                }
+              }
+            },
+
+            detectRetina: true
+          }}
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 1
+          }}
+        />
+      )}
+
+      {/* LOGO */}
+      <div className="relative z-10 flex flex-col items-center">
+        <img src={Logo} alt="Logo" className="logo animate-logo" />
+        <p className="text-white mt-3 text-sm opacity-70">
+         
+        </p>
+      </div>
+
     </div>
   );
 }
