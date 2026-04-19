@@ -24,12 +24,41 @@ export function Settings() {
   const [feedback, setFeedback] = useState("");
 
   // Handlers
-  const handleSave = () => {
-    toast.success("Settings saved successfully!", {
-      description: "Your preferences have been updated.",
-      duration: 3000,
+ const handleSave = async () => {
+  setLoading(true);
+  setMessage("");
+
+  const { data: userData } = await supabase.auth.getUser();
+  const user = userData.user;
+
+  if (!user) {
+    setMessage("No user found");
+    setLoading(false);
+    return;
+  }
+
+  const full_name = `${firstName} ${lastName}`.trim();
+
+  const { error } = await supabase
+    .from("profiles")
+    .upsert({
+      id: user.id,
+      full_name,
     });
-  };
+
+  if (error) {
+    console.log("SAVE ERROR:", error); // 🔥 IMPORTANT
+    setMessage(error.message);
+    setLoading(false);
+    return;
+  }
+
+  setMessage("Saved successfully ✅");
+
+  await supabase.auth.refreshSession();
+
+  setLoading(false);
+};
 
   const handleCancel = () => {
     setFirstName("Killian");

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { SideBar } from "./components/Layout/SideBar";
@@ -15,22 +15,46 @@ import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
 import { Settings } from "@/pages/settings";
-
+import { supabase } from "@/lib/supabase/client"; // ✅ IMPORTANT
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // ✅ MISSING BEFORE
   const [splashFinished, setSplashFinished] = useState(false);
-  const handleLogout = () => setIsLoggedIn(false);
 
-  if (!splashFinished)
-  return <SplashScreen onFinish={() => setSplashFinished(true)} />;
+  const handleLogout = async () => {
+    await supabase.auth.signOut(); // optional but better
+    setIsLoggedIn(false);
+  };
+
+  // ✅ CHECK SESSION ON LOAD
+  useEffect(() => {
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        setIsLoggedIn(true);
+      }
+    };
+
+    checkSession();
+  }, []);
+
+  // Splash screen
+  if (!splashFinished) {
+    return <SplashScreen onFinish={() => setSplashFinished(true)} />;
+  }
 
   return (
     <TooltipProvider>
       <Routes>
         {/* AUTH ROUTES */}
-        <Route path="/signIn" element={<SignIn onLogin={() => setIsLoggedIn(true)} />} />
-        <Route path="/signUp" element={<SignUp onLogin={() => setIsLoggedIn(true)} />} />
+        <Route
+          path="/signIn"
+          element={<SignIn onLogin={() => setIsLoggedIn(true)} />}
+        />
+        <Route
+          path="/signUp"
+          element={<SignUp onLogin={() => setIsLoggedIn(true)} />}
+        />
 
         {/* PROTECTED ROUTES */}
         {isLoggedIn ? (
@@ -39,9 +63,16 @@ function App() {
             element={
               <div style={{ display: "flex", minHeight: "100vh" }}>
                 <SideBar onLogout={handleLogout} />
-                <div style={{ flex: 1, display: "flex", flexDirection: "column",  overflowX: "hidden", }}>
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    overflowX: "hidden",
+                  }}
+                >
                   <Header />
-                  <main style={{ flex: 1, overflowX: "hidden"}}>
+                  <main style={{ flex: 1, overflowX: "hidden" }}>
                     <Routes>
                       <Route path="/" element={<Navigate to="/dashboard" replace />} />
                       <Route path="/dashboard" element={<DashboardPage />} />
@@ -52,8 +83,7 @@ function App() {
                       <Route path="/learning/Greetings" element={<LearningGreetingsPage />} />
                       <Route path="/learning/Colors" element={<ColorsLearningPage />} />
                       <Route path="/history" element={<HistoryPage />} />
-                       <Route path="/settings" element={<Settings />} />
-                   
+                      <Route path="/settings" element={<Settings />} />
                     </Routes>
                   </main>
                 </div>

@@ -1,13 +1,13 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import Logo from "@/assets/Logo.png"; 
-import SideImage from "@/assets/signIn.jpg"; 
+import Logo from "@/assets/Logo.png";
+import SideImage from "@/assets/signIn.jpg";
+import { supabase } from "@/lib/supabase/client";
 
 type SignInForm = {
   email: string;
   password: string;
-
 };
 
 type Props = {
@@ -16,35 +16,53 @@ type Props = {
 
 export default function SignIn({ onLogin }: Props) {
   const [form, setForm] = useState<SignInForm>({
-  
     email: "",
     password: "",
-   
   });
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
 
     setForm((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   }
 
- function handleSubmit(e: FormEvent<HTMLFormElement>) {
-  e.preventDefault();
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
 
-  console.log("Sign in data:", form);
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: form.email,
+      password: form.password,
+    });
 
-  onLogin(); // update login state
-  navigate("/dashboard"); // redirect to dashboard
-}
+    setLoading(false);
+
+    console.log("LOGIN DATA:", data);
+    console.log("LOGIN ERROR:", error);
+
+    if (error) {
+      setError(error.message);
+      return;
+    }
+
+    if (data.session) {
+      onLogin();
+      navigate("/dashboard");
+    }
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-6">
 
-      {/* Container */}
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden flex">
 
         {/* LEFT SIDE */}
@@ -62,20 +80,18 @@ export default function SignIn({ onLogin }: Props) {
               Connect Without Barriers
             </h2>
 
-            <p className="text-1.5xl leading-relaxed">
-              Join thousands of users communicating freely with our advanced
-              sign language translation tools.
+            <p className="text-lg">
+              Join thousands of users communicating freely with our sign language translation tools.
             </p>
 
           </div>
-
         </div>
 
         {/* RIGHT SIDE */}
         <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
 
-          {/* Logo */}
-          <div className="flex flex-col items-center mb-10">
+          {/* LOGO */}
+          <div className="flex flex-col items-center mb-8">
 
             <img src={Logo} alt="Logo" className="w-20 mb-3" />
 
@@ -86,79 +102,61 @@ export default function SignIn({ onLogin }: Props) {
             <p className="text-gray-500 text-sm">
               Sign in to access your dashboard
             </p>
-
           </div>
+
+          {/* ERROR MESSAGE */}
+          {error && (
+            <div className="bg-red-100 text-red-600 p-2 rounded mb-4 text-sm">
+              {error}
+            </div>
+          )}
 
           {/* FORM */}
           <form onSubmit={handleSubmit} className="space-y-4">
 
-            {/* Email */}
-            <div>
+            {/* EMAIL */}
+            <input
+              name="email"
+              type="email"
+              placeholder="example@gmail.com"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+            />
 
-              <label className="block text-sm mb-1">
-                Email Address
-              </label>
+            {/* PASSWORD */}
+            <input
+              name="password"
+              type="password"
+              placeholder="Enter Your Password"
+              value={form.password}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+            />
 
-              <input
-                name="email"
-                type="email"
-                placeholder="example@gmail.com"
-                value={form.email}
-                onChange={handleChange}
-                required
-                className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
-              />
-
-            </div>
-
-            {/* Password */}
-            <div>
-
-              <label className="block text-sm mb-1">
-                Password
-              </label>
-
-              <input
-                name="password"
-                type="password"
-                placeholder="Enter Your Password"
-                value={form.password}
-                onChange={handleChange}
-                required
-                className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
-              />
-
-            </div>
-
-
-            {/* Submit */}
+            {/* BUTTON */}
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition"
+              disabled={loading}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition disabled:opacity-50"
             >
-              Sign In
+              {loading ? "Signing in..." : "Sign In"}
             </button>
 
           </form>
 
-          {/* Sign up to link */}
+          {/* SIGN UP LINK */}
           <p className="text-center text-sm mt-4">
-
             Don't have an account?{" "}
-
-            <Link
-              to="/signUp"
-              className="text-blue-600 hover:underline"
-            >
+            <Link to="/signUp" className="text-blue-600 hover:underline">
               Sign Up
             </Link>
-
           </p>
 
         </div>
-
       </div>
-
     </div>
   );
 }
