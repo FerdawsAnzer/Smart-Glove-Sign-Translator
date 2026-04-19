@@ -63,7 +63,7 @@ export function ProfileSettings() {
     } else {
       setMessage("Profile updated successfully ✅");
 
-      // 🔥 IMPORTANT: refresh UI immediately
+      
       await loadProfile();
     }
 

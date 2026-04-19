@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { User, Languages, HelpCircle } from "lucide-react";
 
 import { ProfileSettings } from "../components/settings/ProfilSettings";
@@ -6,6 +6,7 @@ import { LanguageSettings } from "../components/settings/LanguageSettings";
 import { HelpSettings } from "../components/settings/HelpSettings";
 import { Button } from "../components/ui/button";
 import { toast, Toaster } from "sonner";
+import { supabase } from "@/lib/supabase/client";
 
 type Tab = "profile" | "language" | "help";
 
@@ -13,9 +14,10 @@ export function Settings() {
   const [activeTab, setActiveTab] = useState<Tab>("profile");
 
   // Profile / Language state
-  const [firstName, setFirstName] = useState("Killian");
-  const [lastName, setLastName] = useState("James");
-  const [email, setEmail] = useState("killianjames@gmail.com");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const [language, setLanguage] = useState("asl");
   const [targetLanguage, setTargetLanguage] = useState("en");
 
@@ -23,49 +25,79 @@ export function Settings() {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
 
+  // ✅ FIX: move loadProfile OUTSIDE useEffect so it can be reused
+  const loadProfile = async () => {
+    const { data: authData } = await supabase.auth.getUser();
+    const user = authData.user;
+
+    if (!user) return;
+
+    const { data } = await supabase
+      .from("profiles")
+      .select("full_name")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (data?.full_name) {
+      const [first, ...last] = data.full_name.split(" ");
+      setFirstName(first);
+      setLastName(last.join(" "));
+    } else {
+      setFirstName("");
+      setLastName("");
+    }
+  };
+
+  // ✅ load on page open
+  useEffect(() => {
+    loadProfile();
+  }, []);
+
   // Handlers
- const handleSave = async () => {
-  setLoading(true);
-  setMessage("");
+  const handleSave = async () => {
+    setLoading(true);
 
-  const { data: userData } = await supabase.auth.getUser();
-  const user = userData.user;
+    const { data: authData } = await supabase.auth.getUser();
+    const user = authData.user;
 
-  if (!user) {
-    setMessage("No user found");
+    if (!user) {
+      toast.error("No user found");
+      setLoading(false);
+      return;
+    }
+
+    const full_name = `${firstName} ${lastName}`.trim();
+
+    const { error } = await supabase
+      .from("profiles")
+      .upsert(
+        {
+          id: user.id,
+          full_name,
+        },
+        {
+          onConflict: "id",
+        }
+      );
+
+    if (error) {
+      console.log("SAVE ERROR:", error);
+      toast.error(error.message);
+      setLoading(false);
+      return;
+    }
+
+    toast.success("Saved successfully ✅");
+
+    // ✅ refresh UI everywhere
+    window.dispatchEvent(new Event("profileUpdated"));
+
     setLoading(false);
-    return;
-  }
+  };
 
-  const full_name = `${firstName} ${lastName}`.trim();
-
-  const { error } = await supabase
-    .from("profiles")
-    .upsert({
-      id: user.id,
-      full_name,
-    });
-
-  if (error) {
-    console.log("SAVE ERROR:", error); // 🔥 IMPORTANT
-    setMessage(error.message);
-    setLoading(false);
-    return;
-  }
-
-  setMessage("Saved successfully ✅");
-
-  await supabase.auth.refreshSession();
-
-  setLoading(false);
-};
-
+  // ✅ FIX: reload real data instead of clearing inputs
   const handleCancel = () => {
-    setFirstName("Killian");
-    setLastName("James");
-    setEmail("killianjames@gmail.com");
-    setLanguage("asl");
-    setTargetLanguage("en");
+    loadProfile();
 
     toast.info("Changes cancelled", {
       description: "All changes have been reverted.",
@@ -105,7 +137,7 @@ export function Settings() {
     <div className="h-full bg-gray-50 overflow-x-hidden">
       <Toaster position="top-right" />
 
-<div className="max-w-7xl mx-auto w-full px-6 py-6">
+      <div className="max-w-7xl mx-auto w-full px-6 py-6">
         {/* Header */}
         <div className="relative h-40 rounded-t-3xl overflow-hidden">
           <img
@@ -171,7 +203,7 @@ export function Settings() {
           </div>
 
           {/* Tab Content */}
-         <div className="p-6 w-full overflow-x-hidden">
+          <div className="p-6 w-full overflow-x-hidden">
             {activeTab === "profile" && (
               <ProfileSettings
                 firstName={firstName}
