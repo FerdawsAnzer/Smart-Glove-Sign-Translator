@@ -23,7 +23,7 @@ export function AslInputCard() {
         </CardTitle>
         <CardAction>
           <Button className="bg-teal-400 hover:bg-teal-500 text-white font-medium px-5 py-2 rounded-lg">
-            Connect Glove
+            Start Glove
           </Button>
         </CardAction>
       </CardHeader>
