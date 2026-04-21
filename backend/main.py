@@ -1,8 +1,8 @@
 import asyncio
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware #imported here to allow the frontend(port 3000) to connect to the backend(port 8000) without teh browser blocks teh connection
 
-app = FastAPI()
+app = FastAPI()# create the server
 
 # allows frontend to connect from localhost
 app.add_middleware(
@@ -14,17 +14,33 @@ app.add_middleware(
 )
 
 # store the frontend connection
-frontend_connection: WebSocket | None = None
-
+frontend_connection: WebSocket | None = None # store the current client conn if none then it will be null
+is_processing: bool = False
 @app.websocket("/ws/ui")
 async def ui_endpoint(websocket: WebSocket):
     global frontend_connection
-    await websocket.accept()
-    frontend_connection = websocket
+    await websocket.accept()# approved the connection(accepting teh connection and upgrade to websocket)
+    frontend_connection = websocket # we store the connection so we can use it later 
     print("✅ Frontend connected!")
-    try:
+    try:#we use it to try catch any error and here if the user(clinet) disconnect we will catch it  and set teh conection to null
         while True:
             await asyncio.sleep(1)  # keep connection open
-    except WebSocketDisconnect:
+    except WebSocketDisconnect:# webSocketDisconnet is for the error that occurs when a clinet disconnects from the websocket or closes browser refresh teh page or loses internet
         frontend_connection = None
         print("❌ Frontend disconnected")
+
+# rest enpoint that listen for Post requests . we used restendpoint to start and stop the processing of the data from the glove. so when user clicks start glove button  it will send a rquest to the start endpoint and chnage the isprocessing to true and when click stop glove button it will send a request to change isprocessing to false 
+@app.post("/start") 
+async def start_processing():
+    global is_processing
+    is_processing = True
+    print("Started processing data from the glove...")
+    return {"message": "Processing started"}
+
+@app.post("/stop")
+async def stop_processing():
+    global is_processing
+    is_processing = False
+    print("Stopped processing data from the glove.")
+    return {"message": "Processing stopped"}
+
