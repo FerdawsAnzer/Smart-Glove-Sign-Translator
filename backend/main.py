@@ -29,7 +29,7 @@ async def ui_endpoint(websocket: WebSocket):
         frontend_connection = None
         print("❌ Frontend disconnected")
 
-# rest enpoint that listen for Post requests . we used restendpoint to start and stop the processing of the data from the glove. so when user clicks start glove button  it will send a rquest to the start endpoint and chnage the isprocessing to true and when click stop glove button it will send a request to change isprocessing to false 
+# rest endpoint that listen for Post requests . we used restendpoint to start and stop the processing of the data from the glove. so when user clicks start glove button  it will send a rquest to the start endpoint and chnage the isprocessing to true and when click stop glove button it will send a request to change isprocessing to false 
 @app.post("/start") 
 async def start_processing():
     global is_processing
@@ -44,3 +44,17 @@ async def stop_processing():
     print("Stopped processing data from the glove.")
     return {"message": "Processing stopped"}
 
+@app.websocket("/ws/glove")
+async def glove_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    print("Glove connected!")
+    try:
+        while True:
+         data=await websocket.recieve_json()
+         
+         #if the user didn't click start glove button teh json data will be reacive it but we will not process it 
+         if not is_processing:
+            continue #continue throws teh data away in microseconds so is faster than the  esp32 sending data ()
+
+        #result = await predict(data)
+        
