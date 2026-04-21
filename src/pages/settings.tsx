@@ -55,45 +55,61 @@ export function Settings() {
 
   // Handlers
   const handleSave = async () => {
-    setLoading(true);
+  setLoading(true);
 
-    const { data: authData } = await supabase.auth.getUser();
-    const user = authData.user;
+  const { data: authData, error: authError } = await supabase.auth.getUser();
 
-    if (!user) {
-      toast.error("No user found");
-      setLoading(false);
-      return;
-    }
-
-    const full_name = `${firstName} ${lastName}`.trim();
-
-    const { error } = await supabase
-      .from("profiles")
-      .upsert(
-        {
-          id: user.id,
-          full_name,
-        },
-        {
-          onConflict: "id",
-        }
-      );
-
-    if (error) {
-      console.log("SAVE ERROR:", error);
-      toast.error(error.message);
-      setLoading(false);
-      return;
-    }
-
-    toast.success("Saved successfully ✅");
-
-    // ✅ refresh UI everywhere
-    window.dispatchEvent(new Event("profileUpdated"));
-
+  if (authError || !authData.user) {
+    toast.error("User not found");
     setLoading(false);
-  };
+    return;
+  }
+
+  const user = authData.user;
+  const full_name = `${firstName} ${lastName}`.trim();
+
+  // 🔥 First check if row exists
+  const { data: existing } = await supabase
+    .from("profiles")
+    .select("id")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  let error;
+
+  if (existing) {
+    // ✅ UPDATE
+    ({ error } = await supabase
+      .from("profiles")
+      .update({ full_name })
+      .eq("id", user.id));
+  } else {
+    // ✅ INSERT
+    ({ error } = await supabase
+      .from("profiles")
+      .insert({
+        id: user.id,
+        full_name,
+      }));
+  }
+
+  if (error) {
+    console.log("SAVE ERROR:", error);
+    toast.error(error.message);
+    setLoading(false);
+    return;
+  }
+
+  toast.success("Saved successfully ✅");
+
+  // refresh header
+  setTimeout(() => {
+    window.dispatchEvent(new CustomEvent("profileUpdated",{
+      detail:{full_name},}));
+  }, 300);
+
+  setLoading(false);
+};
 
   // ✅ FIX: reload real data instead of clearing inputs
   const handleCancel = () => {
