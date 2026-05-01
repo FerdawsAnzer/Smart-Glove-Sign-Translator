@@ -15,6 +15,7 @@ with open("artifacts/test_iqr_bounds.json") as f:
 print("✅ Model loaded successfully!")
 
 #  Map ESP32 keys to be the same as the ones we used  in the trained model incase there was a diffrence
+# fake data 
 KEY_MAP = {
     "flex1": "FLEX_THUMB",
     "flex2": "FLEX_INDEX",
