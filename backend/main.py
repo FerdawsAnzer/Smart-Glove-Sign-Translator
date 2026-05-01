@@ -3,7 +3,7 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from model import predict
 
-app = FastAPI()
+app = FastAPI()# create the server
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,10 +19,10 @@ is_processing: bool = False
 @app.websocket("/ws/ui")
 async def ui_endpoint(websocket: WebSocket):
     global frontend_connection
-    await websocket.accept()
-    frontend_connection = websocket
+    await websocket.accept()# approved the connection(accepting teh connection and upgrade to websocket)
+    frontend_connection = websocket # we store the connection so we can use it later 
     print("✅ Frontend connected!")
-    try:
+    try:#we use it to try catch any error and here if the user(clinet) disconnect we will catch it  and set teh conection to null
         while True:
             await asyncio.sleep(1)
     except WebSocketDisconnect:
