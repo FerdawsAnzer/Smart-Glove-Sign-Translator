@@ -14,8 +14,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Globe, Volume2, Copy } from "lucide-react";
+import type { TranslationCardProps } from "src/Types/glove";
 
-export function TranslationCard() {
+export function TranslationCard({ translation }: TranslationCardProps) {
   return (
     <Card className="border border-gray-200 shadow-sm">
       <CardHeader className="flex flex-row items-center justify-between pb-4">
@@ -67,9 +68,13 @@ export function TranslationCard() {
 
       <CardContent>
         <div className="min-h-36 bg-blue-50 rounded-xl border border-blue-100 p-4">
-          <p className="text-gray-400 text-sm">
-            Translation will appear here...
-          </p>
+          {translation ? (
+            <p className="text-gray-800 text-sm">{translation}</p>
+          ) : (
+            <p className="text-gray-400 text-sm">
+              Translation will appear here...
+            </p>
+          )}
         </div>
       </CardContent>
 

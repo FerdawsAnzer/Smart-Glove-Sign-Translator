@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { toast } from "sonner";
+import type { UseGloveConnectionProps, PredictionData } from "src/Types/glove";
 
-export const useGloveConnection = () => {
+export const useGloveConnection = ({ onPrediction }: UseGloveConnectionProps) => {
   const [connected, setConnected] = useState<boolean>(false);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const socketRef = useRef<WebSocket | null>(null);
 
   const connect = () => {
@@ -31,6 +33,13 @@ export const useGloveConnection = () => {
       });
     };
 
+    // receives prediction from backend and sends it up
+    ws.onmessage = (event: MessageEvent) => {
+      const data: PredictionData = JSON.parse(event.data);
+      console.log("Prediction received:", data.letter);
+      onPrediction(data.letter);
+    };
+
     socketRef.current = ws;
   };
 
@@ -40,11 +49,39 @@ export const useGloveConnection = () => {
     setConnected(false);
   };
 
+  const startProcessing = async () => {
+    try {
+      await fetch("http://localhost:8000/start", { method: "POST" });
+      setIsProcessing(true);
+      toast.success("Started!", {
+        description: "Glove is now translating",
+      });
+    } catch {
+      toast.error("Failed to start", {
+        description: "Is the backend running?",
+      });
+    }
+  };
+
+  const stopProcessing = async () => {
+    try {
+      await fetch("http://localhost:8000/stop", { method: "POST" });
+      setIsProcessing(false);
+      toast.success("Stopped!", {
+        description: "Glove stopped translating",
+      });
+    } catch {
+      toast.error("Failed to stop", {
+        description: "Is the backend running?",
+      });
+    }
+  };
+
   useEffect(() => {
     return () => {
       socketRef.current?.close();
     };
   }, []);
 
-  return { connected, connect, disconnect };
+  return { connected, isProcessing, connect, disconnect, startProcessing, stopProcessing };
 };
