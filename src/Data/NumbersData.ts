@@ -9,7 +9,7 @@ export const NumbersData: indexNumber[] = [
       "Hand should be relaxed.",
       "Palm can face forward.",
     ],
-    image: "/images/numbers/0.png",
+    image: "/src/assets/imgsNum/Num0.jpg",
     isLearned: false,
   },
   {
@@ -21,7 +21,7 @@ export const NumbersData: indexNumber[] = [
       "Palm faces forward.",
       "Finger should be straight.",
     ],
-    image: "/images/numbers/1.png",
+    image: "/src/assets/imgsNum/Num1.jpg",
     isLearned: false,
   },
   {
@@ -32,7 +32,7 @@ export const NumbersData: indexNumber[] = [
       "Palm faces forward.",
       "Other fingers remain closed.",
     ],
-    image: "/images/numbers/2.png",
+    image: "/src/assets/imgsNum/Num2.jpg",
     isLearned: false,
   },
   {
@@ -43,7 +43,7 @@ export const NumbersData: indexNumber[] = [
       "Palm faces forward.",
       "Fingers should be clearly visible.",
     ],
-    image: "/images/numbers/3.png",
+    image: "/src/assets/imgsNum/Num3.jpg",
     isLearned: false,
   },
   {
@@ -54,7 +54,7 @@ export const NumbersData: indexNumber[] = [
       "Fingers spread slightly.",
       "Palm faces forward.",
     ],
-    image: "/images/numbers/4.png",
+    image: "/src/assets/imgsNum/Num4.jpg",
     isLearned: false,
   },
   {
@@ -65,7 +65,7 @@ export const NumbersData: indexNumber[] = [
       "Palm faces forward.",
       "Keep hand steady.",
     ],
-    image: "/images/numbers/5.png",
+    image: "/src/assets/imgsNum/Num5.jpg",
     isLearned: false,
   },
   {
@@ -77,7 +77,7 @@ export const NumbersData: indexNumber[] = [
       "Thumb touches pinky clearly.",
       "Palm faces forward.",
     ],
-    image: "/images/numbers/6.png",
+    image: "/src/assets/imgsNum/Num6.jpg",
     isLearned: false,
   },
   {
@@ -89,7 +89,7 @@ export const NumbersData: indexNumber[] = [
       "Thumb touches ring finger clearly.",
       "Palm faces forward.",
     ],
-    image: "/images/numbers/7.png",
+    image: "/src/assets/imgsNum/Num7.jpg",
     isLearned: false,
   },
   {
@@ -101,7 +101,7 @@ export const NumbersData: indexNumber[] = [
       "Thumb touches middle finger clearly.",
       "Palm faces forward.",
     ],
-    image: "/images/numbers/8.png",
+    image: "/src/assets/imgsNum/Num8.jpg",
     isLearned: false,
   },
   {
@@ -113,7 +113,7 @@ export const NumbersData: indexNumber[] = [
       "Make a clear 'O' shape with thumb and index.",
       "Palm faces forward.",
     ],
-    image: "/images/numbers/9.png",
+    image: "/src/assets/imgsNum/Num9.jpg",
     isLearned: false,
   },
   {
@@ -124,7 +124,7 @@ export const NumbersData: indexNumber[] = [
       "Thumb points upward.",
       "Small wrist shake.",
     ],
-    image: "/images/numbers/10.png",
+    image: "/src/assets/imgsNum/Num10.jpg",
     isLearned: false,
   },
 ];
