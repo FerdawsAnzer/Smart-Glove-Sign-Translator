@@ -79,11 +79,17 @@ export function TranslationCard({ translation }: TranslationCardProps) {
       </CardContent>
 
       <CardFooter className="flex items-center gap-3 pt-2">
-        <Button className="flex-1 bg-blue-300 hover:bg-blue-400 text-white font-medium rounded-lg flex items-center gap-2">
+        <Button
+          onClick={() => speak(translation)}
+          disabled={!translation}
+          className="flex-1 bg-blue-300 hover:bg-blue-400 text-white font-medium rounded-lg flex items-center gap-2"
+        >
           <Volume2 className="w-4 h-4" />
           Speak
         </Button>
         <Button
+          onClick={() => copy(translation)}
+          disabled={!translation}
           variant="outline"
           size="icon"
           className="border border-gray-200 text-gray-500 hover:bg-gray-50 rounded-lg"
