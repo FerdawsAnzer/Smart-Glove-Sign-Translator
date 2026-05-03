@@ -14,8 +14,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Globe, Volume2, Copy } from "lucide-react";
-import { speak, copy } from "@/utils/speech";
-
 import type { TranslationCardProps } from "src/Types/glove";
 
 export function TranslationCard({ translation }: TranslationCardProps) {

@@ -21,7 +21,7 @@ async def simulate_glove():
     async with websockets.connect("ws://localhost:8000/ws/glove") as websocket:
         print("🧤 Fake glove connected!")
         odlValue={}
-        for i in range(1):
+        for i in range(5):
            #oldValue = fake_data.copy()
             await websocket.send(json.dumps(fake_data))
             #if oldValue != fake_data:
