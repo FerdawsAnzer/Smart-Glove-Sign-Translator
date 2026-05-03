@@ -8,9 +8,17 @@ import {
 } from "@/components/ui/card";
 import { useGloveConnection } from "@/hooks/useGloveConnection";
 import { Hand } from "lucide-react";
+import type { AslInputCardProps } from "src/Types/glove";
 
-export function AslInputCard() {
-  const { connected, connect, disconnect } = useGloveConnection();
+export function AslInputCard({ onPrediction }: AslInputCardProps) {
+  const {
+    connected,
+    isProcessing,
+    startProcessing,
+    stopProcessing,
+    connect,
+    disconnect,
+  } = useGloveConnection({ onPrediction });
 
   return (
     <Card className="border border-gray-200 shadow-sm">
@@ -22,8 +30,16 @@ export function AslInputCard() {
           ASL Input
         </CardTitle>
         <CardAction>
-          <Button className="bg-teal-400 hover:bg-teal-500 text-white font-medium px-5 py-2 rounded-lg">
-            Start Glove
+          <Button
+            onClick={isProcessing ? stopProcessing : startProcessing}
+            disabled={!connected}
+            className={`${
+              isProcessing
+                ? "bg-red-500 hover:bg-red-600"
+                : "bg-blue-600 hover:bg-blue-700"
+            } text-white font-medium px-6 py-2 rounded-lg flex items-center gap-2`}
+          >
+            {isProcessing ? "Stop Glove" : "Start Glove"}
           </Button>
         </CardAction>
       </CardHeader>
