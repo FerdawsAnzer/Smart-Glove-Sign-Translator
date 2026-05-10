@@ -1,85 +1,54 @@
-import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Avatar, AvatarFallback } from "../ui/avatar";
-import { supabase } from "@/lib/supabase/client";
+import { useAuthStore } from "@/store/authStore";
 
 export function Header() {
-  const [name, setName] = useState("User");
+  const { user } = useAuthStore();
 
-  const loadUser = async () => {
-    const { data: authData } = await supabase.auth.getUser();
-    const user = authData.user;
-
-    if (!user) {
-      setName("User");
-      return;
-    }
-
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("full_name")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    const fullName =
-      profile?.full_name ||
-      user.user_metadata?.full_name ||
-      "User";
-
-    setName(fullName);
-  };
-
-  useEffect(() => {
-    loadUser();
-
-    const { data: listener } = supabase.auth.onAuthStateChange(() => {
-      loadUser();
-    });
-
-    // ✅ FIXED: instant update from Settings
-    const refresh = (e: any) => {
-      if (e.detail?.full_name) {
-        // 🔥 instant UI update (no DB call)
-        setName(e.detail.full_name);
-      } else {
-        // fallback
-        loadUser();
-      }
-    };
-
-    window.addEventListener("profileUpdated", refresh);
-
-    return () => {
-      listener.subscription.unsubscribe();
-      window.removeEventListener("profileUpdated", refresh);
-    };
-  }, []);
+  const name = user?.fullName || user?.email?.split("@")[0] || "User";
 
   const initials =
     name
       .split(" ")
       .filter(Boolean)
-      .map((n) => n[0])
+      .map((n: string) => n[0])
       .join("")
       .toUpperCase() || "U";
 
   return (
-    <header className="w-full h-20 border rounded-xl px-6 flex items-center justify-between bg-white shadow-sm">
-      
+    <header
+      className="w-full h-20 px-6 flex items-center justify-between"
+      style={{
+        borderBottom: "1px solid #e8eaf6",
+        boxShadow: "0 2px 12px rgba(99,102,241,0.08)",
+        background: "linear-gradient(135deg, #fafbff 0%, #f8f9ff 100%)",
+      }}
+    >
       <h1 className="text-lg font-semibold text-gray-800 ml-4">
-        Welcome Back, <span className="text-blue-600">{name}</span>
+        Welcome Back,{" "}
+        <span
+          style={{
+            background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          {name}
+        </span>
       </h1>
 
       <div className="flex items-center gap-3">
-        <Avatar className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-md">
+        <Avatar
+          className="w-12 h-12 text-white shadow-md"
+          style={{ background: "linear-gradient(135deg, #3b82f6, #8b5cf6)" }}
+        >
           <AvatarFallback className="bg-transparent text-white font-semibold">
             {initials}
           </AvatarFallback>
         </Avatar>
-
         <ChevronDown className="w-5 h-5 text-gray-500" />
       </div>
-
     </header>
   );
 }

@@ -1,110 +1,124 @@
-import { useEffect, useState, useCallback } from "react";
-import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import Logo from "@/assets/Logo.png";
 import "./SplashScreen.css";
 
-type Props = {
-  onFinish: () => void;
-};
+type Props = { onFinish: () => void };
 
 export default function SplashScreen({ onFinish }: Props) {
-  const [fadeOut, setFadeOut] = useState(false);
-  const [init, setInit] = useState(false);
+  const [fadeOut, setFadeOut]   = useState(false);
+  const [init, setInit]         = useState(false);
+  const canvasRef               = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-      onFinish();
-    }, 2500);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [onFinish]);
-
+  // particles engine
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    }).then(() => setInit(true));
   }, []);
 
-  const particlesLoaded = useCallback(async (container?: any) => {
-    console.log(container);
+  // canvas particles (fallback / extra layer)
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d")!;
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const pts = Array.from({ length: 50 }, () => ({
+      x:  Math.random() * canvas.width,
+      y:  Math.random() * canvas.height,
+      r:  Math.random() * 1.6 + 0.4,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      o:  Math.random() * 0.35 + 0.1,
+      c:  Math.random() > 0.5 ? "139,92,246" : "99,102,241",
+    }));
+
+    let raf: number;
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pts.forEach((p) => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        pts.forEach((q) => {
+          const d = Math.hypot(p.x - q.x, p.y - q.y);
+          if (d < 130) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(${p.c},${0.12 * (1 - d / 130)})`;
+            ctx.lineWidth = 0.5;
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.stroke();
+          }
+        });
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.c},${p.o})`;
+        ctx.fill();
+      });
+      raf = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => cancelAnimationFrame(raf);
   }, []);
+
+  // timer
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(onFinish, 600);
+    }, 3000);
+    return () => clearTimeout(t);
+  }, [onFinish]);
+
+  const particlesLoaded = useCallback(async () => {}, []);
 
   return (
     <div className={`splash-screen ${fadeOut ? "fade-out" : ""}`}>
-      
-      {/* MODERN PARTICLES */}
-      {init && (
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={{
-            background: { color: "#0f172a" },
 
-            fpsLimit: 60,
+      {/* mesh bg */}
+      <div className="splash-bg" />
 
-            particles: {
-              number: { value: 40, density: { enable: true } },
+      {/* canvas particles */}
+      <canvas
+        ref={canvasRef}
+        style={{ position: "absolute", inset: 0, zIndex: 1, pointerEvents: "none" }}
+      />
 
-              color: { value: "#8b5cf6" },
+     
+    
 
-              shape: { type: "circle" },
+      {/* center content */}
+      <div className="relative z-10 flex flex-col items-center gap-5">
 
-              opacity: {
-                value: 0.4
-              },
+        {/* logo */}
+        <div className="logo-wrap">
+          <div className="logo-glow" />
+          <img src={Logo} alt="SignBridge" className="logo" />
+        </div>
 
-              size: {
-                value: { min: 2, max: 6 }
-              },
+        {/* brand */}
+        <div className="splash-brand">
+          <div className="splash-brand-name">SignBridge</div>
+          <div className="splash-brand-tag">Sign Language Translator</div>
+        </div>
 
-              move: {
-                enable: true,
-                speed: 1,
-                direction: "none",
-                outModes: "bounce"
-              },
+        {/* loader */}
+        <div className="splash-loader">
+          <div className="loader-track">
+            <div className="loader-fill" />
+          </div>
+          <div className="loader-dots">
+            <div className="loader-dot" />
+            <div className="loader-dot" />
+            <div className="loader-dot" />
+          </div>
+        </div>
 
-              links: {
-                enable: true,
-                color: "#8b5cf6",
-                distance: 150,
-                opacity: 0.3
-              }
-            },
-
-            interactivity: {
-              events: {
-                onHover: {
-                  enable: true,
-                  mode: "repulse"
-                }
-              }
-            },
-
-            detectRetina: true
-          }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 1
-          }}
-        />
-      )}
-
-      {/* LOGO */}
-      <div className="relative z-10 flex flex-col items-center">
-        <img src={Logo} alt="Logo" className="logo animate-logo" />
-        <p className="text-white mt-3 text-sm opacity-70">
-         
-        </p>
       </div>
-
     </div>
   );
 }

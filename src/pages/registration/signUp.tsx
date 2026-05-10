@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import authImage from "@/assets/signUP.jpg";
 import Logo from "@/assets/Logo.png";
 import { supabase } from "@/lib/supabase/client";
+import { useAuthStore } from "@/store/authStore";
 
 
 
@@ -18,56 +19,56 @@ export default function SignUp() {
   const [loading, setLoading] = useState(false);
 
   const isWeakPassword = password.length > 0 && password.length < 6;
+  const { updateFullName } = useAuthStore();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setError("");
+  e.preventDefault();
+  setError("");
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-
-    if (password.length < 6) {
-      setError("Password must be at least 6 characters");
-      return;
-    }
-
-    setLoading(true);
-
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          full_name: name,
-        },
-      },
-    });
-
-    if (error) {
-      setError(error.message);
-      setLoading(false);
-      return;
-    }
-
-    const user = data.user;
-
-    if (user) {
-      // upsert prevents duplicates
-      await supabase.from("profiles").upsert({
-        id: user.id,
-        full_name: name,
-        avatar_url: null,
-      });
-
-     
-      navigate("/dashboard");
-    }
-
-    setLoading(false);
+  if (password !== confirmPassword) {
+    setError("Passwords do not match");
+    return;
   }
 
+  if (password.length < 6) {
+    setError("Password must be at least 6 characters");
+    return;
+  }
+
+  setLoading(true);
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: { full_name: name },
+    },
+  });
+
+  if (error) {
+    setError(error.message);
+    setLoading(false);
+    return;
+  }
+
+  //  check session — only exists if email confirmation is OFF
+  const { data: sessionData } = await supabase.auth.getSession();
+
+ if (sessionData.session) {
+  await supabase.from("profiles").upsert({
+    id: sessionData.session.user.id,
+    full_name: name,
+    avatar_url: null,
+  });
+
+  // ✅ fetch the full user into the store first
+  await useAuthStore.getState().fetchUser();
+
+  updateFullName(name); // ✅ then update the name
+  setLoading(false);
+  navigate("/dashboard");
+}
+}
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-200 p-6">
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden flex">
@@ -142,7 +143,7 @@ export default function SignUp() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 text-white py-3 rounded-md"
+                className="w-full  text-white py-3 rounded-md btn-primary transition disabled:opacity-50"
               >
                 {loading ? "Creating..." : "Sign Up"}
               </button>

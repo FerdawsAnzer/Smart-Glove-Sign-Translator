@@ -4,6 +4,7 @@ import type { input, output } from "framer-motion/client";
 export interface User{
     id: string;
     email:string;
+    fullName?: string;
 }
 // a row from gestures 
 export interface Gestures {
@@ -32,6 +33,7 @@ export interface AuthState {
     signIn: (email: string, password: string) => Promise<void>;
     signUp: (email: string, password: string) => Promise<void>;
     signOut: () => Promise<void>;
+    updateFullName: (name: string) => void;
     fetchUser : ()=> Promise<void>;
 }
 
