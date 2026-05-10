@@ -1,10 +1,9 @@
-// Arduino IDE
-
 #include <Wire.h>
 
 const int MPU = 0x68; // MPU6050 I2C address
 int16_t AccX, AccY, AccZ;
 int16_t GyroX, GyroY, GyroZ;
+
 void setup()
 {
     Serial.begin(9600);
