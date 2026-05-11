@@ -1,68 +1,135 @@
+import { useEffect, useState } from "react";
 import { Camera } from "lucide-react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+<<<<<<< HEAD
 import type { ProfileSettingsProps } from "@/Types/ProfileSettings";
+=======
+import { useAuthStore } from "@/store/authStore"; // ✅ use store instead of raw supabase auth
+import { supabase } from "@/lib/supabase/client";
 
-export function ProfileSettings({
-  firstName,
-  lastName,
-  email,
-  onFirstNameChange,
-  onLastNameChange,
-  onEmailChange,
-}: ProfileSettingsProps) {
+export function ProfileSettings() {
+  const { user } = useAuthStore(); // ✅ get user from store
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const loadProfile = async () => {
+    if (!user) return;
+
+    setEmail(user.email || "");
+
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("full_name")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    const fullName = profile?.full_name || "";
+    const parts = fullName.split(" ");
+    setFirstName(parts[0] || "");
+    setLastName(parts.slice(1).join(" ") || "");
+  };
+
+  useEffect(() => {
+    if (user) loadProfile();
+  }, [user]); // ✅ re-runs when user is available
+
+  const handleSave = async () => {
+    if (!user) return;
+    setLoading(true);
+    setMessage("");
+
+    const full_name = `${firstName} ${lastName}`.trim();
+
+    const { error } = await supabase
+      .from("profiles")
+      .upsert({ id: user.id, full_name }); // ✅ use user.id from store
+
+    if (error) {
+      setMessage(error.message);
+    } else {
+      setMessage("Profile updated successfully ✅");
+      window.dispatchEvent(new CustomEvent("profileUpdated", { detail: { full_name } }));
+      await loadProfile();
+    }
+
+    setLoading(false);
+  };
+
+  const handleCancel = () => {
+    loadProfile();
+    setMessage("");
+  };
+
+  const initials = (firstName?.[0] || "") + (lastName?.[0] || "") || "U";
+>>>>>>> supabase
+
   return (
     <div className="space-y-6">
+
+      {/* AVATAR */}
       <div className="flex items-start gap-6">
         <div className="relative">
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold">
-            {firstName[0]}
-            {lastName[0]}
+            {initials}
           </div>
-          <button className="absolute bottom-0 right-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+          <button className="absolute bottom-0 right-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
             <Camera className="w-4 h-4" />
           </button>
         </div>
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900">
-            Profile Picture
-          </h3>
-          <p className="text-sm text-gray-500 mt-1">
+        <div>
+          <h3 className="text-lg font-semibold">Profile Picture</h3>
+          <p className="text-sm text-gray-500">
             Upload a photo to personalize your account
           </p>
         </div>
       </div>
 
+      {/* NAME */}
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="firstName">First name</Label>
-          <Input
-            id="firstName"
-            type="text"
-            value={firstName}
-            onChange={(e) => onFirstNameChange(e.target.value)}
-          />
+          <Label>First name</Label>
+          <Input value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="lastName">Last name</Label>
-          <Input
-            id="lastName"
-            type="text"
-            value={lastName}
-            onChange={(e) => onLastNameChange(e.target.value)}
-          />
+          <Label>Last name</Label>
+          <Input value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
       </div>
 
+      {/* EMAIL */}
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
-        <Input
-          id="email"
-          type="email"
-          value={email}
-          onChange={(e) => onEmailChange(e.target.value)}
-        />
+        <Label>Email</Label>
+        <Input value={email} disabled />
       </div>
+
+      {/* MESSAGE */}
+      {message && (
+        <p className={`text-sm ${message.includes("✅") ? "text-green-600" : "text-red-600"}`}>
+          {message}
+        </p>
+      )}
+
+      {/* ✅ Save/Cancel buttons moved here */}
+      <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
+        <button
+          onClick={handleCancel}
+          className="px-4 py-2 border rounded-lg text-gray-600 hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+        <button
+          onClick={handleSave}
+          disabled={loading}
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+        >
+          {loading ? "Saving..." : "Save Changes"}
+        </button>
+      </div>
+
     </div>
   );
 }

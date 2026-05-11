@@ -1,21 +1,19 @@
-import { useState } from "react";
+import { useState } from "react"; // ✅ removed useEffect, no longer needed
 import { User, Languages, HelpCircle } from "lucide-react";
-
 import { ProfileSettings } from "../components/settings/ProfilSettings";
-import { LanguageSettings } from "../components/settings/LanguageSettings";
-import { HelpSettings } from "../components/settings/HelpSettings";
+import { LanguageSettings } from "../components/settings/languageSettings"; // ✅ fix casing
+import { HelpSettings } from "../components/settings/helpSettings";         // ✅ fix casing
 import { Button } from "../components/ui/button";
 import { toast, Toaster } from "sonner";
+import { useAuthStore } from "@/store/authStore";
 
 type Tab = "profile" | "language" | "help";
 
 export function Settings() {
+  const { user } = useAuthStore();
   const [activeTab, setActiveTab] = useState<Tab>("profile");
 
-  // Profile / Language state
-  const [firstName, setFirstName] = useState("Killian");
-  const [lastName, setLastName] = useState("James");
-  const [email, setEmail] = useState("killianjames@gmail.com");
+  // Language settings state
   const [language, setLanguage] = useState("asl");
   const [targetLanguage, setTargetLanguage] = useState("en");
 
@@ -23,41 +21,21 @@ export function Settings() {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
 
-  // Handlers
-  const handleSave = () => {
-    toast.success("Settings saved successfully!", {
-      description: "Your preferences have been updated.",
-      duration: 3000,
-    });
+  // ✅ Only handles language save now — profile saves itself
+  const handleSave = async () => {
+    toast.success("Settings saved ✅");
   };
 
   const handleCancel = () => {
-    setFirstName("Killian");
-    setLastName("James");
-    setEmail("killianjames@gmail.com");
-    setLanguage("asl");
-    setTargetLanguage("en");
-
-    toast.info("Changes cancelled", {
-      description: "All changes have been reverted.",
-      duration: 3000,
-    });
+    toast.info("Changes cancelled", { duration: 3000 });
   };
 
   const handleSubmitFeedback = () => {
     if (rating === 0) {
-      toast.error("Please select a rating", {
-        description: "You need to rate your experience before submitting.",
-        duration: 3000,
-      });
+      toast.error("Please select a rating");
       return;
     }
-
-    toast.success("Feedback submitted successfully!", {
-      description: "Thank you for your feedback.",
-      duration: 3000,
-    });
-
+    toast.success("Feedback submitted successfully!");
     setRating(0);
     setFeedback("");
   };
@@ -65,18 +43,14 @@ export function Settings() {
   const handleCancelFeedback = () => {
     setRating(0);
     setFeedback("");
-
-    toast.info("Feedback cleared", {
-      description: "Your feedback has been reset.",
-      duration: 3000,
-    });
+    toast.info("Feedback cleared");
   };
 
   return (
-    <div className="h-full bg-gray-50 p-6">
+    <div className="h-full bg-gray-50 overflow-x-hidden">
       <Toaster position="top-right" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto w-full px-6 py-6">
         {/* Header */}
         <div className="relative h-40 rounded-t-3xl overflow-hidden">
           <img
@@ -142,16 +116,9 @@ export function Settings() {
           </div>
 
           {/* Tab Content */}
-          <div className="p-6 overflow-auto">
+          <div className="p-6 w-full overflow-x-hidden">
             {activeTab === "profile" && (
-              <ProfileSettings
-                firstName={firstName}
-                lastName={lastName}
-                email={email}
-                onFirstNameChange={setFirstName}
-                onLastNameChange={setLastName}
-                onEmailChange={setEmail}
-              />
+              <ProfileSettings /> // ✅ no props — it's self-contained
             )}
 
             {activeTab === "language" && (
@@ -175,8 +142,8 @@ export function Settings() {
             )}
           </div>
 
-          {/* Footer */}
-          {activeTab !== "help" && (
+          {/* ✅ Footer only shows for language tab now */}
+          {activeTab === "language" && (
             <div className="flex justify-end gap-3 p-6 border-t border-gray-200">
               <Button onClick={handleCancel}>Cancel</Button>
               <Button onClick={handleSave}>Save Changes</Button>

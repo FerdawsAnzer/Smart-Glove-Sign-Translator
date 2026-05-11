@@ -15,7 +15,8 @@ export function GreetingsCard() {
       {/* Card Content container */}
       <CardContent className="flex flex-col items-center gap-3 p-4">
         {/* Green box with sparkles icon */}
-        <div className="w-full flex items-center justify-center bg-green-500 rounded-xl py-8">
+        <div className="w-full flex items-center justify-center  rounded-xl py-8"
+        style={{background:"linear-gradient(135deg, #6366f1, #8b5cf6"}}>
           <Sparkles className="w-14 h-14 text-white" />
         </div>
 

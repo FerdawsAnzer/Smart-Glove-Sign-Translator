@@ -1,45 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  --blue:   #3b82f6;
+  --purple: #8b5cf6;
+  --indigo: #6366f1;
+  --dark:   #0a0a1a;
+}
+
 .splash-screen {
   position: fixed;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f4f8;
+  background: linear-gradient(135deg, #050510 0%, #0a0a1a 50%, #0d0620 100%);
   z-index: 9999;
   overflow: hidden;
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.6s ease;
+  font-family: 'Outfit', sans-serif;
 }
 
-.splash-screen.fade-out {
-  opacity: 0;
+.splash-screen.fade-out { opacity: 0; }
+
+/* ── mesh background ── */
+.splash-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, #1e1b4b55 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 70%, #1e3a5f44 0%, transparent 60%);
+}
+
+
+/* ── logo ── */
+.logo-wrap {
+  position: relative;
+  width: 200px; height: 200px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.logo-glow {
+  position: absolute; inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
+  animation: glowPulse 2.5s ease-in-out infinite;
 }
 
 .logo {
-  width: 200px;
-  height: 200px;
-  z-index: 2;
+  width: 180px; height: 180px;
+  position: relative; z-index: 2;
+  animation: logoIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.6));
 }
 
-/* Logo animation: scale + rotate +glow */
-@keyframes logoAnimation {
-  0% {
-    transform: scale(0.6) rotate(0deg);
-    filter: drop-shadow(0 0 0px #3b82f6);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2) rotate(180deg);
-    filter: drop-shadow(0 0 20px #3b82f6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
-    filter: drop-shadow(0 0 10px #3b82f6);
-    opacity: 1;
-  }
+@keyframes logoIn {
+  from { transform: scale(0.3) rotate(-180deg); opacity: 0; }
+  to   { transform: scale(1)   rotate(0deg);    opacity: 1; }
 }
 
-.animate-logo {
-  animation: logoAnimation 2.5s ease-in-out forwards;
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1);   opacity: 0.6; }
+  50%       { transform: scale(1.2); opacity: 1;   }
+}
+
+/* ── brand text ── */
+.splash-brand {
+  text-align: center;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.splash-brand-name {
+  font-size: 26px; font-weight: 700; letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 40%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.splash-brand-tag {
+  font-size: 12px; font-weight: 300;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 4px;
+}
+
+/* ── loader ── */
+.splash-loader {
+  width: 160px;
+  animation: fadeUp 0.6s 0.7s ease both;
+}
+
+.loader-track {
+  height: 2px; border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%; border-radius: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #3b82f6);
+  animation: loadBar 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loadBar {
+  0%   { width: 0%;   }
+  30%  { width: 40%;  }
+  70%  { width: 75%;  }
+  100% { width: 100%; }
+}
+
+.loader-dots {
+  display: flex; justify-content: center;
+  gap: 5px; margin-top: 10px;
+}
+
+.loader-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  animation: dotBlink 1.2s ease-in-out infinite;
+}
+.loader-dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotBlink {
+  0%, 100% { background: rgba(255,255,255,0.2);  transform: scale(1);   }
+  50%       { background: rgba(139,92,246,0.8);   transform: scale(1.4); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
 }

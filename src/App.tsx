@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "@/components/ui/sonner";
+import { useAuthStore } from "@/store/authStore";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { SideBar } from "./components/Layout/SideBar";
 import { Header } from "./components/Layout/Header";
@@ -14,16 +16,30 @@ import { HistoryPage } from "./pages/historyPage";
 import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
-import { Settings } from "./pages/settings";
-import { Toaster } from "sonner";
+import { Settings } from "@/pages/settings";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { user, loading, fetchUser, signOut } = useAuthStore(); //  get everything from store
   const [splashFinished, setSplashFinished] = useState(false);
-  const handleLogout = () => setIsLoggedIn(false);
 
-  if (!splashFinished)
+  // ✅ Restore session on app load — replaces your manual checkSession
+  useEffect(() => {
+    fetchUser();
+  }, []);
+
+  const handleLogout = async () => {
+    await signOut(); // ✅ store handles everything, no manual supabase call needed
+  };
+
+  // Show splash screen first
+  if (!splashFinished) {
     return <SplashScreen onFinish={() => setSplashFinished(true)} />;
+  }
+
+  // ✅ Show nothing while checking session (prevents flicker to /signIn)
+  if (loading) {
+    return null; // or a loading spinner
+  }
 
   return (
     <TooltipProvider>
@@ -32,54 +48,32 @@ function App() {
         {/* AUTH ROUTES */}
         <Route
           path="/signIn"
-          element={<SignIn onLogin={() => setIsLoggedIn(true)} />}
+          element={<SignIn />} // ✅ no need to pass onLogin, store handles user state
         />
         <Route
           path="/signUp"
-          element={<SignUp onLogin={() => setIsLoggedIn(true)} />}
+          element={<SignUp />}
         />
 
         {/* PROTECTED ROUTES */}
-        {isLoggedIn ? (
+        {user ? ( // ✅ user from store instead of isLoggedIn state
           <Route
             path="/*"
             element={
-              <div className="flex min-h-screen">
+              <div style={{ display: "flex", minHeight: "100vh" }}>
                 <SideBar onLogout={handleLogout} />
-                <div
-                  style={{ flex: 1, display: "flex", flexDirection: "column" }}
-                >
-                  {""}
-                  {/** <Header /> */}
-
+                <div className="flex flex-col flex-1 min-w-0">
+                  <Header />
                   <main className="flex-1 overflow-auto">
                     <Routes>
-                      <Route
-                        path="/"
-                        element={<Navigate to="/dashboard" replace />}
-                      />
+                      <Route path="/" element={<Navigate to="/dashboard" replace />} />
                       <Route path="/dashboard" element={<DashboardPage />} />
                       <Route path="/learning" element={<LearnPage />} />
-                      <Route
-                        path="/learning/alphabet"
-                        element={<AlphabetLearningPage />}
-                      />
-                      <Route
-                        path="/learning/numbers"
-                        element={<NumberLearningPage />}
-                      />
-                      <Route
-                        path="/learning/CategoryCardsPage"
-                        element={<CategoryCardsPage />}
-                      />
-                      <Route
-                        path="/learning/Greetings"
-                        element={<LearningGreetingsPage />}
-                      />
-                      <Route
-                        path="/learning/Colors"
-                        element={<ColorsLearningPage />}
-                      />
+                      <Route path="/learning/alphabet" element={<AlphabetLearningPage />} />
+                      <Route path="/learning/numbers" element={<NumberLearningPage />} />
+                      <Route path="/learning/CategoryCardsPage" element={<CategoryCardsPage />} />
+                      <Route path="/learning/Greetings" element={<LearningGreetingsPage />} />
+                      <Route path="/learning/Colors" element={<ColorsLearningPage />} />
                       <Route path="/history" element={<HistoryPage />} />
                       <Route path="/settings" element={<Settings />} />
                     </Routes>

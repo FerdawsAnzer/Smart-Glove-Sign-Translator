@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import {
   Card,
   CardAction,
@@ -10,16 +11,7 @@ import { useGloveConnection } from "@/hooks/useGloveConnection";
 import { Hand } from "lucide-react";
 import type { AslInputCardProps } from "src/Types/glove";
 
-export function AslInputCard({ onPrediction }: AslInputCardProps) {
-  const {
-    connected,
-    isProcessing,
-    startProcessing,
-    stopProcessing,
-    connect,
-    disconnect,
-  } = useGloveConnection({ onPrediction });
-
+export function AslInputCard() {
   return (
     <Card className="border border-gray-200 shadow-sm">
       <CardHeader className="flex flex-row items-center justify-between pb-4">
@@ -29,37 +21,26 @@ export function AslInputCard({ onPrediction }: AslInputCardProps) {
           </span>
           ASL Input
         </CardTitle>
+
         <CardAction>
-          <Button
-            onClick={isProcessing ? stopProcessing : startProcessing}
-            disabled={!connected}
-            className={`${
-              isProcessing
-                ? "bg-red-500 hover:bg-red-600"
-                : "bg-blue-600 hover:bg-blue-700"
-            } text-white font-medium px-6 py-2 rounded-lg flex items-center gap-2`}
-          >
-            {isProcessing ? "Stop Glove" : "Start Glove"}
+          <Button className="bg-teal-400 hover:bg-teal-500 text-white font-medium px-5 py-2 rounded-lg">
+            Connect Glove
           </Button>
         </CardAction>
       </CardHeader>
 
       <CardContent>
         <div className="flex flex-col items-center justify-center gap-4 bg-blue-50 rounded-xl py-12 border border-blue-100">
+          
           <div className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-600">
             <Hand className="w-7 h-7 text-white" />
           </div>
           <p className="text-gray-500 text-sm">Ready To start Translating</p>
-          <Button
-            onClick={connected ? disconnect : connect}
-            className={`${
-              connected
-                ? "bg-red-400 hover:bg-red-500"
-                : "bg-teal-400 hover:bg-teal-500"
-            } text-white font-medium px-5 py-2 rounded-lg`}
-          >
-            {connected ? "Disconnect" : "Connect Glove"}
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-lg flex items-center gap-2">
+            <Hand className="w-4 h-4" />
+            Start Glove
           </Button>
+
         </div>
       </CardContent>
     </Card>
