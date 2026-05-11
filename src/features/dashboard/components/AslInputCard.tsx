@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import {
   Card,
   CardAction,
@@ -7,9 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useGloveConnection } from "@/hooks/useGloveConnection";
 import { Hand } from "lucide-react";
-import type { AslInputCardProps } from "src/Types/glove";
 
 export function AslInputCard() {
   return (

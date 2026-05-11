@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-import { supabase } from "./client"; 
 
-export const saveTranslation = async (
-  userId: string,
-  input: string,
-  output: string
-) => {
-  return await supabase.from("history").insert([
-    {
-      user_id: userId,
-      input,
-      output,
-    },
-  ]);
-};
-
-export const getHistory = async (userId: string) => {
-  return await supabase
-=======
 import { supabase } from "./client";
 import type { HistoryItem } from "@/Types/HistoryItems";
 
@@ -36,13 +17,11 @@ export const saveHistory = async (
 // Fetch all history for a user — mapped to HistoryItem shape
 export const fetchHistory = async (userId: string): Promise<HistoryItem[]> => {
   const { data, error } = await supabase
->>>>>>> supabase
+
     .from("history")
     .select("*")
     .eq("user_id", userId)
     .order("created_at", { ascending: false });
-<<<<<<< HEAD
-=======
 
   if (error || !data) return [];
 
@@ -73,5 +52,4 @@ export const toggleStarred = async (id: string, starred: boolean) => {
 // Delete a history entry
 export const deleteHistory = async (id: string) => {
   return await supabase.from("history").delete().eq("id", id);
->>>>>>> supabase
 };

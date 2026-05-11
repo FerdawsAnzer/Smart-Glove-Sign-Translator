@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import { Camera } from "lucide-react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
-<<<<<<< HEAD
-import type { ProfileSettingsProps } from "@/Types/ProfileSettings";
-=======
 import { useAuthStore } from "@/store/authStore"; // ✅ use store instead of raw supabase auth
 import { supabase } from "@/lib/supabase/client";
 
@@ -65,7 +62,6 @@ export function ProfileSettings() {
   };
 
   const initials = (firstName?.[0] || "") + (lastName?.[0] || "") || "U";
->>>>>>> supabase
 
   return (
     <div className="space-y-6">
