@@ -106,3 +106,8 @@ Smart-Glove-Sign-Translator/
 
 ---
 
+---
+
+## 📜 License
+
+© 2026 SignBridge Team. All rights reserved.
