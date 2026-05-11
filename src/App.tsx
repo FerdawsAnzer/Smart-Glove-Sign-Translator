@@ -7,6 +7,7 @@ import { DashboardPage } from "./features/dashboard/components/dashboardPage";
 import { LearnPage } from "./features/learningsP/learnPage";
 import { AlphabetLearningPage } from "./features/learningAlphabet/AlphabetLearningPage";
 import { CategoryCardsPage } from "./features/learningsP/CategoryCardsPage";
+import { CategoryCardsWordPage } from "./features/LearningWords/CategoryCardsWordPage";
 import { NumberLearningPage } from "./features/LearningNumbers/NumberLearningPage";
 import { LearningGreetingsPage } from "./features/LearningGreetings/LearningGreetingsPage";
 import { ColorsLearningPage } from "./features/LearningColors/ColorsLearningPage";
@@ -16,6 +17,12 @@ import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
 import { Settings } from "./pages/settings";
 import { Toaster } from "sonner";
+import { SocialWordLearningPage } from "./features/LearningWords/SocialWordLearningPage";
+import { VerbsLearningPage } from "./features/LearningWords/VerbsLearningPage";
+import { UtilityWordLearningPage } from "./features/LearningWords/UtilityWordsLeraningPage";
+import { CategoryCradPageEss } from "./features/LearningEssentials/CategoryCradPageEss";
+import { PronounsLearningPage } from "./features/LearningEssentials/PronounsLearningPage";
+import { TimeLearningPage } from "./features/LearningEssentials/TimeLearningPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -77,8 +84,36 @@ function App() {
                         element={<LearningGreetingsPage />}
                       />
                       <Route
+                        path="/learning/CategoryCardsWordPage"
+                        element={<CategoryCardsWordPage />}
+                      />
+                      <Route
+                        path="/learning/SocialWordLearningPage"
+                        element={<SocialWordLearningPage />}
+                      />
+                      <Route
                         path="/learning/Colors"
                         element={<ColorsLearningPage />}
+                      />
+                      <Route
+                        path="/learning/VerbsLearningPage"
+                        element={<VerbsLearningPage />}
+                      />
+                      <Route
+                        path="/learning/UtilityWordLearningPage"
+                        element={<UtilityWordLearningPage />}
+                      />
+                      <Route
+                        path="/learning/CategoryCradPageEss"
+                        element={<CategoryCradPageEss />}
+                      />
+                      <Route
+                        path="/learning/PronounsLearningPage"
+                        element={<PronounsLearningPage />}
+                      />
+                      <Route
+                        path="/learning/TimeLearningPage"
+                        element={<TimeLearningPage />}
                       />
                       <Route path="/history" element={<HistoryPage />} />
                       <Route path="/settings" element={<Settings />} />

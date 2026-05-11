@@ -1,8 +1,8 @@
-import type { SocialWord } from "@/Types/indexSocialWords";
 
-export const socialWords: SocialWord[] = [
+import type { UtilityWords } from "@/Types/IndexUtilityWords";
+export const utilityWords : UtilityWords[] = [
   {
-    letter: "Bye",
+    letter: "How",
     description: "Raise one hand with the palm facing forward. Extend the thumb, index finger, and little finger while keeping the middle and ring fingers folded down.",
     tips: [
       "Keep the palm facing outward toward the person you are communicating with.",
@@ -13,7 +13,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Deaf",
+    letter: "What",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -25,7 +25,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Hearing",
+    letter: "When",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -37,7 +37,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Hello",
+    letter: "Where",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -49,7 +49,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "No",
+    letter: "Which",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -61,7 +61,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Sorry",
+    letter: "Who",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -73,7 +73,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Yes",
+    letter: "Why",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -83,29 +83,5 @@ export const socialWords: SocialWord[] = [
     ],
     image: "/images/red.png",
     isLearned: false
-  },
-  {
-    letter: "Thnak You",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/images/red.png",
-    isLearned: false
-  },
-  {
-    letter: "I Love You",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/images/red.png",
-    isLearned: false
-  },
+  }
 ]

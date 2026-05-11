@@ -26,12 +26,12 @@ export function CategoryCardWords() {
           {/* Description of the card */}
           <p className="text-gray-500 text-sm text-center">
             {" "}
-            Social Words and verbs
+            Social, Utility Words and Verbs
           </p>
 
           {/* Badge of teh card */}
           <span className="bg-purple-50 text-purple-500 text-sm font-medium px-4 py-1 rounded-full">
-            2 Categories
+            3 Categories
           </span>
         </div>
       </CardContent>

@@ -1,8 +1,9 @@
-import type { SocialWord } from "@/Types/indexSocialWords";
+import type { indexPronouns } from "@/Types/indexPronouns";
 
-export const socialWords: SocialWord[] = [
+
+export const pronouns: indexPronouns[] = [
   {
-    letter: "Bye",
+    letter: "He",
     description: "Raise one hand with the palm facing forward. Extend the thumb, index finger, and little finger while keeping the middle and ring fingers folded down.",
     tips: [
       "Keep the palm facing outward toward the person you are communicating with.",
@@ -13,7 +14,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Deaf",
+    letter: "His",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -25,7 +26,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Hearing",
+    letter: "Me",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -37,7 +38,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Hello",
+    letter: "My",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -49,7 +50,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "No",
+    letter: "Our",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -61,7 +62,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Sorry",
+    letter: "Their",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -73,7 +74,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Yes",
+    letter: "They",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -85,7 +86,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Thnak You",
+    letter: "We",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -97,7 +98,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "I Love You",
+    letter: "You",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -107,5 +108,5 @@ export const socialWords: SocialWord[] = [
     ],
     image: "/images/red.png",
     isLearned: false
-  },
+  }
 ]

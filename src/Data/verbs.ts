@@ -1,8 +1,9 @@
-import type { SocialWord } from "@/Types/indexSocialWords";
 
-export const socialWords: SocialWord[] = [
+import type { Verbs } from "@/Types/IndexVerbs";
+
+export const verbs : Verbs[] = [
   {
-    letter: "Bye",
+    letter: "Clean",
     description: "Raise one hand with the palm facing forward. Extend the thumb, index finger, and little finger while keeping the middle and ring fingers folded down.",
     tips: [
       "Keep the palm facing outward toward the person you are communicating with.",
@@ -13,7 +14,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Deaf",
+    letter: "Come",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -25,7 +26,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Hearing",
+    letter: "Cook",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -37,7 +38,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Hello",
+    letter: "Cry",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -49,7 +50,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "No",
+    letter: "Cut",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -61,7 +62,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Sorry",
+    letter: "Draw",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -73,7 +74,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Yes",
+    letter: "Drink",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -85,7 +86,7 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "Thnak You",
+    letter: "Draw",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",
@@ -97,7 +98,19 @@ export const socialWords: SocialWord[] = [
     isLearned: false
   },
   {
-    letter: "I Love You",
+    letter: "Drop",
+    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
+    tips: [
+     "Start the hand near the chin or lips before moving it outward.",
+     "Keep the fingers together and the movement smooth.",
+     "Move the hand toward the person you are thanking.",
+     "Do not brush down the lips; the motion should go outward from the chin."
+    ],
+    image: "/images/red.png",
+    isLearned: false
+  },
+  {
+    letter: "Eat",
     description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
     tips: [
      "Start the hand near the chin or lips before moving it outward.",

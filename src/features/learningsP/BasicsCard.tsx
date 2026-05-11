@@ -24,7 +24,7 @@ export function BasicsCard() {
 
         {/* Description of card */}
         <p className="text-gray-500 text-sm text-center">
-          Alphabet , Numbers and Pronouns
+          Alphabet , Numbers and Colors
         </p>
 
         {/* Badge */}

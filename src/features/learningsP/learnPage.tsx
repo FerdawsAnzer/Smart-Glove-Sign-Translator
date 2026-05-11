@@ -1,5 +1,5 @@
 import { BasicsCard } from "./BasicsCard";
-import { GreetingsCard } from "./GreetingsCard";
+import { EssentialsCard } from "./EssentialsCard";
 import { CategoryCardWords } from "./CategoryCardSWords";
 import { WhyLearnCard } from "./WhyLearncard";
 
@@ -21,7 +21,7 @@ export function LearnPage() {
       <div className="grid grid-cols-3 gap-6 ">
         <BasicsCard />
         <CategoryCardWords />
-        <GreetingsCard />
+        <EssentialsCard />
       </div>
 
       {/* Why Learn card container */}

@@ -1,10 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { PronounsCard } from "./PronounsCard";
+import { TimeCard } from "./TimeCard";
+import { QuantityCard } from "./QuantityCard";
 
-import { WordsCard } from "./wordCard";
-import { VerbsCard } from "./VerbsCard";
-import { UtilityWordCard } from "./UtilityWords";
-
-export function CategoryCardsWordPage() {
+export function CategoryCradPageEss() {
   const navigate = useNavigate();
   return (
     <div className=" w-full bg-blue-50 flex flex-col items-center py-12 px-6 gap-8 ">
@@ -24,9 +23,9 @@ export function CategoryCardsWordPage() {
 
       {/* The 3 cards container*/}
       <div className="grid grid-cols-3 gap-6 ">
-        <WordsCard />
-        <VerbsCard />
-        <UtilityWordCard />
+        <PronounsCard />
+        <TimeCard />
+        <QuantityCard />
       </div>
     </div>
   );
