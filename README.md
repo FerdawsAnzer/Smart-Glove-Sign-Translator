@@ -1,14 +1,16 @@
 # 🧤SignBridge — Smart Glove Sign Language Translator
-> A real-time American Sign Language (ASL) recognition system bridging communication between the deaf community and hearing users — built as a Human-Centered AI capstone project.
+> A real-time American Sign Language (ASL) recognition system bridging communication between the deaf community and hearing users built as a Human-Centered AI capstone project.
 ---
 
 ## 🎯 What is SignBridge?
 
-> SignBridge is an **assistive AI system** that translates hand gestures into text and speech in real time. A user wears a smart glove equipped with **flex sensors** and an **MPU6050 IMU**, performs an ASL sign, and the system immediately displays the recognized word as **text and audio output**.
+> SignBridge is an **assistive AI system** that translates hand gestures into text and speech in real time. A user wears a smart glove equipped with **flex sensors** and
+>  an **MPU6050 IMU**, performs an ASL sign, and the system immediately displays the recognized word as **text and audio output**.
 
 The system also includes an **interactive learning platform** for hearing users to practice and learn ASL signs.
 
-This is a **Human-Centered AI system by design** — the human is always in the loop, the AI assists communication, it never replaces the user's intent. If a gesture is misrecognized, the user simply redoes it. Control stays with the person.
+This is a **Human-Centered AI system by design** the human is always in the loop, the AI assists communication, 
+it never replaces the user's intent. If a gesture is misrecognized, the user simply redoes it. Control stays with the person.
 
 ---
 
@@ -36,10 +38,10 @@ This is a **Human-Centered AI system by design** — the human is always in the 
 ## ✨ Features
 - 🤝 **Real-time ASL gesture recognition** via smart glove hardware
 - 📡 **WebSocket streaming** for low-latency, bidirectional communication
-- 🧠 **KNN prototype / KNN+LSTM hybrid in development** — interpretable and scalable ML pipeline
+- 🧠 **KNN prototype / KNN+LSTM hybrid in development** interpretable and scalable ML pipeline
 - 🔊 **Text + Speech output** for recognized signs
 - 📚 **Interactive learning platform** for hearing users to learn ASL
-- 🔁 **Human-in-the-Loop** — user performs gesture → AI responds → user corrects if neede
+- 🔁 **Human-in-the-Loop** user performs gesture → AI responds → user corrects if neede
 ---
 
 ## 🛠️ Tech Stack
@@ -55,7 +57,8 @@ This is a **Human-Centered AI system by design** — the human is always in the 
 ---
 
 ## 🤖 Why KNN?
-The current implementation uses KNN with a Kaggle dataset to validate the backend pipeline and WebSocket communication. The production model will be a KNN+LSTM hybrid — combining KNN for spatial gesture pattern recognition with LSTM for temporal sequence modeling. This architecture is currently in development by the team's ML engineers.
+The current implementation uses KNN with a Kaggle dataset to validate the backend pipeline and WebSocket communication. The production model will be
+a KNN+LSTM hybrid  combining KNN for spatial gesture pattern recognition with LSTM for temporal sequence modeling. This architecture is currently in development by the team's ML engineers.
 
 This is an applied **Explainable AI (XAI)** decision.
 
@@ -103,7 +106,8 @@ Smart-Glove-Sign-Translator/
 **Conference:** DGFC 2026 *(paper submitted)*
 
 ---
-> ⚠️ **Original Repository**: This is the official and original repository of SignBridge, developed by [Ferdaws Anzer](https://github.com/FerdawsAnzer) and the SignBridge Team at Cyprus International University. Any copies or forks are not the original work.
+> ⚠️ **Original Repository**: This is the official and original repository of SignBridge, developed by 
+the SignBridge Team at Cyprus International University. Any copies or forks are not the original work.
 
 ---
 
