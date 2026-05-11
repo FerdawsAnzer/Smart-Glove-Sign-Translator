@@ -96,7 +96,7 @@ Smart-Glove-Sign-Translator/
 |---|---|
 | **Ferdaws Anzer** | FastAPI backend, WebSocket layer, ML integration, Learning & Practice platform frontend |
 |** Imane Sayd** | ML Model | scikit-learn (KNN), TensorFlow/Keras (LSTM — in dev) |
-| ** Ibtissame Arrassi ** | Authentication, Settings(Frontend),SignIn/SignOut Pages , SplashScreen |
+| ** Ibtissame Arrassi ** | Authentication, Settings(Frontend),SignIn/SignOut Pages , SplashScreen,Supabase|
 | **Ketsia Winner Nyembo** |Hardware & glove implementation |
 | **Logance Musese Mwamba** | Hardware & glove implementation |
 | **Chadrack Zeka Tshiwewe** | ESP32-S3 firmware & WebSocket transmission to backend |
