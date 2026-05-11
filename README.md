@@ -1,7 +1,5 @@
 # 🧤SignBridge — Smart Glove Sign Language Translator
-
 > A real-time American Sign Language (ASL) recognition system bridging communication between the deaf community and hearing users — built as a Human-Centered AI capstone project.
-> ⚠️ **Original Repository**: This is the official and original repository of SignBridge, developed by [Ferdaws Anzer](https://github.com/FerdawsAnzer) and the SignBridge Team at Cyprus International University. Any copies or forks are not the original work.
 ---
 
 ## 🎯 What is SignBridge?
