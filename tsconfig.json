@@ -3,16 +3,12 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-<<<<<<< HEAD
   ],
-   "compilerOptions": {
+  "compilerOptions": {
     "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   }
-=======
-  ]
->>>>>>> supabase
 }
