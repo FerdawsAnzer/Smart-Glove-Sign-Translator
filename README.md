@@ -103,8 +103,6 @@ Smart-Glove-Sign-Translator/
 
 **Supervisor:** Prof. Dr. Melike Şah Direkoğlu  
 **Institution:** Cyprus International University  
-**Conference:** DGFC 2026 *(paper submitted)*
-
 ---
 > ⚠️ **Original Repository**: This is the official and original repository of SignBridge, developed by 
 the SignBridge Team at Cyprus International University. Any copies or forks are not the original work.
