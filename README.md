@@ -34,75 +34,15 @@ it never replaces the user's intent. If a gesture is misrecognized, the user sim
         ▼
 [React / TypeScript Frontend]
   Real-time gesture display · Text + Speech output · ASL Learning Platform
-```
-## ✨ Features
-- 🤝 **Real-time ASL gesture recognition** via smart glove hardware
-- 📡 **WebSocket streaming** for low-latency, bidirectional communication
-- 🧠 **KNN prototype / KNN+LSTM hybrid in development** interpretable and scalable ML pipeline
-- 🔊 **Text + Speech output** for recognized signs
-- 📚 **Interactive learning platform** for hearing users to learn ASL
-- 🔁 **Human-in-the-Loop** user performs gesture → AI responds → user corrects if neede
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Hardware | ESP32-S3, Flex Sensors, MPU6050  |
-| Backend | Python, FastAPI, WebSockets |
-| ML Model | scikit-learn (KNN), TensorFlow/Keras (LSTM — in dev), pandas, numpy |
-| Frontend | React, TypeScript, Tailwind CSS, shadcn/ui |
-| Build Tool | Vite |
-
----
-
-## 🤖 Why KNN?
-The current implementation uses KNN with a Kaggle dataset to validate the backend pipeline and WebSocket communication. The production model will be
-a KNN+LSTM hybrid  combining KNN for spatial gesture pattern recognition with LSTM for temporal sequence modeling. This architecture is currently in development by the team's ML engineers.
-
-This is an applied **Explainable AI (XAI)** decision.
-
----
-
-## 📁 Project Structure
-
-```
-Smart-Glove-Sign-Translator/
-├── backend/
-│   ├── main.py                      # FastAPI app — WebSocket + REST endpoints
-│   ├── model/
-│   │   ├── test_model_knn.pkl       # Trained KNN classifier
-│   │   ├── test_scaler.pkl          # Feature scaler
-│   │   ├── test_feature_columns.json
-│   │   └── test_iqr_bounds.json     # IQR outlier filtering bounds
-│   └── requirements.txt
-├── src/
-│   ├── components/                  # Reusable React UI components
-│   ├── pages/                       # Translator page + Learning platform
-│   └── main.tsx
-└── README.md
-
----
-
-## 🚀 Getting Started
-
-### Backend
 
 
 
-## 👥 Team
 
-| Name | Contribution |
-|---|---|
-| **Ferdaws Anzer** | FastAPI backend, WebSocket layer, ML integration, Learning & Practice platform frontend |
-|** Imane Sayd** | ML Model | scikit-learn (KNN), TensorFlow/Keras (LSTM — in dev) |
-| ** Ibtissame Arrassi ** | Authentication, Settings(Frontend),SignIn/SignOut Pages , SplashScreen,|Database(supabase)|styling the whole app
-| **Ketsia Winner Nyembo** |Hardware & glove implementation |
-| **Logance Musese Mwamba** | Hardware & glove implementation |
-| **Chadrack Zeka Tshiwewe** | ESP32-S3 firmware & WebSocket transmission to backend |
 
-**Supervisor:** Prof. Dr. Melike Şah Direkoğlu  
-**Institution:** Cyprus International University  
+
+
+
+
 ---
 > ⚠️ **Original Repository**: This is the official and original repository of SignBridge, developed by 
 the SignBridge Team at Cyprus International University. Any copies or forks are not the original work.
