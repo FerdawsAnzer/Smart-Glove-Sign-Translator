@@ -20,7 +20,7 @@ export function MainLetterCard({
         <img
           src={currentLetter.image}
           alt={currentLetter.letter}
-          className="w-44 h-44 object-contain"
+          className="w-100 h-80 object-contain"
         />
         {/* Hold Position badge */}
         <span className="bg-blue-100 text-blue-500 text-xs font-medium px-4 py-1 rounded-full">
