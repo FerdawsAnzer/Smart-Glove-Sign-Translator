@@ -9,7 +9,7 @@ export const utilityWords : UtilityWords[] = [
       "Make sure the middle and ring fingers stay folded to clearly form the 'I-L-Y' handshape.",
       "Hold the gesture steady for a moment so it is easy to recognize."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/how.gif",
     isLearned: false
   },
   {
@@ -21,7 +21,7 @@ export const utilityWords : UtilityWords[] = [
      "Move the hand toward the person you are thanking.",
      "Do not brush down the lips; the motion should go outward from the chin."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/what.gif",
     isLearned: false
   },
   {
@@ -33,7 +33,7 @@ export const utilityWords : UtilityWords[] = [
      "Move the hand toward the person you are thanking.",
      "Do not brush down the lips; the motion should go outward from the chin."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/when.gif",
     isLearned: false
   },
   {
@@ -45,7 +45,7 @@ export const utilityWords : UtilityWords[] = [
      "Move the hand toward the person you are thanking.",
      "Do not brush down the lips; the motion should go outward from the chin."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/where.gif",
     isLearned: false
   },
   {
@@ -57,7 +57,7 @@ export const utilityWords : UtilityWords[] = [
      "Move the hand toward the person you are thanking.",
      "Do not brush down the lips; the motion should go outward from the chin."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/which.gif",
     isLearned: false
   },
   {
@@ -69,7 +69,7 @@ export const utilityWords : UtilityWords[] = [
      "Move the hand toward the person you are thanking.",
      "Do not brush down the lips; the motion should go outward from the chin."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/who.gif",
     isLearned: false
   },
   {
@@ -81,7 +81,7 @@ export const utilityWords : UtilityWords[] = [
      "Move the hand toward the person you are thanking.",
      "Do not brush down the lips; the motion should go outward from the chin."
     ],
-    image: "/images/red.png",
+    image: "/src/assets/Quest/why.gif",
     isLearned: false
   }
 ]

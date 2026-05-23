@@ -8,7 +8,7 @@ export const GreetingsData: indexGreeting[] = [
       "Move your hand slightly outward from the forehead.",
       "Practice greeting naturally as if you are saying hello to someone."
     ],
-    image: "/images/hello.png",
+    image: "/src/assets/SocialWords/Hello.gif",
     isLearned: false
   },
   {
