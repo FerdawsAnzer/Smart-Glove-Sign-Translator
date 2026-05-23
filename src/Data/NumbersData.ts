@@ -2,17 +2,6 @@ import type { indexNumber } from "@/Types/indexNumbers";
 
 export const NumbersData: indexNumber[] = [
   {
-    letter: "0",
-    description: "Form an 'O' handshape by touching your fingertips together.",
-    tips: [
-      "Keep all fingertips touching.",
-      "Hand should be relaxed.",
-      "Palm can face forward.",
-    ],
-    image: "/src/assets/imgsNum/Num0.jpg",
-    isLearned: false,
-  },
-  {
     letter: "1",
     description:
       "Extend your index finger upward while keeping other fingers closed.",
