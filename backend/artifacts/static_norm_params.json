@@ -1,0 +1,59 @@
+{
+  "flex_normalization": "global_minmax",
+  "global_ranges": {
+    "flex1": {
+      "min": 394.0,
+      "max": 1434.0
+    },
+    "flex2": {
+      "min": 271.0,
+      "max": 1003.0
+    },
+    "flex3": {
+      "min": 347.0,
+      "max": 1212.0
+    },
+    "flex4": {
+      "min": 205.0,
+      "max": 935.0
+    },
+    "flex5": {
+      "min": 333.0,
+      "max": 1071.0
+    }
+  },
+  "imu_normalization": "global_standard_scaler",
+  "imu_mean": [
+    -1781.607,
+    13959.8755,
+    1493.2471666666668,
+    3513.414875,
+    -248.151125,
+    -387.868625
+  ],
+  "imu_scale": [
+    4250.8677636710445,
+    4667.841541280054,
+    5180.952700026187,
+    431.66917850409595,
+    717.5704743806709,
+    499.3085621125906
+  ],
+  "flex_cols": [
+    "flex1",
+    "flex2",
+    "flex3",
+    "flex4",
+    "flex5"
+  ],
+  "imu_cols": [
+    "ax",
+    "ay",
+    "az",
+    "gx",
+    "gy",
+    "gz"
+  ],
+  "confidence_threshold": 0.7,
+  "timesteps": 10
+}

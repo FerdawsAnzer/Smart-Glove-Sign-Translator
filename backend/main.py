@@ -3,7 +3,7 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from model import predict
 
-app = FastAPI()# create the server
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -16,13 +16,14 @@ app.add_middleware(
 frontend_connection: WebSocket | None = None
 is_processing: bool = False
 
+
 @app.websocket("/ws/ui")
 async def ui_endpoint(websocket: WebSocket):
     global frontend_connection
-    await websocket.accept()# approved the connection(accepting teh connection and upgrade to websocket)
-    frontend_connection = websocket # we store the connection so we can use it later 
+    await websocket.accept()
+    frontend_connection = websocket
     print("✅ Frontend connected!")
-    try:#we use it to try catch any error and here if the user(clinet) disconnect we will catch it  and set teh conection to null
+    try:
         while True:
             await asyncio.sleep(1)
     except WebSocketDisconnect:
@@ -45,6 +46,7 @@ async def stop_processing():
 
 @app.websocket("/ws/glove")
 async def glove_endpoint(websocket: WebSocket):
+    global last_sent_letter, prediction_counter
     await websocket.accept()
     print("✅ Glove connected!")
     try:
@@ -56,12 +58,8 @@ async def glove_endpoint(websocket: WebSocket):
 
             result = await predict(data)
 
-            if result and frontend_connection:
-                await frontend_connection.send_json({
-                    "letter": result[0],
-                    "confidence": result[1]
-                })
-                print(f"📤 Sent to frontend: {result[0]}")
+                        prediction_counter = 0
+                        print(f"📤 Sent: {letter}")
 
     except WebSocketDisconnect:
         print("❌ Glove disconnected")
