@@ -1,20 +1,10 @@
-# ASL Smart Glove — Backend Dependencies
+# ASL Smart Glove — AI Related Dependencies (Were trained on python ver 3.10.0)
 # Install: pip install -r requirements.txt
-# Run:     uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-# ── Server ────────────────────────────────────────────────────
-fastapi==0.115.12
-uvicorn==0.34.3
-websockets==15.0.1
-
-# ── Deep learning ─────────────────────────────────────────────
-tensorflow==2.21.0
-keras==3.14.1
-
-# ── Numerical / ML ────────────────────────────────────────────
-numpy==2.4.4
-scikit-learn==1.8.0
-scipy==1.17.1
-
-# ── Model file handling ───────────────────────────────────────
-h5py==3.14.0
+numpy==2.2.6
+pandas == 2.3.3
+tensorflow==2.20.0
+keras==3.12.0
+h5py==3.15.1
+scikit-learn == 1.7.2
+matplotlib == 3.10.8
