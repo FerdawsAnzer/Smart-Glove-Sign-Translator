@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   Home,
   BookOpen,
@@ -35,7 +36,7 @@ const bottomNavItems: NavItem[] = [
 export function SideBar({ onLogout }: Props) {
   const [hovered, setHovered] = useState(false);
   const expanded = hovered;
-
+  
   return (
     <aside
       onMouseEnter={() => setHovered(true)}
@@ -51,7 +52,7 @@ export function SideBar({ onLogout }: Props) {
         overflow:       "hidden",
         flexShrink:     0,
         boxShadow:      expanded
-          ? "4px 0 24px rgba(99,102,241,0.10)"  // ✅ purple-tinted shadow
+          ? "4px 0 24px rgba(99,102,241,0.10)"  
           : "2px 0 8px  rgba(99,102,241,0.05)",
         position: "relative",
         zIndex:   40,
@@ -151,6 +152,7 @@ export function SideBar({ onLogout }: Props) {
 // ── NavItem component ──
 function NavItem({ item, expanded }: { item: NavItem; expanded: boolean }) {
   const Icon = item.icon;
+  const { t } = useTranslation(); 
 
   return (
     <NavLink
@@ -203,8 +205,8 @@ function NavItem({ item, expanded }: { item: NavItem; expanded: boolean }) {
               transition:    "opacity 0.2s ease",
               pointerEvents: "none",
             }}
-          >
-            {item.label}
+          >{t (`nav.${item.label.toLowerCase()}`)}
+           
           </span>
         </div>
       )}

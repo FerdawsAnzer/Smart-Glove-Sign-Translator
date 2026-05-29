@@ -1,5 +1,9 @@
-import type { input, output } from "framer-motion/client";
 
+export interface PredictionData  {
+  prediction: string;
+  confidence: number;
+  mode: "static" | "dynamic";
+}
 //the authenticated user 
 export interface User{
     id: string;
@@ -22,9 +26,14 @@ export interface HistoryEntry{
 }
 // raw sensor data coming from the glove 
 export interface SensorData {
-    flex: number[];
-    imu:{ax:number; ay: number; az: number};
-    timestamp: number ;
+  flex: number[];
+  imu: {
+    ax: number;
+    ay: number;
+    az: number;
+  };
+  label: string;
+  mode: "static" | "dynamic";
 }
 //auth store shape 
 export interface AuthState {
@@ -50,9 +59,9 @@ export interface HistoryState {
 export interface GloveState {
   sensorData: SensorData | null;
   currentGesture: string | null;
-  translatedText: string | null;       // ✅ fixed
+  translatedText: string | null;      
   isStreaming: boolean;
   setSensorData: (data: SensorData) => void;
-  setTranslation: (gesture: string, text: string) => void; // ✅ fixed
+  setTranslation: (gesture: string, text: string) => void; 
   setStreaming: (val: boolean) => void;
 }

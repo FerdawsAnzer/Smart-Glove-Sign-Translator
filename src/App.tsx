@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Toaster } from "@/components/ui/sonner";
-import { useAuthStore } from "@/store/authStore";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { SideBar } from "./components/Layout/SideBar";
 import { Header } from "./components/Layout/Header";
 import { DashboardPage } from "./features/dashboard/components/dashboardPage";
@@ -17,54 +16,68 @@ import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
 import { Settings } from "@/pages/settings";
+import { useAuthStore } from "./store/authStore";
+import { supabase } from "@/lib/supabase/client";
 
 function App() {
-  const { user, loading, fetchUser, signOut } = useAuthStore(); //  get everything from store
+  const { user, loading, fetchUser, signOut } = useAuthStore();
   const [splashFinished, setSplashFinished] = useState(false);
+  const { i18n } = useTranslation();
 
-  // ✅ Restore session on app load — replaces your manual checkSession
+  // ✅ restore session on load
   useEffect(() => {
     fetchUser();
   }, []);
 
+  // ✅ switch RTL for Arabic
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  // ✅ restore saved language preference on login
+  useEffect(() => {
+    const restoreLanguage = async () => {
+      if (!user) return;
+      const { data } = await supabase
+        .from("user_settings")
+        .select("output_language")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      if (data?.output_language) {
+        i18n.changeLanguage(data.output_language);
+      }
+    };
+    restoreLanguage();
+  }, [user]);
+
   const handleLogout = async () => {
-    await signOut(); // ✅ store handles everything, no manual supabase call needed
+    await signOut();
   };
 
-  // Show splash screen first
   if (!splashFinished) {
     return <SplashScreen onFinish={() => setSplashFinished(true)} />;
   }
 
-  // ✅ Show nothing while checking session (prevents flicker to /signIn)
-  if (loading) {
-    return null; // or a loading spinner
-  }
+  if (loading) return null;
 
   return (
     <TooltipProvider>
-      <Toaster position="top-right" />
       <Routes>
         {/* AUTH ROUTES */}
-        <Route
-          path="/signIn"
-          element={<SignIn />} // ✅ no need to pass onLogin, store handles user state
-        />
-        <Route
-          path="/signUp"
-          element={<SignUp />}
-        />
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
 
         {/* PROTECTED ROUTES */}
-        {user ? ( // ✅ user from store instead of isLoggedIn state
+        {user ? (
           <Route
             path="/*"
             element={
               <div style={{ display: "flex", minHeight: "100vh" }}>
                 <SideBar onLogout={handleLogout} />
-                <div className="flex flex-col flex-1 min-w-0">
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", overflowX: "hidden" }}>
                   <Header />
-                  <main className="flex-1 overflow-auto">
+                  <main style={{ flex: 1, overflowX: "hidden" }}>
                     <Routes>
                       <Route path="/" element={<Navigate to="/dashboard" replace />} />
                       <Route path="/dashboard" element={<DashboardPage />} />

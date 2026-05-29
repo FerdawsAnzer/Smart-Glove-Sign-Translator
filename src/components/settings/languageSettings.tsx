@@ -1,12 +1,14 @@
 import { Hand } from "lucide-react";
 import { Label } from "../ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../ui/select";
+import { useTranslation } from "react-i18next";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+
+const UI_LANGUAGES = [
+  { code: "en", label: "English",  flag: "🇬🇧" },
+  { code: "fr", label: "Français", flag: "🇫🇷" },
+  { code: "ar", label: "العربية",  flag: "🇸🇦" },
+  { code: "tr", label: "Türkçe",   flag: "🇹🇷" },
+];
 
 interface LanguageSettingsProps {
   language: string;
@@ -15,25 +17,27 @@ interface LanguageSettingsProps {
   onTargetLanguageChange: (value: string) => void;
 }
 
-export function LanguageSettings({
-  language,
-  targetLanguage,
-  onLanguageChange,
-  onTargetLanguageChange,
-}: LanguageSettingsProps) {
+export function LanguageSettings({ language, targetLanguage, onLanguageChange, onTargetLanguageChange }: LanguageSettingsProps) {
+  const { i18n, t } = useTranslation(); 
+
+  const handleUILanguageChange = (code: string) => {
+    i18n.changeLanguage(code);
+    onTargetLanguageChange(code);
+  };
+
   return (
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Translation Settings
+          {t("settings.languages")}
         </h3>
         <p className="text-sm text-gray-500 mb-6">
-          Configure your preferred sign language and translation language
+          {t("settings.subtitle")} 
         </p>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="signLanguage">Sign Language</Label>
+        <Label htmlFor="signLanguage">{t("dashboard.aslInput")}</Label> 
         <Select value={language} onValueChange={onLanguageChange}>
           <SelectTrigger id="signLanguage">
             <SelectValue placeholder="Select sign language" />
@@ -47,33 +51,39 @@ export function LanguageSettings({
         </p>
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="targetLanguage">Translation Language</Label>
-        <Select value={targetLanguage} onValueChange={onTargetLanguageChange}>
-          <SelectTrigger id="targetLanguage">
-            <SelectValue placeholder="Select translation language" />
-          </SelectTrigger>
-          <SelectContent className="bg-white text-gray-900">
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="es">Spanish</SelectItem>
-            <SelectItem value="fr">French</SelectItem>
-            <SelectItem value="de">German</SelectItem>
-            <SelectItem value="ja">Japanese</SelectItem>
-            <SelectItem value="zh">Chinese</SelectItem>
-            <SelectItem value="ar">Arabic</SelectItem>
-          </SelectContent>
-        </Select>
+      <div className="space-y-3">
+        <Label>App Language</Label>
+        <p className="text-xs text-gray-500">Changes the app interface language instantly</p>
+        <div className="grid grid-cols-2 gap-3">
+          {UI_LANGUAGES.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => handleUILanguageChange(lang.code)}
+              className="flex items-center gap-3 p-4 rounded-xl transition-all text-left"
+              style={{
+                border: i18n.language === lang.code ? "2px solid #8b5cf6" : "1px solid #e8eaf6",
+                background: i18n.language === lang.code ? "linear-gradient(135deg, #eff6ff, #f5f3ff)" : "white",
+              }}
+            >
+              <span className="text-2xl">{lang.flag}</span>
+              <span className="font-medium text-sm text-gray-800">{lang.label}</span>
+              {i18n.language === lang.code && (
+                <span className="ml-auto text-xs font-bold" style={{ color: "#8b5cf6" }}>✓</span>
+              )}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <div className="rounded-xl p-4" style={{ background: "linear-gradient(135deg, #eff6ff, #f5f3ff)", border: "1px solid #e8eaf6" }}>
         <div className="flex gap-3">
-          <Hand className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+          <Hand className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#6366f1" }} />
           <div>
-            <h4 className="font-medium text-blue-900 mb-1">Translation Tip</h4>
-            <p className="text-sm text-blue-700">
-              For best results, ensure your glove is properly connected via
-              Wifi and fitted snugly on your hand for accurate gesture
-              recognition.
+            <h4 className="font-medium mb-1" style={{ color: "#3730a3" }}>
+              {t("dashboard.quickTip")} 
+            </h4>
+            <p className="text-sm" style={{ color: "#4338ca" }}>
+              {t("dashboard.tipText")} 
             </p>
           </div>
         </div>

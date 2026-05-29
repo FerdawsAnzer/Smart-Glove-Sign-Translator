@@ -27,15 +27,21 @@ export const useHistoryStore = create<HistoryState>((set) => ({
   },
 
   addEntry: async (userId, input, output, language = "ASL") => {
-    await saveHistory(userId, input, output, language);
-    // Re-fetch to get the real UUID and created_at from Supabase
+    console.log("STORE addEntry called with:", { userId, input, output }); // ✅ debug
+
+    const { error } = await saveHistory(userId, input, output, language);
+
+    console.log("STORE saveHistory error:", error); // ✅ debug
+
+    if (error) throw error;
+
     const data = await fetchHistory(userId);
+    console.log("STORE after fetch entries:", data); // ✅ debug
     set({ entries: data });
   },
 
   toggleStar: async (id, current) => {
     await toggleStarred(id, !current);
-    // Update locally without re-fetching
     set((state) => ({
       entries: state.entries.map((e) =>
         e.id === id ? { ...e, starred: !current } : e

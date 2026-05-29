@@ -2,28 +2,27 @@ import { useEffect, useState } from "react";
 import { Camera } from "lucide-react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
-import { useAuthStore } from "@/store/authStore"; // ✅ use store instead of raw supabase auth
+import { useAuthStore } from "@/store/authStore";
 import { supabase } from "@/lib/supabase/client";
+import { useTranslation } from "react-i18next"; 
+import { toast } from "sonner"; 
 
 export function ProfileSettings() {
-  const { user } = useAuthStore(); // ✅ get user from store
+  const { user } = useAuthStore();
+  const { t } = useTranslation(); 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
 
   const loadProfile = async () => {
     if (!user) return;
-
     setEmail(user.email || "");
-
     const { data: profile } = await supabase
       .from("profiles")
       .select("full_name")
       .eq("id", user.id)
       .maybeSingle();
-
     const fullName = profile?.full_name || "";
     const parts = fullName.split(" ");
     setFirstName(parts[0] || "");
@@ -32,33 +31,29 @@ export function ProfileSettings() {
 
   useEffect(() => {
     if (user) loadProfile();
-  }, [user]); // ✅ re-runs when user is available
+  }, [user]);
 
   const handleSave = async () => {
     if (!user) return;
     setLoading(true);
-    setMessage("");
-
     const full_name = `${firstName} ${lastName}`.trim();
-
     const { error } = await supabase
       .from("profiles")
-      .upsert({ id: user.id, full_name }); // ✅ use user.id from store
+      .upsert({ id: user.id, full_name });
 
     if (error) {
-      setMessage(error.message);
+      toast.error(error.message);
     } else {
-      setMessage("Profile updated successfully ✅");
+      toast.success(t("toast.profileSaved")); 
       window.dispatchEvent(new CustomEvent("profileUpdated", { detail: { full_name } }));
       await loadProfile();
     }
-
     setLoading(false);
   };
 
   const handleCancel = () => {
     loadProfile();
-    setMessage("");
+    toast.info(t("toast.profileCancelled")); 
   };
 
   const initials = (firstName?.[0] || "") + (lastName?.[0] || "") || "U";
@@ -77,55 +72,50 @@ export function ProfileSettings() {
           </button>
         </div>
         <div>
-          <h3 className="text-lg font-semibold">Profile Picture</h3>
-          <p className="text-sm text-gray-500">
-            Upload a photo to personalize your account
-          </p>
+          <h3 className="text-lg font-semibold">{t("profile.title")}</h3> 
+          <p className="text-sm text-gray-500">{t("profile.subtitle")}</p> 
         </div>
       </div>
 
       {/* NAME */}
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label>First name</Label>
+          <Label>{t("profile.firstName")}</Label> 
           <Input value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
         <div className="space-y-2">
-          <Label>Last name</Label>
+          <Label>{t("profile.lastName")}</Label> 
           <Input value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
       </div>
 
       {/* EMAIL */}
       <div className="space-y-2">
-        <Label>Email</Label>
+        <Label>{t("profile.email")}</Label> 
         <Input value={email} disabled />
       </div>
 
-      {/* MESSAGE */}
-      {message && (
-        <p className={`text-sm ${message.includes("✅") ? "text-green-600" : "text-red-600"}`}>
-          {message}
-        </p>
-      )}
-
-      {/* ✅ Save/Cancel buttons moved here */}
-      <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
+      {/* Buttons */}
+      <div className="flex justify-end gap-3 p-6 border-t border-gray-200">
         <button
           onClick={handleCancel}
           className="px-4 py-2 border rounded-lg text-gray-600 hover:bg-gray-50"
         >
-          Cancel
+          {t("profile.cancel")} 
         </button>
-        <button
-          onClick={handleSave}
-          disabled={loading}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-        >
-          {loading ? "Saving..." : "Save Changes"}
-        </button>
+        
+<button
+  onClick={handleSave}
+  disabled={loading}
+  className="px-4 py-2 text-white rounded-lg disabled:opacity-50 border-0"
+  style={{
+    background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+    boxShadow: "0 4px 12px rgba(99,102,241,0.3)",
+  }}
+>
+  {loading ? "..." : t("profile.save")}
+</button>
       </div>
-
     </div>
   );
 }

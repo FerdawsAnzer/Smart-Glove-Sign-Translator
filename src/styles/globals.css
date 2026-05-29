@@ -69,3 +69,8 @@ body {
   color: white !important;
   border-radius: 10px;
 }
+.input-gradient:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #8b5cf6, 0 0 0 1px #3b82f6;
+}
