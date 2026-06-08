@@ -2,88 +2,136 @@ import type { indexPronouns } from "@/Types/indexPronouns";
 
 
 export const pronouns: indexPronouns[] = [
+
   {
-    letter: "He",
-    description: "Raise one hand with the palm facing forward. Extend the thumb, index finger, and little finger while keeping the middle and ring fingers folded down.",
+    letter: "Me/I",
+    description: "Point to yourself using the index finger near the chest.",
     tips: [
-      "Keep the palm facing outward toward the person you are communicating with.",
-      "Make sure the middle and ring fingers stay folded to clearly form the 'I-L-Y' handshape.",
-      "Hold the gesture steady for a moment so it is easy to recognize."
+     "Touch or point toward the center of your chest.",
+     "Keep the movement small and natural.",
+     "Use a relaxed hand and avoid stiff motions.",
+     "Maintain clear direction toward yourself."
     ],
-    image: "/src/assets/Pronouns/it-she-him.gif",
+    image: "/images/Me-I.gif",
     isLearned: false
   },
+
   {
-    letter: "His",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
+    letter: "My/Mine",
+    description: "Place an open hand flat against the chest.",
     tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Pronouns/his.gif",
+    "Keep the fingers together and palm open.",
+    "Touch the chest lightly with the palm.",
+    "Avoid bending the fingers too much.",
+    "Keep the motion calm and smooth."
+  ],
+    image: "/images/My-Mine.gif",
     isLearned: false
   },
-  {
-    letter: "My",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Pronouns/My.gif",
-    isLearned: false
-  },
-  {
-    letter: "Me",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Pronouns/Me.gif",
-    isLearned: false
-  },
+
   
   {
-    letter: "They",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Pronouns/they-them.gif",
+    letter: "You",
+  description: "Point outward toward the other person using the index finger.",
+  tips: [
+    "Extend the index finger clearly forward.",
+    "Aim naturally toward the person you mean.",
+    "Keep the wrist relaxed.",
+    "Avoid exaggerated arm movement."
+  ],
+    image: "/images/You.gif",
     isLearned: false
   },
+
+  {
+    letter: "Your/Yours",
+  description: "Move an open palm outward toward the other person.",
+  tips: [
+    "Keep the palm open with fingers together.",
+    "Face the palm toward the person.",
+    "Push the hand outward gently.",
+    "Keep the movement smooth and controlled."
+  ],
+    image: "/images/Your-Yours.gif",
+    isLearned: false
+  },
+
+  {
+    letter: "He/She/It",
+  description: "Point toward the person or object being referenced.",
+  tips: [
+    "Use a clear pointing direction.",
+    "Keep the index finger straight.",
+    "Use natural facial focus toward the target.",
+    "Avoid fast or unclear movements."
+  ],
+    image: "/images/He-She-It.gif",
+    isLearned: false
+  },
+
+  {
+    letter: "His/Her/Its",
+  description: "Use an open palm directed toward the person or object.",
+  tips: [
+    "Keep the hand open and relaxed.",
+    "Move slightly toward the referenced subject.",
+    "Keep fingers together for clarity.",
+    "Maintain a gentle outward motion."
+  ],
+    image: "/images/His/Her-Its.gif",
+    isLearned: false
+  },
+
   {
     letter: "We",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Pronouns/we_us.gif",
+  description: "Move the index finger in a small arc between yourself and others.",
+  tips: [
+    "Start by pointing to yourself first.",
+    "Sweep the motion smoothly toward the group.",
+    "Keep the movement small and controlled.",
+    "Use relaxed wrist movement."
+  ],
+    image: "/images/We.gif",
     isLearned: false
   },
+
   {
-    letter: "You",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Pronouns/You.gif",
+    letter: "Our/Ours",
+  description: "Use an open palm moving in a small arc across the group area.",
+  tips: [
+    "Keep the palm open and fingers together.",
+    "Move the hand smoothly across the space.",
+    "Show inclusion with a gentle sweeping motion.",
+    "Avoid sharp or rushed movements."
+  ],
+    image: "/images/Our-Ours.gif",
     isLearned: false
-  }
+  },
+
+  {
+    letter: "They",
+  description: "Point outward toward multiple people or a group.",
+  tips: [
+    "Use a slight sweeping point for groups.",
+    "Keep the hand relaxed and natural.",
+    "Face the direction of the people clearly.",
+    "Make the movement easy to follow."
+  ],
+    image: "/images/They.gif",
+    isLearned: false
+  },
+
+  {
+    letter: "Their/Theirs",
+  description: "Move an open palm toward the referenced group.",
+  tips: [
+    "Keep the palm open and relaxed.",
+    "Direct the motion toward the group clearly.",
+    "Use a smooth outward movement.",
+    "Keep finger positioning neat and consistent."
+  ],
+    image: "/images/Their-Theirs.gif",
+    isLearned: false
+  },
+
 ]

@@ -9,7 +9,7 @@ export const ColorsData: indexAlphabet[] = [
       "Start near the upper lip and move slightly downward.",
       "Practice the motion slowly to make the sign clear."
     ],
-    image: "/src/assets/Colors/Red.gif",
+    image: "/images/Red.gif",
     isLearned: false
   },
   {
@@ -20,7 +20,7 @@ export const ColorsData: indexAlphabet[] = [
       "Move the hand gently from side to side.",
       "Keep the movement small and controlled."
     ],
-    image: "/src/assets/Colors/Blue.gif",
+    image: "/images/Blue.gif",
     isLearned: false
   },
   {
@@ -31,7 +31,7 @@ export const ColorsData: indexAlphabet[] = [
       "Keep the other fingers closed.",
       "Move the hand slightly to emphasize the sign."
     ],
-    image: "/src/assets/Colors/Green.gif",
+    image: "/images/Green.gif",
     isLearned: false
   },
   {
@@ -42,7 +42,7 @@ export const ColorsData: indexAlphabet[] = [
       "Keep the other fingers folded.",
       "Move the hand side to side slightly."
     ],
-    image: "/src/assets/Colors/Yellow.gif",
+    image: "/images/Yellow.gif",
     isLearned: false
   },
   {
@@ -53,7 +53,7 @@ export const ColorsData: indexAlphabet[] = [
       "Move the finger across smoothly.",
       "Keep the motion slow and clear."
     ],
-    image: "/src/assets/Colors/Black.gif",
+    image: "/images/Black.gif",
     isLearned: false
   },
   {
@@ -64,7 +64,7 @@ export const ColorsData: indexAlphabet[] = [
       "Move the hand forward slowly.",
       "Keep fingers slightly open."
     ],
-    image: "/src/assets/Colors/White.gif",
+    image: "/images/White.gif",
     isLearned: false
   },
   
@@ -76,7 +76,7 @@ export const ColorsData: indexAlphabet[] = [
       "Touch the chin lightly.",
       "Avoid large movements."
     ],
-    image: "/src/assets/Colors/Pink.gif",
+    image: "/images/Pink.gif",
     isLearned: false
   },
   {
@@ -87,7 +87,7 @@ export const ColorsData: indexAlphabet[] = [
       "Shake gently from the wrist.",
       "Make sure the fingers remain clearly shaped."
     ],
-    image: "/src/assets/Colors/Purple.gif",
+    image: "/images/Purple.gif",
     isLearned: false
   },
   {
@@ -98,7 +98,22 @@ export const ColorsData: indexAlphabet[] = [
       "Close the fingers toward the thumb repeatedly.",
       "Keep the hand close to the mouth."
     ],
-    image: "/src/assets/Colors/Orange.gif",
+    image: "/images/Orange.gif",
+    isLearned: false
+  },
+
+  {
+    letter: "Gray",
+    description: "Both hands start near the chest with fingers relaxed, then move outward while opening slightly.",
+    tips: [
+      "Start with the hands relaxed near the upper chest area.",
+      "Keep the fingers naturally together at the beginning of the sign.",
+      "Move the hands outward smoothly while slightly opening the fingers.",
+      "Avoid stiff finger movements and keep the motion soft and fluid.",
+      "Watch the thumb position carefully and keep it relaxed against the hand."
+    ],
+    image: "/images/Gray.gif",
     isLearned: false
   }
+
 ];

@@ -12,45 +12,52 @@ export const AlpahbetData: indexAlphabet[] = [
     image: "/images/A.png",
     isLearned: false  
   },
+
   {
     letter: "B",
-    description: "Flat hand with fingers together, thumb across palm",
+    description: "Flat hand with fingers together and thumb bent tightly across the palm.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
-      "Keep your movements smooth and natural."
+       "Keep all four fingers straight and together.",
+       "Bend the thumb fully across the palm.",
+       "Thumb should press tightly toward the little finger.",
+       "Palm faces forward."
     ],
     image: "/images/A.png",
     isLearned: false  
   },
+
 {
     letter: "C",
-    description: "Curved hand forming C shape",
+    description: "Curved hand forming C shape.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/A.png",
     isLearned: false  
   },
+
 {
     letter: "D",
-    description: "Index finger up, other fingers touch thumb",
+    description: "Index finger points upward while thumb and middle finger touch to form a circle. Ring and pinky are folded into the palm.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
-      "Keep your movements smooth and natural."
+    "Make a clear circle by touching thumb and middle finger.",
+    "Keep the index finger fully extended upward.",
+    "Fold ring and pinky into the palm.",
+    "Turn the hand so it is viewed from the side (not palm-forward).",
+    "The palm is oriented sideways, not facing the viewer."
     ],
     image: "/images/D.png",
     isLearned: false  
   },
+
 {
     letter: "E",
-    description: "Fingers curled down touching thumb",
+    description: "Fingers curled down touching thumb.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/E.png",
@@ -58,10 +65,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "F",
-    description: "Index and thumb form circle, other fingers up",
+    description: "Index and thumb form circle, other fingers up.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/F.png",
@@ -69,10 +76,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "G",
-    description: "Index and thumb point horizontally",
+    description: "Index and thumb point horizontally.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/G.png",
@@ -80,10 +87,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "H",
-    description: "Index and middle finger point horizontally",
+    description: "Index and middle finger point horizontally.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/H.png",
@@ -91,10 +98,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "I",
-    description: "Pinky finger up, others closed with thumb",
+    description: "Pinky finger up, others closed with thumb.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/I.png",
@@ -102,10 +109,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "J",
-    description: "Pinky up, draw a J in the air",
+    description: "Pinky up, draw a J in the air.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/J.png",
@@ -113,10 +120,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "K",
-    description: "Index and middle up in V, thumb between them",
+    description: "Index and middle up in V, thumb between them.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/K.png",
@@ -126,8 +133,8 @@ export const AlpahbetData: indexAlphabet[] = [
     letter: "L",
     description: "Index and thumb form L shape.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/L.png",
@@ -135,10 +142,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "M",
-    description: "Three fingers over thumb, pinky down",
+    description: "Three fingers over thumb, pinky down.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/M.png",
@@ -146,10 +153,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "N",
-    description: "Two fingers over thumb, others down",
+    description: "Two fingers over thumb, others down.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/N.png",
@@ -157,10 +164,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "O",
-    description: "Fingers form circle shape",
+    description: "Fingers form circle shape.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/O.png",
@@ -168,10 +175,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "P",
-    description: "Like K but pointing down",
+    description: "Like K but pointing down.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/P.png",
@@ -179,10 +186,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "Q",
-    description: "Index and thumb point down",
+    description: "Index and thumb point down.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/Q.png",
@@ -190,10 +197,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "R",
-    description: "Index and middle crossed",
+    description: "Index and middle crossed.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/R.png",
@@ -201,10 +208,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
 {
     letter: "S",
-    description: "Fist with thumb over fingers",
+    description: "Fist with thumb over fingers.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/S.png",
@@ -212,10 +219,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
   {
     letter: "T",
-    description: "Thumb between index and middle",
+    description: "Thumb between index and middle.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/T.png",
@@ -223,10 +230,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
   {
     letter: "U",
-    description: "Index and middle up together",
+    description: "Index and middle up together.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/U.png",
@@ -234,10 +241,10 @@ export const AlpahbetData: indexAlphabet[] = [
   },
   {
     letter: "V",
-    description: "Index and middle up in V shape",
+    description: "Index and middle finger up in a V shape, with thumb relaxed and flattened along the ring finger.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Keep the index and middle fingers straight and evenly spaced in a clear V.",
+      "Let the thumb stay relaxed and flat against the ring finger.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/V.png",
@@ -245,49 +252,50 @@ export const AlpahbetData: indexAlphabet[] = [
   },
   {
     letter: "W",
-    description: "Three fingers up in W shape",
+    description: "Three fingers up in W shape.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/W.png",
     isLearned: false  
   },
+
   {
     letter: "X",
-    description: "Index bent like a hook",
+    description: "Index bent like a hook.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Turn the hand so it is viewed from the side (not palm-forward).",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/X.png",
     isLearned: false  
   },
+  
   {
     letter: "Y",
-    description: "Thumb and pinky extended",
+    description: "Thumb and pinky extended.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/Y.png",
     isLearned: false  
   },
+
   {
     letter: "Z",
-    description: "Index draws a Z in the air",
+    description: "Index draws a Z in the air.",
     tips: [
-      "Watch the hand animation carefully and follow the movement",
-      "Practice in front of a mirror to check your form",
+      "Watch the hand animation carefully and follow the movement.",
+      "Practice in front of a mirror to check your form.",
       "Keep your movements smooth and natural."
     ],
     image: "/images/Z.png",
     isLearned: false  
   },
-
-
 
 ];

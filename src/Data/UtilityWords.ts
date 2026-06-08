@@ -1,87 +1,92 @@
-
 import type { UtilityWords } from "@/Types/IndexUtilityWords";
 export const utilityWords : UtilityWords[] = [
+
+  {
+    letter: "Where",
+    description: "Extend your right index finger pointing upward and wave it side to side from the wrist.",
+    tips: [
+    "Only the index finger is extended, keep all other fingers curled in.",
+    "The waving motion comes from the wrist, not the whole arm.",
+    "Keep the hand raised at about chin to shoulder level.",
+    "Furrow your brows to signal the WH question expression."
+  ],
+    image: "/images/Where.gif",
+    isLearned: false
+  },
+
+  {
+    letter: "Who",
+  description: "Make an L-shape with your right hand, then place the tip of your index finger on your chin and rotate or wiggle it slightly.",
+  tips: [
+    "The index finger rests lightly on the chin, don't press too hard.",
+    "The small circular or wiggling motion is what distinguishes it from other chin signs.",
+    "Keep the rest of your fingers relaxed and curled.",
+    "Pair with a furrowed brow to complete the question expression."
+  ],
+    image: "/images/Who.gif",
+    isLearned: false
+  },
+
+   {
+    letter: "Why",
+    description: "Touch your right middle finger to your forehead, then pull the hand away while transitioning into a loose bent-finger handshape in front of you.",
+    tips: [
+    "The middle finger makes brief contact with the forehead before pulling away.",
+    "As the hand moves forward, let the fingers naturally curve into a loose claw shape.",
+    "The movement represents a thought leaving your head.",
+    "Furrow your brows to complete the WH question facial expression."
+  ],
+    image: "/images/Why.gif",
+    isLearned: false
+  },
+
   {
     letter: "How",
-    description: "Raise one hand with the palm facing forward. Extend the thumb, index finger, and little finger while keeping the middle and ring fingers folded down.",
+    description: "Place both hands together in front of you with knuckles touching and thumbs pointing up. Roll both hands forward and upward, ending with palms facing up.",
     tips: [
-      "Keep the palm facing outward toward the person you are communicating with.",
-      "Make sure the middle and ring fingers stay folded to clearly form the 'I-L-Y' handshape.",
-      "Hold the gesture steady for a moment so it is easy to recognize."
-    ],
-    image: "/src/assets/Quest/how.gif",
+    "Start with the knuckles of both hands touching each other.",
+    "The rolling motion is smooth, think of opening a book forward.",
+    "End clearly with palms facing upward and fingers relaxed.",
+    "Furrow your brows to complete the WH question facial expression."
+  ],
+    image: "/images/How.gif",
     isLearned: false
   },
   {
     letter: "What",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
+    description: "Hold both hands out in front of you with palms facing upward and fingers loosely spread, then tilt them slightly side to side as if presenting nothing.",
     tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Quest/what.gif",
+    "Both hands move together in a loose, relaxed shrug-like motion.",
+    "Keep fingers naturally spread, not stiff or tightly together.",
+    "The motion is subtle, not exaggerated, a gentle side-to-side tilt.",
+    "Furrow your brows and pair with a slight shoulder shrug for full expression."
+  ],
+    image: "/images/What.gif",
     isLearned: false
   },
   {
     letter: "When",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
+    description: "Hold your left index finger pointing upward. With your right index finger, draw a circle around it, then tap the tip of the left finger.",
     tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Quest/when.gif",
+    "The left finger stays completely still as the base.",
+    "The right finger circles smoothly before landing on the fingertip.",
+    "Both fingers should be close together, the circle is small and tight.",
+    "Furrow your brows to complete the WH question facial expression."
+  ],
+    image: "/images/When.gif",
     isLearned: false
   },
-  {
-    letter: "Where",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Quest/where.gif",
-    isLearned: false
-  },
+
   {
     letter: "Which",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
+    description: "Hold both hands in front of you with thumbs pointing up (A-handshape). Alternate moving them up and down like a scale weighing two options.",
     tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Quest/which.gif",
-    isLearned: false
-  },
-  {
-    letter: "Who",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Quest/who.gif",
-    isLearned: false
-  },
-  {
-    letter: "Why",
-    description: "Place the fingertips of one hand near your chin or lips with the palm facing you, then move the hand forward and slightly downward away from your face.",
-    tips: [
-     "Start the hand near the chin or lips before moving it outward.",
-     "Keep the fingers together and the movement smooth.",
-     "Move the hand toward the person you are thanking.",
-     "Do not brush down the lips; the motion should go outward from the chin."
-    ],
-    image: "/src/assets/Quest/why.gif",
+    "Both hands start at the same height before the alternating motion begins.",
+    "The up-down alternating movement is smooth and even, not jerky.",
+    "Keep the thumbs clearly extended upward throughout the motion.",
+    "Furrow your brows to complete the WH question facial expression."
+  ],
+    image: "/images/Which.gif",
     isLearned: false
   }
 ]
