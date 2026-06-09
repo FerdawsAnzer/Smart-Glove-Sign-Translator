@@ -10,7 +10,7 @@ type ModeSelectorProps = {
 
 export function ModeSelector({ mode, onModeChange }: ModeSelectorProps) {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 gap-4">
       <ModeSelectorCard
         icon={BookOpen}
         title="Learn Mode"
@@ -19,14 +19,15 @@ export function ModeSelector({ mode, onModeChange }: ModeSelectorProps) {
         isActive={mode === "Learn"}
         onClick={() => onModeChange("Learn")}
       />
-      <ModeSelectorCard
+    </div>
+  );
+}
+/**PracticeMode
+<ModeSelectorCard
         icon={RefreshCw}
         title="Practice Mode"
         description="Review and reinforce your knowledge"
         iconColor="text-green-500"
         isActive={mode === "Practice"}
         onClick={() => onModeChange("Practice")}
-      />
-    </div>
-  );
-}
+      /> */

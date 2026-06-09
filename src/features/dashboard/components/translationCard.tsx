@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { copy, speak } from "@/utils/speech";
 import { Globe, Volume2, Copy } from "lucide-react";
 import type { TranslationCardProps } from "src/Types/glove";
 
