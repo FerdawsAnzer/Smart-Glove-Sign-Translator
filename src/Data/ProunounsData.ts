@@ -12,7 +12,7 @@ export const pronouns: indexPronouns[] = [
      "Use a relaxed hand and avoid stiff motions.",
      "Maintain clear direction toward yourself."
     ],
-    image: "/src/assets/Pronouns/Me.gif",
+    image: "/src/assets/Pronouns/me_I.gif",
     isLearned: false
   },
 
@@ -25,7 +25,7 @@ export const pronouns: indexPronouns[] = [
     "Avoid bending the fingers too much.",
     "Keep the motion calm and smooth."
   ],
-    image: "/src/assets/Pronouns/My-Mine.gif",
+    image: "/src/assets/Pronouns/My.gif",
     isLearned: false
   },
 
@@ -52,7 +52,7 @@ export const pronouns: indexPronouns[] = [
     "Push the hand outward gently.",
     "Keep the movement smooth and controlled."
   ],
-    image: "/src/assets/Pronouns/Your-Yours.gif",
+    image: "/src/assets/Pronouns/Your.gif",
     isLearned: false
   },
 
@@ -65,7 +65,7 @@ export const pronouns: indexPronouns[] = [
     "Use natural facial focus toward the target.",
     "Avoid fast or unclear movements."
   ],
-    image: "/src/assets/Pronouns/it-she-him.gif",
+    image: "/src/assets/Pronouns/He_she_it.gif",
     isLearned: false
   },
 
@@ -78,7 +78,7 @@ export const pronouns: indexPronouns[] = [
     "Keep fingers together for clarity.",
     "Maintain a gentle outward motion."
   ],
-    image: "/src/assets/Pronouns/His-Her-Its.gif",
+    image: "/src/assets/Pronouns/His_her_its.gif",
     isLearned: false
   },
 
@@ -91,7 +91,7 @@ export const pronouns: indexPronouns[] = [
     "Keep the movement small and controlled.",
     "Use relaxed wrist movement."
   ],
-    image: "/src/assets/Pronouns/We_us.gif",
+    image: "/src/assets/Pronouns/we.gif",
     isLearned: false
   },
 
@@ -104,7 +104,7 @@ export const pronouns: indexPronouns[] = [
     "Show inclusion with a gentle sweeping motion.",
     "Avoid sharp or rushed movements."
   ],
-    image: "/src/assets/Pronouns/Our-Ours.gif",
+    image: "/src/assets/Pronouns/Our.gif",
     isLearned: false
   },
 
@@ -130,7 +130,7 @@ export const pronouns: indexPronouns[] = [
     "Use a smooth outward movement.",
     "Keep finger positioning neat and consistent."
   ],
-    image: "/src/assets/Pronouns/Their-Theirs.gif",
+    image: "/src/assets/Pronouns/Theirs.gif",
     isLearned: false
   },
 

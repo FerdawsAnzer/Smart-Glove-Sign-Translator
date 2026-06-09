@@ -11,7 +11,7 @@ export const timeData: IndexTime[] = [
     "The bigger the tilt forward, the further into the future 'later' implies.",
     "Practice the smooth wrist pivot from vertical to horizontal or downward."
   ],
-    image: "/src/assets/TimeDataImg/Later.jpg",
+    image: "/src/assets/TimeDataImg/Later.png",
     isLearned: false
   },
 
@@ -24,7 +24,7 @@ export const timeData: IndexTime[] = [
     "Fingertips should land near the center of the base palm, not the edge.",
     "The motion can be repeated twice to emphasize the meaning."
   ],
-    image: "/src/assets/TimeDataImg/Again.jpg",
+    image: "/src/assets/TimeDataImg/again.png",
     isLearned: false
   },
   {
@@ -36,7 +36,7 @@ export const timeData: IndexTime[] = [
     "Start with fingers loosely curled inward before the flip.",
     "End with fingers fully spread and palms clearly facing outward."
   ],
-    image: "/src/assets/TimeDataImg/Done.jpg",
+    image: "/src/assets/TimeDataImg/done.png",
     isLearned: false
   },
 
@@ -49,7 +49,7 @@ export const timeData: IndexTime[] = [
     "Keep the hands at a comfortable mid-chest height.",
     "Make sure the fingertips, not the knuckles, are what make contact."
   ],
-    image: "/src/assets/TimeDataImg/More.jpg",
+    image: "/src/assets/TimeDataImg/more.png",
     isLearned: false
   },
   {
@@ -61,7 +61,7 @@ export const timeData: IndexTime[] = [
     "Both hands move together at the same time.",
     "The downward motion represents the present moment happening right now."
   ],
-    image: "/src/assets/TimeDataImg/Now.jpg",
+    image: "/src/assets/TimeDataImg/Now.png",
     isLearned: false
   }
 ]
