@@ -112,7 +112,7 @@ export const socialWords: SocialWord[] = [
     "Either direction, ear to mouth or mouth to ear, is acceptable.",
     "Keep the index finger fully extended and pointed throughout the entire motion."
   ],
-    image: "/src/assets/SocialWords/Deaf.png",
+    image: "/src/assets/SocialWords/Deaf.gif",
     isLearned: false
   },
   
@@ -125,7 +125,7 @@ export const socialWords: SocialWord[] = [
     "Keep the index finger fully extended and pointing forward throughout the loop.",
     "The circle is small and tight, one clean loop is enough to sign it clearly."
   ],
-    image: "/src/assets/SocialWords/Hearing_Person.jpg",
+    image: "/src/assets/SocialWords/Hearing_Person.gif",
     isLearned: false
   }
 ]
