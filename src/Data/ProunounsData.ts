@@ -25,7 +25,7 @@ export const pronouns: indexPronouns[] = [
     "Avoid bending the fingers too much.",
     "Keep the motion calm and smooth."
   ],
-    image: "/src/assets/Pronouns/My.gif",
+    image: "/src/assets/Pronouns/My_Mine.gif",
     isLearned: false
   },
 
@@ -130,7 +130,7 @@ export const pronouns: indexPronouns[] = [
     "Use a smooth outward movement.",
     "Keep finger positioning neat and consistent."
   ],
-    image: "/src/assets/Pronouns/Theirs.gif",
+    image: "/src/assets/Pronouns/Their_Theirs.gif",
     isLearned: false
   },
 

@@ -49,7 +49,7 @@ export const verbs : Verbs[] = [
     "The bend is a sharp downward hook, the wrist drives the motion.",
     "The finger ends up bent or hooked downward at the end of the motion."
   ],
-    image: "/src/assets/verbsImg/Need.png",
+    image: "/src/assets/verbsImg/Need.gif",
     isLearned: false
   },
 
