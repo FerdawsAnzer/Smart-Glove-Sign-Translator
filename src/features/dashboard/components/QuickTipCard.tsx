@@ -8,9 +8,10 @@ export function QuickTipCard() {
         Quick Tip
       </p>
       <p className="text-white/90 text-sm">
-        Make sure your glove is properly calibrated before starting a
-        translation session. Visit the Learning section to practice common signs
-        and improve accuracy.
+        Hold still the sign for half a second until the translation appears. For
+        motion signs, complete the full gesture naturally and wait for the
+        translation to show before continuing. Visit the learning section to
+        gain more knowledge about ASL.
       </p>
     </div>
   );

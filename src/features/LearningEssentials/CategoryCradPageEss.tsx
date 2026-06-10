@@ -5,7 +5,7 @@ import { TimeCard } from "./TimeCard";
 export function CategoryCradPageEss() {
   const navigate = useNavigate();
   return (
-    <div className=" w-full bg-blue-50 flex flex-col items-center py-12 px-6 gap-8 ">
+    <div className=" w-full h-full bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center py-12 px-6 gap-8 ">
       {/* Main container with light blue background and centered content */}
       {/* Title */}
       <button

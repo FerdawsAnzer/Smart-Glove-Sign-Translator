@@ -7,7 +7,7 @@ export function BasicsCard() {
 
   return (
     <Card
-      className="border border-gray-200 shadow-sm w-92 rounded-2xl cursor-pointer hover:shadow-md transition-shadow duration-300 "
+      className="border border-gray-200 shadow-sm w-92  rounded-2xl cursor-pointer hover:shadow-md transition-shadow duration-300 "
       onClick={() => navigate("/learning/CategoryCardsPage")}
     >
       {/* when you clik teh card will navigate you to the learning Alphabet Page*/}
