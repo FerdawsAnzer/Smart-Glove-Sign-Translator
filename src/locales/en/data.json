@@ -1,0 +1,82 @@
+{
+  "alphabet": {
+    "A": {
+      "description": "The letter A is formed by making a fist with your thumb resting on the side of your index finger.",
+      "tips": [
+        "Make sure to keep your fingers curled tightly to form a clear fist.",
+        "Keep your thumb relaxed and resting on the side of your index finger.",
+        "Practice transitioning from other letters to A to improve your fluidity."
+      ]
+    },
+    "B": {
+      "description": "Flat hand with fingers together, thumb across palm",
+      "tips": [
+        "Watch the hand animation carefully and follow the movement",
+        "Practice in front of a mirror to check your form",
+        "Keep your movements smooth and natural."
+      ]
+    },
+    "C": { "description": "Curved hand forming C shape", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "D": { "description": "Index finger up, other fingers touch thumb", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "E": { "description": "Fingers curled down touching thumb", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "F": { "description": "Index and thumb form circle, other fingers up", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "G": { "description": "Index and thumb point horizontally", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "H": { "description": "Index and middle finger point horizontally", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "I": { "description": "Pinky finger up, others closed with thumb", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "J": { "description": "Pinky up, draw a J in the air", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "K": { "description": "Index and middle up in V, thumb between them", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "L": { "description": "Index and thumb form L shape.", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "M": { "description": "Three fingers over thumb, pinky down", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "N": { "description": "Two fingers over thumb, others down", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "O": { "description": "Fingers form circle shape", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "P": { "description": "Like K but pointing down", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "Q": { "description": "Index and thumb point down", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "R": { "description": "Index and middle crossed", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "S": { "description": "Fist with thumb over fingers", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "T": { "description": "Thumb between index and middle", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "U": { "description": "Index and middle up together", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "V": { "description": "Index and middle up in V shape", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "W": { "description": "Three fingers up in W shape", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "X": { "description": "Index bent like a hook", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "Y": { "description": "Thumb and pinky extended", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] },
+    "Z": { "description": "Index draws a Z in the air", "tips": ["Watch the hand animation carefully and follow the movement", "Practice in front of a mirror to check your form", "Keep your movements smooth and natural."] }
+  },
+  "colors": {
+    "Red": { "description": "Use your index finger and brush it downward along your lips.", "tips": ["Keep your index finger straight and relaxed.", "Start near the upper lip and move slightly downward.", "Practice the motion slowly to make the sign clear."] },
+    "Blue": { "description": "Make the letter B handshape and shake your hand slightly.", "tips": ["Keep your fingers together and thumb across your palm.", "Move the hand gently from side to side.", "Keep the movement small and controlled."] },
+    "Green": { "description": "Form the letter G with your hand and shake it slightly.", "tips": ["Extend your index finger and thumb parallel.", "Keep the other fingers closed.", "Move the hand slightly to emphasize the sign."] },
+    "Yellow": { "description": "Make the letter Y handshape and shake it gently.", "tips": ["Extend your thumb and pinky.", "Keep the other fingers folded.", "Move the hand side to side slightly."] },
+    "Black": { "description": "Draw your index finger across your forehead.", "tips": ["Start from one side of your forehead.", "Move the finger across smoothly.", "Keep the motion slow and clear."] },
+    "White": { "description": "Place your hand on your chest and pull it outward.", "tips": ["Start with fingers touching the chest.", "Move the hand forward slowly.", "Keep fingers slightly open."] },
+    "Pink": { "description": "Form the letter P and tap it on your chin.", "tips": ["Keep your fingers clearly in the P shape.", "Touch the chin lightly.", "Avoid large movements."] },
+    "Purple": { "description": "Make the letter P handshape and shake it slightly.", "tips": ["Keep the P handshape steady.", "Shake gently from the wrist.", "Make sure the fingers remain clearly shaped."] },
+    "Orange": { "description": "Form a claw hand near your mouth and squeeze your fingers together.", "tips": ["Start with fingers slightly curved.", "Close the fingers toward the thumb repeatedly.", "Keep the hand close to the mouth."] }
+  },
+  "greetings": {
+    "Hello": { "description": "Raise your hand near your forehead and move it outward in a small wave.", "tips": ["Keep your hand relaxed while making the movement.", "Move your hand slightly outward from the forehead.", "Practice greeting naturally."] },
+    "Good Morning": { "description": "Touch your chin with your dominant hand, then move your arm upward like the rising sun.", "tips": ["Start with the 'good' sign at the chin.", "Raise your hand upward smoothly.", "Keep the movement gentle and natural."] },
+    "Good Afternoon": { "description": "Sign 'good' at the chin, then move your flat hand forward and slightly downward.", "tips": ["Start with the 'good' sign.", "Move your hand outward and slightly down.", "Imagine showing the position of the afternoon sun."] },
+    "Good Evening": { "description": "Sign 'good' at the chin, then bring your flat hand downward over your other arm.", "tips": ["Start with the 'good' sign at your chin.", "Place your non-dominant arm horizontally.", "Move the dominant hand downward to show sunset."] },
+    "How Are You": { "description": "Extend both hands forward with palms facing up and slightly move them outward.", "tips": ["Keep your palms facing upward.", "Move both hands outward slightly.", "Maintain eye contact when signing."] },
+    "Nice To Meet You": { "description": "Sign 'nice' by sliding one hand over the other, then bring both index fingers together.", "tips": ["Slide your dominant hand smoothly over the other hand.", "Use both index fingers pointing toward each other.", "Bring them together gently."] },
+    "Welcome": { "description": "Move both open hands from your body outward as if inviting someone in.", "tips": ["Start with hands close to your body.", "Move them outward in a smooth motion.", "Imagine inviting someone to enter."] },
+    "Goodbye": { "description": "Wave your hand side to side similar to waving goodbye.", "tips": ["Keep your fingers relaxed.", "Move your hand side to side.", "Make the gesture friendly and natural."] }
+  },
+  "numbers": {
+    "0": { "description": "Form an 'O' handshape by touching your fingertips together.", "tips": ["Keep all fingertips touching.", "Hand should be relaxed.", "Palm can face forward."] },
+    "1": { "description": "Extend your index finger upward while keeping other fingers closed.", "tips": ["Keep the other fingers tightly closed.", "Palm faces forward.", "Finger should be straight."] },
+    "2": { "description": "Extend index and middle fingers upward.", "tips": ["Keep fingers separated slightly.", "Palm faces forward.", "Other fingers remain closed."] },
+    "3": { "description": "Extend thumb, index, and middle fingers.", "tips": ["Ring and pinky remain closed.", "Palm faces forward.", "Fingers should be clearly visible."] },
+    "4": { "description": "Extend four fingers upward with thumb tucked in.", "tips": ["Keep thumb inside the palm.", "Fingers spread slightly.", "Palm faces forward."] },
+    "5": { "description": "Extend all five fingers upward.", "tips": ["Spread fingers naturally.", "Palm faces forward.", "Keep hand steady."] },
+    "6": { "description": "Touch thumb to pinky finger while other fingers stay extended.", "tips": ["Index, middle, and ring stay up.", "Thumb touches pinky clearly.", "Palm faces forward."] },
+    "7": { "description": "Touch thumb to ring finger while other fingers stay extended.", "tips": ["Index and middle stay up.", "Thumb touches ring finger clearly.", "Palm faces forward."] },
+    "8": { "description": "Touch thumb to middle finger while other fingers stay extended.", "tips": ["Index, ring, and pinky remain extended.", "Thumb touches middle finger clearly.", "Palm faces forward."] },
+    "9": { "description": "Touch thumb to index finger while other fingers stay extended.", "tips": ["Ring, middle, and pinky stay extended.", "Make a clear 'O' shape with thumb and index.", "Palm faces forward."] },
+    "10": { "description": "Make a fist with thumb extended upward and shake slightly.", "tips": ["Keep fingers closed tightly.", "Thumb points upward.", "Small wrist shake."] }
+  },
+  "socialWords": {
+    "I love you": { "description": "Raise one hand with palm facing forward. Extend thumb, index, and little finger while keeping middle and ring fingers folded.", "tips": ["Keep the palm facing outward.", "Make sure the middle and ring fingers stay folded.", "Hold the gesture steady."] },
+    "Thank you": { "description": "Place fingertips near your chin with palm facing you, then move hand forward and slightly downward.", "tips": ["Start the hand near the chin.", "Keep the fingers together.", "Move the hand toward the person you are thanking.", "The motion should go outward from the chin."] }
+  }
+}
