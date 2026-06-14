@@ -30,7 +30,13 @@
     "lastName": "Soyad",
     "email": "E-posta",
     "profilePicture": "Profil Fotoğrafı",
-    "profilePictureDesc": "Hesabınızı kişiselleştirmek için bir fotoğraf yükleyin"
+    "profilePictureDesc": "Hesabınızı kişiselleştirmek için bir fotoğraf yükleyin",
+     "appLanguage": "Uygulama Dili",
+  "appLanguageDesc": "Uygulama arayüz dilini anında değiştirir",
+  "aslOnly": "Şu anda yalnızca Amerikan İşaret Dili desteklenmektedir",
+   "translationTip": "Çeviri İpucu",
+"translationTipText": "En iyi sonuçlar için eldivenin Wifi üzerinden düzgün bağlandığından ve doğru jest tanıma için elinize sıkıca takıldığından emin olun."
+
   },
   "auth": {
     "signIn": "Giriş Yap",
@@ -169,10 +175,11 @@
     "translation": "Çeviri",
     "translationPlaceholder": "Çeviri burada görünecek...",
     "speak": "Sesli Oku",
-    "quickTip": "Hızlı İpucu",
-    "tipText": "Çeviri oturumuna başlamadan önce eldiven kalibrasyonunu kontrol edin.",
+    
     "stopGlove": "Eldiveni Durdur",
-    "disconnect": "Bağlantıyı Kes"
+    "disconnect": "Bağlantıyı Kes",
+    "quickTip": "Hızlı İpucu",
+"tipText": "Çeviri görünene kadar işareti yarım saniye sabit tutun. Hareket gerektiren işaretler için, tam hareketi doğal şekilde tamamlayın ve devam etmeden önce çevirinin görünmesini bekleyin. ASL hakkında daha fazla bilgi edinmek için öğrenme bölümünü ziyaret edin."
   },
   "learning": {
     "backToCategories": "← Kategorilere Geri Dön",
@@ -199,3 +206,4 @@
     "desc": "Amerikan İşaret Dilindeki renkleri öğrenin"
   }
 }
+ 

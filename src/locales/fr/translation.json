@@ -30,7 +30,13 @@
     "lastName": "Nom de famille",
     "email": "E-mail",
     "profilePicture": "Photo de profil",
-    "profilePictureDesc": "Téléchargez une photo pour personnaliser votre compte"
+    "profilePictureDesc": "Téléchargez une photo pour personnaliser votre compte",
+     "appLanguage": "Langue de l'application",
+  "appLanguageDesc": "Change la langue de l'interface instantanément",
+  "aslOnly": "Actuellement, seule la langue des signes américaine est prise en charge",
+   "translationTip": "Conseil de traduction",
+"translationTipText": "Pour de meilleurs résultats, assurez-vous que votre gant est correctement connecté via Wifi et bien ajusté sur votre main pour une reconnaissance précise des gestes."
+
   },
   "auth": {
     "signIn": "Se connecter",
@@ -169,10 +175,11 @@
     "translation": "Traduction",
     "translationPlaceholder": "La traduction apparaîtra ici...",
     "speak": "Parler",
-    "quickTip": "Conseil rapide",
-    "tipText": "Assurez-vous que votre gant est bien calibré avant de commencer.",
+    
     "stopGlove": "Arrêter le gant",
-    "disconnect": "Déconnecter"
+    "disconnect": "Déconnecter",
+    "quickTip": "Conseil rapide",
+"tipText": "Maintenez le signe immobile pendant une demi-seconde jusqu'à ce que la traduction apparaisse. Pour les signes en mouvement, effectuez le geste complet naturellement et attendez que la traduction s'affiche avant de continuer. Visitez la section apprentissage pour en savoir plus sur la LSA."
   },
   "learning": {
     "backToCategories": "← Retour aux catégories",
@@ -199,3 +206,4 @@
     "desc": "Maîtrisez les couleurs en langue des signes américaine"
   }
 }
+ 

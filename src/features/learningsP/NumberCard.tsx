@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Hash } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 export function NumbersCard() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
@@ -20,16 +22,16 @@ export function NumbersCard() {
         </div>
 
         {/* middle Title of card*/}
-        <p className="text-gray-900 font-bold text-xl">Numbers</p>
+        <p className="text-gray-900 font-bold text-xl">{t("cards.numbers")}</p>
 
         {/* Description of card */}
         <p className="text-gray-500 text-sm text-center">
-          Master counting in ASL from 0 to 10
+          {t("cards.numbersDesc")}
         </p>
 
         {/* Badge */}
         <span className="bg-blue-50 text-blue-500 text-sm font-medium px-4 py-1 rounded-full">
-          10 Numbers
+          {t("cards.numbersBadge")}
         </span>
       </CardContent>
     </Card>

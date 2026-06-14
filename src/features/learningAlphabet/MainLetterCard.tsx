@@ -15,39 +15,45 @@ export function MainLetterCard({
 
   //  detect category by letter content
   const getTranslated = () => {
-    const letter = currentItem.letter;
+  const letter = currentItem.letter;
 
-    const isAlphabet = /^[A-Z]$/.test(letter);
-    const isNumber = /^\d+$/.test(letter);
-    const isColor = ["Red","Blue","Green","Yellow","Black","White","Pink","Purple","Orange"].includes(letter);
-    const isGreeting = ["Hello","Good Morning","Good Afternoon","Good Evening","How Are You","Nice To Meet You","Welcome","Goodbye"].includes(letter);
-    const isSocialWord = ["I love you","Thank you"].includes(letter);
+  const isAlphabet = /^[A-Z]$/.test(letter);
+  const isNumber = /^\d+$/.test(letter);
+  const isColor = ["Red","Blue","Green","Yellow","Black","White","Pink","Purple","Orange"].includes(letter);
+  const isSocialWord = ["I Love You","Thank You","Hello","Goodbye","Please","Sorry","No","Yes","Deaf","Hearing Person"].includes(letter);
+  const isPronoun = ["Me/I","My/Mine","You","Your/Yours","He/She/It","His/Her/Its","We","Our/Ours","They","Their/Theirs"].includes(letter);
+  const isVerb = ["Like","Cut","Drop","Need","Hear","Talk","Eat","Drink","Help","See","Go","Come","Sit","Stand","Wake Up","Sleep","Stop","Clean","Want","Cook","Write","Draw","Read","Cry","Laugh","Walk","Jump","Hug"].includes(letter);
+  const isUtility = ["Where","Who","Why","How","What","When","Which"].includes(letter);
+  const isTime = ["Later","Again","Done","More","Now"].includes(letter);
 
-    let category = "";
-    if (isAlphabet)   category = "alphabet";
-    if (isNumber)     category = "numbers";
-    if (isColor)      category = "colors";
-    if (isGreeting)   category = "greetings";
-    if (isSocialWord) category = "socialWords";
+  let category = "";
+  if (isAlphabet)  category = "alphabet";
+  if (isNumber)    category = "numbers";
+  if (isColor)     category = "colors";
+  if (isSocialWord) category = "socialWords";
+  if (isPronoun)   category = "pronouns";
+  if (isVerb)      category = "verbs";
+  if (isUtility)   category = "utilityWords";
+  if (isTime)      category = "timeData";
 
-    if (!category) {
-      return {
-        description: currentItem.description,
-        tips: currentItem.tips,
-      };
-    }
+  if (!category) {
+    return {
+      description: currentItem.description,
+      tips: currentItem.tips,
+    };
+  }
 
-    const description = t(`data.${category}.${letter}.description`, {
-      defaultValue: currentItem.description,
-    });
+  const description = t(`data.${category}.${letter}.description`, {
+    defaultValue: currentItem.description,
+  });
 
-    const tips = t(`data.${category}.${letter}.tips`, {
-      returnObjects: true,
-      defaultValue: currentItem.tips,
-    }) as string[];
+  const tips = t(`data.${category}.${letter}.tips`, {
+    returnObjects: true,
+    defaultValue: currentItem.tips,
+  }) as string[];
 
-    return { description, tips };
-  };
+  return { description, tips };
+};
 
   const { description, tips } = getTranslated();
 

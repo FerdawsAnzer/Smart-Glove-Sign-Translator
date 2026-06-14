@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import type { HistorySearchBarProps } from "@/Types/HistorySearshBarProps";
 import { Download, Filter, Search } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function HistorySearchBar({ search, onSearch }: HistorySearchBarProps) {
+  const { t } = useTranslation();
   return (
     <Card
       className="rounded-xl border-0"
@@ -15,19 +17,19 @@ export function HistorySearchBar({ search, onSearch }: HistorySearchBarProps) {
         {/* Search input */}
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
-            style={{ color: "#8b5cf6" }} // ✅ purple icon
+            style={{ color: "#8b5cf6" }} 
           />
           <Input
-            placeholder="Search translations..."
+            placeholder={t("history.search")}
             value={search}
             onChange={(e) => onSearch(e.target.value)}
             className="pl-9 rounded-lg bg-white"
             style={{
-              border: "1px solid #e8eaf6",        // ✅ purple-tinted border
+              border: "1px solid #e8eaf6",        
               outline: "none",
             }}
             onFocus={(e) => {
-              e.target.style.border = "1px solid #8b5cf6"; // ✅ purple focus
+              e.target.style.border = "1px solid #8b5cf6"; 
               e.target.style.boxShadow = "0 0 0 3px rgba(139,92,246,0.1)";
             }}
             onBlur={(e) => {
@@ -43,7 +45,7 @@ export function HistorySearchBar({ search, onSearch }: HistorySearchBarProps) {
           className="flex items-center gap-2 rounded-lg"
           style={{
             border: "1px solid #e8eaf6",
-            color: "#6366f1",              // ✅ indigo text
+            color: "#6366f1",             
             background: "#fafbff",
           }}
           onMouseEnter={(e) => {
@@ -57,8 +59,8 @@ export function HistorySearchBar({ search, onSearch }: HistorySearchBarProps) {
             el.style.borderColor = "#e8eaf6";
           }}
         >
-          <Filter className="w-4 h-4" />
-          All
+          <Filter className="w-4 h-4" /> {t("history.all")}
+        
         </Button>
 
         {/* Export button */}
@@ -77,8 +79,8 @@ export function HistorySearchBar({ search, onSearch }: HistorySearchBarProps) {
             e.currentTarget.style.transform = "translateY(0)";
           }}
         >
-          <Download className="w-4 h-4" />
-          Export
+          <Download className="w-4 h-4" />{t("history.export")}
+          
         </Button>
 
       </CardContent>

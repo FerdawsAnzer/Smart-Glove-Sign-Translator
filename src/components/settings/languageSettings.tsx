@@ -46,14 +46,14 @@ export function LanguageSettings({ language, targetLanguage, onLanguageChange, o
             <SelectItem value="asl">American Sign Language (ASL)</SelectItem>
           </SelectContent>
         </Select>
-        <p className="text-xs text-gray-500 mt-1">
-          Currently, only American Sign Language is supported
+        <p className="text-xs text-gray-500 mt-1"> {t("settings.aslOnly")}
+          
         </p>
       </div>
 
       <div className="space-y-3">
-        <Label>App Language</Label>
-        <p className="text-xs text-gray-500">Changes the app interface language instantly</p>
+        <Label> {t("settings.appLanguage")}</Label>
+        <p className="text-xs text-gray-500"> {t("settings.appLanguageDesc")}</p>
         <div className="grid grid-cols-2 gap-3">
           {UI_LANGUAGES.map((lang) => (
             <button
@@ -80,10 +80,10 @@ export function LanguageSettings({ language, targetLanguage, onLanguageChange, o
           <Hand className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#6366f1" }} />
           <div>
             <h4 className="font-medium mb-1" style={{ color: "#3730a3" }}>
-              {t("dashboard.quickTip")} 
+              {t("settings.translationTip")}
             </h4>
             <p className="text-sm" style={{ color: "#4338ca" }}>
-              {t("dashboard.tipText")} 
+             {t("settings.translationTipText")}
             </p>
           </div>
         </div>

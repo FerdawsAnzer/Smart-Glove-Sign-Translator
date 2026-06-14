@@ -30,7 +30,13 @@
     "lastName": "Last name",
     "email": "Email",
     "profilePicture": "Profile Picture",
-    "profilePictureDesc": "Upload a photo to personalize your account"
+    "profilePictureDesc": "Upload a photo to personalize your account",
+    "appLanguage": "App Language",
+    "appLanguageDesc": "Changes the app interface language instantly",
+    "aslOnly": "Currently, only American Sign Language is supported",
+     "translationTip": "Translation Tip",
+"translationTipText": "For best results, ensure your glove is properly connected via Wifi and fitted snugly on your hand for accurate gesture recognition."
+
   },
   "auth": {
     "signIn": "Sign In",
@@ -169,10 +175,10 @@
     "translation": "Translation",
     "translationPlaceholder": "Translation will appear here...",
     "speak": "Speak",
+   
+    "disconnect": "Disconnect",
     "quickTip": "Quick Tip",
-    "tipText": "Make sure your glove is properly calibrated before starting a translation session.",
-    "stopGlove": "Stop Glove",
-    "disconnect": "Disconnect"
+  "tipText": "Hold still the sign for half a second until the translation appears. For motion signs, complete the full gesture naturally and wait for the translation to show before continuing. Visit the learning section to gain more knowledge about ASL."
   },
   "learning": {
     "backToCategories": "← Back to Categories",
@@ -199,3 +205,4 @@
     "desc": "Master the American Sign Language colors"
   }
 }
+ 

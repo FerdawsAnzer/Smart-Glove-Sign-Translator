@@ -36,6 +36,7 @@ const bottomNavItems: NavItem[] = [
 export function SideBar({ onLogout }: Props) {
   const [hovered, setHovered] = useState(false);
   const expanded = hovered;
+  const { t } = useTranslation();
   
   return (
     <aside
@@ -127,7 +128,7 @@ export function SideBar({ onLogout }: Props) {
           }}
         >
           <LogOut size={18} />
-          {expanded && <span>Logout</span>}
+         {expanded && <span>{t("nav.logout")}</span>}
         </div>
       </nav>
 

@@ -36,18 +36,13 @@
     "White": { "description": "Placez la main sur la poitrine et tirez-la vers l'avant.", "tips": ["Commencez avec les doigts touchant la poitrine.", "Avancez la main lentement.", "Gardez les doigts légèrement ouverts."] },
     "Pink": { "description": "Formez la lettre P et tapotez-la sur le menton.", "tips": ["Gardez la forme P claire.", "Touchez le menton légèrement.", "Évitez les grands mouvements."] },
     "Purple": { "description": "Faites la forme P et secouez légèrement.", "tips": ["Gardez la forme P stable.", "Secouez doucement depuis le poignet.", "Les doigts restent bien formés."] },
-    "Orange": { "description": "Formez une main en griffe près de la bouche et serrez les doigts.", "tips": ["Commencez avec les doigts légèrement courbés.", "Fermez les doigts vers le pouce.", "Gardez la main près de la bouche."] }
+    "Orange": { "description": "Formez une main en griffe près de la bouche et serrez les doigts.", "tips": ["Commencez avec les doigts légèrement courbés.", "Fermez les doigts vers le pouce.", "Gardez la main près de la bouche."] },
+    "Gray": {
+  "description": "Les deux mains commencent près de la poitrine avec les doigts détendus, puis s'éloignent en s'ouvrant légèrement.",
+  "tips": ["Commencez avec les mains détendues près du haut de la poitrine.", "Gardez les doigts naturellement ensemble au début.", "Déplacez les mains vers l'extérieur doucement en ouvrant légèrement les doigts.", "Évitez les mouvements rigides et gardez le mouvement fluide.", "Faites attention à la position du pouce et gardez-le détendu."]
+}
   },
-  "greetings": {
-    "Hello": { "description": "Levez la main près du front et faites un petit geste vers l'extérieur.", "tips": ["Gardez la main détendue.", "Bougez légèrement vers l'extérieur.", "Pratiquez naturellement."] },
-    "Good Morning": { "description": "Touchez le menton puis levez le bras comme le soleil qui se lève.", "tips": ["Commencez le signe 'bien' au menton.", "Levez la main doucement.", "Gardez le mouvement naturel."] },
-    "Good Afternoon": { "description": "Signez 'bien' au menton, puis déplacez la main vers l'avant et légèrement vers le bas.", "tips": ["Commencez par le signe 'bien'.", "Déplacez la main vers l'extérieur.", "Imaginez la position du soleil."] },
-    "Good Evening": { "description": "Signez 'bien' au menton puis abaissez la main sur l'autre bras.", "tips": ["Commencez le signe au menton.", "Bras non dominant horizontal.", "Déplacez la main vers le bas."] },
-    "How Are You": { "description": "Étendez les deux mains vers l'avant, paumes vers le haut.", "tips": ["Paumes vers le haut.", "Bougez les deux mains légèrement.", "Maintenez le contact visuel."] },
-    "Nice To Meet You": { "description": "Glissez une main sur l'autre, puis rapprochez les index.", "tips": ["Glissez doucement.", "Utilisez les deux index.", "Rapprochez-les doucement."] },
-    "Welcome": { "description": "Déplacez les deux mains ouvertes de votre corps vers l'extérieur.", "tips": ["Commencez près du corps.", "Bougez vers l'extérieur.", "Imaginez inviter quelqu'un."] },
-    "Goodbye": { "description": "Agitez la main de côté à côté.", "tips": ["Gardez les doigts détendus.", "Bougez la main de côté.", "Rendez le geste naturel."] }
-  },
+ 
   "numbers": {
     "0": { "description": "Formez un O en touchant les bouts des doigts.", "tips": ["Tous les bouts touchent.", "Main détendue.", "Paume vers l'avant."] },
     "1": { "description": "Étendez l'index vers le haut.", "tips": ["Autres doigts fermés.", "Paume vers l'avant.", "Doigt droit."] },
@@ -63,6 +58,254 @@
   },
   "socialWords": {
     "I love you": { "description": "Levez une main paume vers l'avant. Étendez le pouce, l'index et l'auriculaire.", "tips": ["Paume vers l'extérieur.", "Majeur et annulaire repliés.", "Tenez le geste stable."] },
-    "Thank you": { "description": "Placez les doigts près du menton paume vers vous, puis déplacez la main vers l'avant.", "tips": ["Commencez près du menton.", "Gardez les doigts ensemble.", "Déplacez vers la personne.", "Mouvement vers l'extérieur du menton."] }
+    "Thank you": { "description": "Placez les doigts près du menton paume vers vous, puis déplacez la main vers l'avant.", "tips": ["Commencez près du menton.", "Gardez les doigts ensemble.", "Déplacez vers la personne.", "Mouvement vers l'extérieur du menton."] },
+    "Hello": {
+  "description": "Amenez votre main droite plate à votre front ou tempe puis balayez-la vers l'extérieur comme un salut.",
+  "tips": ["Commencez avec les bouts des doigts près du front.", "Le balayage vers l'extérieur doit être fluide et confiant.", "Accentuez le poignet qui se déplace vers l'extérieur.", "Gardez les doigts plats et ensemble."]
+},
+"Goodbye": {
+  "description": "Levez la main droite à hauteur de tête avec les doigts pointant vers le haut, puis repliez les doigts vers le bas et vers le haut de façon répétée.",
+  "tips": ["La vague vient du pliage des doigts aux articulations.", "Gardez la paume vers l'avant et la main levée.", "Accentuez la position ferme du poignet.", "Deux à trois pliages suffisent."]
+},
+"Please": {
+  "description": "Placez la main droite plate sur la poitrine avec les doigts ensemble, puis frottez-la en mouvement circulaire.",
+  "tips": ["La main reste en contact total avec la poitrine.", "Le cercle est fait en faisant pivoter le poignet.", "Accentuez le mouvement circulaire.", "Gardez la main plate et les doigts ensemble."]
+},
+"Sorry": {
+  "description": "Faites un poing avec la main droite avec le pouce étendu et placez-le sur la poitrine, puis frottez en cercle.",
+  "tips": ["Contrairement à S'il vous plaît qui utilise une main plate, Désolé utilise un poing.", "Accentuez la rotation du poignet.", "Gardez le poing ferme en contact avec la poitrine."]
+},
+"No": {
+  "description": "Étendez l'index et le majeur avec le pouce replié, puis fermez-les rapidement vers le bas pour rejoindre le pouce.",
+  "tips": ["Commencez avec l'index et le majeur clairement étendus vers le haut.", "La fermeture vers le pouce doit être rapide et nette.", "Accentuez le claquement du poignet vers le bas.", "Le mouvement peut être répété deux fois."]
+},
+"Yes": {
+  "description": "Faites un poing avec la main droite et faites-le hocher de haut en bas depuis le poignet, imitant une tête acquiesçant.",
+  "tips": ["Le mouvement vient entièrement du poignet.", "Gardez le poing ferme pendant le hochement.", "Accentuez un hochement de poignet clair.", "Deux hochements est la norme."]
+},
+"Thank You": {
+  "description": "Touchez les bouts des doigts de votre main plate à votre menton, puis balancez la main vers l'avant et vers l'extérieur.",
+  "tips": ["Le mouvement commence au menton et coule vers l'extérieur.", "Accentuez la rotation du poignet.", "Gardez les doigts ensemble et la main plate.", "Terminez avec la paume clairement vers le haut."]
+},
+"I Love You": {
+  "description": "Levez la main droite avec le pouce, l'index et l'auriculaire étendus, le majeur et l'annulaire repliés. Donnez un petit twist.",
+  "tips": ["Commencez la main près du menton ou des lèvres.", "Gardez les doigts ensemble et le mouvement fluide.", "Déplacez la main de droite à gauche."]
+},
+"Deaf": {
+  "description": "Pointez l'index droit vers l'oreille, puis déplacez-le vers le bas et vers l'avant pour toucher le coin de la bouche.",
+  "tips": ["Le mouvement est un chemin droit entre l'oreille et le coin de la bouche.", "Accentuez le changement d'orientation du poignet.", "Les deux directions sont acceptables.", "Gardez l'index complètement étendu."]
+},
+"Hearing Person": {
+  "description": "Étendez l'index droit et tenez-le devant la bouche, puis faites un petit mouvement circulaire vers l'avant.",
+  "tips": ["Le cercle est fait devant la bouche.", "Le mouvement vient du poignet.", "Gardez l'index pointant vers l'avant.", "Le cercle est petit et serré."]
+}
+  },
+  "pronouns": {
+    "Me/I": {
+      "description": "Pointez vers vous-même avec l'index près de la poitrine.",
+      "tips": ["Touchez ou pointez vers le centre de votre poitrine.", "Gardez le mouvement petit et naturel.", "Utilisez une main détendue.", "Maintenez une direction claire vers vous-même."]
+    },
+    "My/Mine": {
+      "description": "Placez une main ouverte et plate contre la poitrine.",
+      "tips": ["Gardez les doigts ensemble et la paume ouverte.", "Touchez légèrement la poitrine avec la paume.", "Évitez de trop plier les doigts.", "Gardez le mouvement calme et fluide."]
+    },
+    "You": {
+      "description": "Pointez vers l'extérieur vers l'autre personne avec l'index.",
+      "tips": ["Étendez clairement l'index vers l'avant.", "Visez naturellement vers la personne.", "Gardez le poignet détendu.", "Évitez les mouvements de bras exagérés."]
+    },
+    "Your/Yours": {
+      "description": "Déplacez une paume ouverte vers l'extérieur vers l'autre personne.",
+      "tips": ["Gardez la paume ouverte avec les doigts ensemble.", "Faites face à la personne avec la paume.", "Poussez la main doucement vers l'extérieur.", "Gardez le mouvement fluide et contrôlé."]
+    },
+    "He/She/It": {
+      "description": "Pointez vers la personne ou l'objet référencé.",
+      "tips": ["Utilisez une direction de pointage claire.", "Gardez l'index droit.", "Utilisez une mise au point naturelle vers la cible.", "Évitez les mouvements rapides ou peu clairs."]
+    },
+    "His/Her/Its": {
+      "description": "Utilisez une paume ouverte dirigée vers la personne ou l'objet.",
+      "tips": ["Gardez la main ouverte et détendue.", "Bougez légèrement vers le sujet référencé.", "Gardez les doigts ensemble pour la clarté.", "Maintenez un mouvement extérieur doux."]
+    },
+    "We": {
+      "description": "Déplacez l'index en petit arc entre vous et les autres.",
+      "tips": ["Commencez par vous pointer vous-même.", "Balayez le mouvement vers le groupe.", "Gardez le mouvement petit et contrôlé.", "Utilisez un mouvement de poignet détendu."]
+    },
+    "Our/Ours": {
+      "description": "Utilisez une paume ouverte se déplaçant en petit arc sur la zone du groupe.",
+      "tips": ["Gardez la paume ouverte et les doigts ensemble.", "Déplacez la main doucement.", "Montrez l'inclusion avec un mouvement de balayage doux.", "Évitez les mouvements brusques."]
+    },
+    "They": {
+      "description": "Pointez vers l'extérieur vers plusieurs personnes ou un groupe.",
+      "tips": ["Utilisez un léger pointage de balayage pour les groupes.", "Gardez la main détendue et naturelle.", "Faites face clairement à la direction des personnes.", "Rendez le mouvement facile à suivre."]
+    },
+    "Their/Theirs": {
+      "description": "Déplacez une paume ouverte vers le groupe référencé.",
+      "tips": ["Gardez la paume ouverte et détendue.", "Dirigez clairement le mouvement vers le groupe.", "Utilisez un mouvement extérieur fluide.", "Gardez le positionnement des doigts net et cohérent."]
+    }
+  },
+  "verbs": {
+    "Like": {
+      "description": "Placez la main droite sur la poitrine avec le pouce et le majeur pincés, puis tirez la main en étendant le pouce et le majeur vers l'extérieur.",
+      "tips": ["Commencez avec le majeur et le pouce touchant légèrement la poitrine.", "Le retrait est fluide, les doigts s'étendent en avant.", "Terminez avec le pouce et le majeur clairement étendus."]
+    },
+    "Cut": {
+      "description": "Étendez l'index et le majeur droits en forme de V, puis fermez-les comme des ciseaux.",
+      "tips": ["Commencez avec les doigts V complètement ouverts.", "La fermeture est rapide et nette comme des ciseaux.", "Accentuez le mouvement de ciseaux.", "Le mouvement peut être répété deux fois."]
+    },
+    "Drop": {
+      "description": "Tenez la main droite devant vous avec les doigts écartés, puis laissez le poignet tomber vers le bas.",
+      "tips": ["Commencez avec la main levée et les doigts ouverts.", "La chute est une brusque descente du poignet.", "Terminez avec les doigts pendant vers le bas."]
+    },
+    "Need": {
+      "description": "Étendez l'index droit vers l'avant, puis pliez-le brusquement vers le bas depuis le poignet.",
+      "tips": ["Commencez avec l'index complètement étendu.", "La flexion est un crochet brusque vers le bas.", "Le doigt finit courbé vers le bas."]
+    },
+    "Hear": {
+      "description": "Placez la main droite près de l'oreille avec le pouce reposant à côté, puis recourbez l'index et le majeur vers l'intérieur et l'extérieur.",
+      "tips": ["Le pouce reste ancré près de l'oreille.", "Seuls l'index et le majeur bougent.", "Le mouvement pulsé est doux et léger."]
+    },
+    "Talk": {
+      "description": "Tenez la main droite près de la bouche avec les doigts ensemble pointant vers le haut, puis ouvrez et fermez les doigts de façon répétée.",
+      "tips": ["Les doigts s'ouvrent et se ferment aux articulations.", "Gardez la main près de la bouche.", "Accentuez le mouvement répété des doigts.", "La répétition est essentielle."]
+    },
+    "Eat": {
+      "description": "Regroupez les bouts des doigts droits en forme de O plat et tapotez-les vers la bouche de façon répétée.",
+      "tips": ["Les bouts des doigts et le pouce sont pincés ensemble.", "Le tapotement vers la bouche vient du poignet.", "Accentuez le mouvement répété.", "Gardez le mouvement petit et naturel."]
+    },
+    "Drink": {
+      "description": "Formez un C avec la main droite comme si vous teniez un verre, puis inclinez la main vers la bouche.",
+      "tips": ["Le C doit ressembler à une tasse invisible.", "L'inclinaison vient du poignet qui tourne vers la bouche.", "Terminez avec la main près de la bouche."]
+    },
+    "Help": {
+      "description": "Placez la main gauche à plat paume vers le haut. Posez la main droite en pouce levé dessus, puis soulevez les deux mains vers le haut.",
+      "tips": ["La main de base agit comme une plateforme.", "Les deux mains bougent ensemble.", "Gardez le pouce clairement étendu vers le haut.", "Le mouvement vers le haut est fluide."]
+    },
+    "See": {
+      "description": "Tenez la main droite en V avec les doigts pointant vers les yeux, puis tournez le poignet et pointez les doigts V vers l'extérieur.",
+      "tips": ["Commencez avec les doigts V pointant vers vos yeux.", "La rotation du poignet vers l'avant est le mouvement clé.", "Gardez les deux doigts du V étendus.", "Terminez avec les doigts V pointant clairement vers l'avant."]
+    },
+    "Go": {
+      "description": "Étendez les deux index vers l'avant, puis faites-les arquer vers l'extérieur simultanément.",
+      "tips": ["Les deux mains commencent au centre et balayent vers l'extérieur.", "L'arc extérieur vient des poignets.", "Accentuez le mouvement vers l'extérieur.", "Terminez avec les index pointant clairement vers l'avant."]
+    },
+    "Come": {
+      "description": "Étendez les deux index vers le haut ou l'extérieur, puis faites-les arquer vers l'intérieur.",
+      "tips": ["Les index commencent pointés vers l'extérieur.", "L'arc vient des poignets.", "Accentuez l'arc intérieur.", "Le mouvement se lit naturellement comme 'viens ici'."]
+    },
+    "Sit": {
+      "description": "Tenez les deux mains devant vous avec l'index et le majeur étendus. Posez les doigts de la main droite sur ceux de la gauche.",
+      "tips": ["Les deux mains utilisent la même forme à deux doigts.", "Les doigts droits drapent sur les gauches.", "Accentuez le drapé du poignet vers le bas.", "Maintenez la position brièvement."]
+    },
+    "Stand": {
+      "description": "Tenez la main droite à plat paume vers le haut. Placez les doigts V droits pointant vers le bas sur la paume de base.",
+      "tips": ["Les doigts V représentent des jambes debout.", "Contrairement à Sauter, les doigts V restent plantés.", "Accentuez le placement ferme.", "Maintenez la position régulièrement."]
+    },
+    "Wake Up": {
+      "description": "Placez les deux mains près du visage avec les doigts pincés près des yeux, puis ouvrez-les rapidement.",
+      "tips": ["Les deux mains commencent avec les bouts des doigts pincés.", "L'ouverture est rapide et simultanée.", "Associez avec des yeux grands ouverts."]
+    },
+    "Sleep": {
+      "description": "Pressez les deux mains plates ensemble avec les doigts pointant vers le haut, puis inclinez-les latéralement vers la joue.",
+      "tips": ["Les deux paumes se pressent ensemble à plat.", "La tête s'incline pour rejoindre les mains.", "Accentuez l'inclinaison latérale du poignet."]
+    },
+    "Stop": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Abattez la main droite brusquement sur la paume gauche.",
+      "tips": ["La main de base reste immobile.", "Le coup est brusque et décisif.", "Accentuez le claquement du poignet vers le bas.", "La main droite atterrit perpendiculairement."]
+    },
+    "Clean": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Glissez la main droite à plat dessus du poignet aux bouts des doigts.",
+      "tips": ["La main gauche est la surface à nettoyer.", "L'essuyage parcourt toute la longueur de la paume.", "Le mouvement peut être répété deux fois."]
+    },
+    "Want": {
+      "description": "Tenez les deux mains devant vous avec les doigts écartés et les paumes vers le haut, puis tirez-les vers le corps en recourbant les doigts.",
+      "tips": ["Commencez avec les deux mains ouvertes et étendues.", "Le mouvement de tirage est vers l'intérieur.", "Les doigts se recourbent en griffe.", "Les deux mains bougent symétriquement."]
+    },
+    "Cook": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Placez la main droite dessus, puis retournez-la.",
+      "tips": ["La main gauche est la poêle.", "La main droite se retourne en douceur.", "Le mouvement peut être répété une fois."]
+    },
+    "Write": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Pincez l'index et le pouce droits comme un stylo et faites des mouvements d'écriture sur la paume.",
+      "tips": ["Les doigts pincés imitent un stylo.", "Le mouvement d'écriture est petit et rapide.", "Accentuez le mouvement du poignet.", "Contrairement à Dessiner qui utilise l'auriculaire."]
+    },
+    "Draw": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Utilisez l'auriculaire droit pour tracer une ligne ondulée sur la paume.",
+      "tips": ["L'auriculaire agit comme un crayon.", "Le mouvement ondulé vient du poignet.", "Accentuez le mouvement pour le distinguer d'Écrire.", "Gardez les autres doigts recourbés."]
+    },
+    "Read": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Pointez les doigts V droits vers le bas et déplacez-les d'avant en arrière.",
+      "tips": ["Les doigts V représentent les yeux qui lisent.", "Le mouvement imite la lecture de lignes.", "Accentuez le mouvement de balayage.", "La main de base reste immobile."]
+    },
+    "Cry": {
+      "description": "Étendez les deux index et placez-les juste sous chaque œil, puis tracez-les vers le bas sur les joues.",
+      "tips": ["Les deux index commencent sous les yeux.", "Le trait vers le bas est lent et délibéré.", "Accentuez le tracé vers le bas.", "Le mouvement peut être répété."]
+    },
+    "Laugh": {
+      "description": "Pointez les deux index vers les coins de la bouche, puis tirez-les vers l'extérieur et vers le haut en traçant un sourire.",
+      "tips": ["Les deux index commencent aux coins de la bouche.", "Le tirage vers l'extérieur imite un sourire.", "Accentuez le mouvement vers l'extérieur.", "Associez avec une vraie expression souriante."]
+    },
+    "Walk": {
+      "description": "Tenez les deux mains à plat devant vous paumes vers le bas, puis alternez leur mouvement vers l'avant.",
+      "tips": ["Les deux mains représentent les pieds, elles alternent.", "Chaque main avance depuis le poignet.", "Accentuez le mouvement alternatif.", "Maintenez un rythme régulier."]
+    },
+    "Jump": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Placez la main droite en V pointant vers le bas sur la paume, puis faites rebondir les doigts V vers le haut.",
+      "tips": ["Les doigts V représentent les jambes.", "Le mouvement de lancement vient du poignet.", "Accentuez le rebond du poignet vers le haut.", "La main de base reste immobile."]
+    },
+    "Hug": {
+      "description": "Croisez les deux bras sur la poitrine avec les poings fermés, puis serrez légèrement les bras vers la poitrine.",
+      "tips": ["Les deux bras se croisent aux poignets.", "Le serrement est subtil mais délibéré.", "Gardez les deux poings fermes."]
+    }
+  },
+  "utilityWords": {
+    "Where": {
+      "description": "Étendez l'index droit vers le haut et agitez-le de côté depuis le poignet.",
+      "tips": ["Seul l'index est étendu.", "Le mouvement vient du poignet.", "Gardez la main levée à hauteur du menton.", "Froncez les sourcils pour signaler la question."]
+    },
+    "Who": {
+      "description": "Faites un L avec la main droite, puis placez le bout de l'index sur le menton et faites-le tourner légèrement.",
+      "tips": ["L'index repose légèrement sur le menton.", "Le petit mouvement circulaire le distingue.", "Gardez les autres doigts détendus.", "Froncez les sourcils pour compléter l'expression."]
+    },
+    "Why": {
+      "description": "Touchez le majeur droit au front, puis tirez la main en adoptant une forme de doigts courbés.",
+      "tips": ["Le majeur touche brièvement le front.", "Les doigts se courbent naturellement.", "Le mouvement représente une pensée qui quitte la tête.", "Froncez les sourcils pour compléter l'expression."]
+    },
+    "How": {
+      "description": "Placez les deux mains ensemble avec les articulations se touchant et les pouces levés. Roulez les deux mains vers l'avant et vers le haut, terminant avec les paumes vers le haut.",
+      "tips": ["Commencez avec les articulations se touchant.", "Le mouvement de roulement est fluide.", "Terminez clairement avec les paumes vers le haut.", "Froncez les sourcils pour compléter l'expression."]
+    },
+    "What": {
+      "description": "Tenez les deux mains devant vous paumes vers le haut et doigts écartés, puis inclinez-les légèrement de côté.",
+      "tips": ["Les deux mains bougent dans un mouvement détendu.", "Gardez les doigts naturellement écartés.", "Le mouvement est subtil.", "Froncez les sourcils et haussez légèrement les épaules."]
+    },
+    "When": {
+      "description": "Tenez l'index gauche pointant vers le haut. Avec l'index droit, tracez un cercle autour de lui, puis tapotez le bout du doigt gauche.",
+      "tips": ["Le doigt gauche reste complètement immobile.", "L'index droit cercle doucement.", "Les deux doigts sont proches l'un de l'autre.", "Froncez les sourcils pour compléter l'expression."]
+    },
+    "Which": {
+      "description": "Tenez les deux mains devant vous avec les pouces levés. Alternez en les déplaçant de haut en bas comme une balance.",
+      "tips": ["Les deux mains commencent à la même hauteur.", "Le mouvement alternatif est fluide et régulier.", "Gardez les pouces clairement étendus.", "Froncez les sourcils pour compléter l'expression."]
+    }
+  },
+  "timeData": {
+    "Later": {
+      "description": "Formez un L avec la main droite (pouce levé, index pointant vers le haut). Puis faites pivoter la main vers l'avant et vers le bas.",
+      "tips": ["Gardez le L ferme tout au long du mouvement.", "Plus l'inclinaison est grande, plus 'plus tard' est loin.", "Pratiquez le pivot fluide du poignet."]
+    },
+    "Again": {
+      "description": "Tenez la main gauche à plat paume vers le haut. Formez une main courbée et faites-la arquer vers le bas pour que les bouts des doigts atterrissent au centre de la paume.",
+      "tips": ["Gardez la main de base immobile.", "La main qui bouge s'arque doucement.", "Les bouts des doigts atterrissent au centre.", "Le mouvement peut être répété deux fois."]
+    },
+    "Done": {
+      "description": "Tenez les deux mains devant vous avec les doigts pliés et les paumes vers l'intérieur. Retournez les deux mains vers l'extérieur simultanément.",
+      "tips": ["Le retournement doit être rapide et décisif.", "Les deux mains bougent en même temps.", "Commencez avec les doigts légèrement recourbés.", "Terminez avec les doigts complètement écartés."]
+    },
+    "More": {
+      "description": "Formez des O plats avec les deux mains en rassemblant les bouts des doigts. Tapotez les bouts des deux mains ensemble devant le corps.",
+      "tips": ["Les deux mains se reflètent avec les bouts pincés.", "Le tapotement peut être répété deux fois.", "Gardez les mains à hauteur confortable.", "Assurez-vous que ce sont les bouts qui se touchent."]
+    },
+    "Now": {
+      "description": "Commencez avec les deux index pointant vers le haut près des épaules. Puis laissez tomber les deux mains simultanément en Y.",
+      "tips": ["La chute doit être fluide.", "Terminez clairement en Y, pouce et auriculaire étendus.", "Les deux mains bougent ensemble.", "Le mouvement vers le bas représente le moment présent."]
+    }
   }
 }
