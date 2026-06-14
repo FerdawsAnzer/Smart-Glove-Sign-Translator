@@ -1,0 +1,311 @@
+{
+  "alphabet": {
+    "A": { "description": "A harfi, başparmağınız işaret parmağının yanında durarak yumruk yapılarak oluşturulur.", "tips": ["Yumruk oluşturmak için parmaklarınızı sıkıca kıvırın.", "Başparmağı rahat tutun.", "Diğer harflerden A'ya geçişi pratik yapın."] },
+    "B": { "description": "Düz el, parmaklar birleşik, başparmak avuç içinde", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "C": { "description": "El C şekli oluşturacak şekilde kıvrılır", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "D": { "description": "İşaret parmağı yukarıda, diğerleri başparmağa değiyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "E": { "description": "Parmaklar aşağı kıvrılmış başparmağa değiyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "F": { "description": "İşaret ve başparmak daire oluşturuyor, diğerleri yukarı", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "G": { "description": "İşaret ve başparmak yatay işaret ediyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "H": { "description": "İşaret ve orta parmak yatay işaret ediyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "I": { "description": "Serçe parmak yukarıda, diğerleri başparmakla kapalı", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "J": { "description": "Serçe yukarıda, havada J çiziliyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "K": { "description": "İşaret ve orta V'de, başparmak aralarında", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "L": { "description": "İşaret ve başparmak L şekli oluşturuyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "M": { "description": "Üç parmak başparmağın üstünde, serçe aşağıda", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "N": { "description": "İki parmak başparmağın üstünde, diğerleri aşağıda", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "O": { "description": "Parmaklar daire şekli oluşturuyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "P": { "description": "K gibi ama aşağı bakıyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "Q": { "description": "İşaret ve başparmak aşağı işaret ediyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "R": { "description": "İşaret ve orta parmak çapraz", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "S": { "description": "Başparmak parmakların üstünde yumruk", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "T": { "description": "Başparmak işaret ve orta parmak arasında", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "U": { "description": "İşaret ve orta parmak birlikte yukarıda", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "V": { "description": "İşaret ve orta parmak V şeklinde", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "W": { "description": "Üç parmak W şeklinde", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "X": { "description": "İşaret parmağı kanca gibi bükülmüş", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "Y": { "description": "Başparmak ve serçe uzatılmış", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] },
+    "Z": { "description": "İşaret parmağı havada Z çiziyor", "tips": ["Hareketi dikkatlice izleyin", "Aynada pratik yapın", "Hareketlerinizi akıcı tutun."] }
+  },
+  "colors": {
+    "Red": { "description": "İşaret parmağınızı dudaklarınız boyunca aşağı sürün.", "tips": ["İşaret parmağını düz tutun.", "Üst dudaktan başlayın.", "Yavaş pratik yapın."] },
+    "Blue": { "description": "B el şeklini yapın ve elinizi hafifçe sallayın.", "tips": ["Parmakları birleşik tutun.", "Eli yavaşça sallayın.", "Hareketi küçük tutun."] },
+    "Green": { "description": "G el şeklini yapın ve hafifçe sallayın.", "tips": ["İşaret ve başparmağı paralel uzatın.", "Diğer parmakları kapalı tutun.", "Eli hafifçe hareket ettirin."] },
+    "Yellow": { "description": "Y el şeklini yapın ve nazikçe sallayın.", "tips": ["Başparmak ve serçeyi uzatın.", "Diğerleri kıvrık.", "Eli hafifçe sallayın."] },
+    "Black": { "description": "İşaret parmağınızı alnınızda gezdirin.", "tips": ["Alnın bir tarafından başlayın.", "Parmağı düzgün hareket ettirin.", "Hareketi yavaş tutun."] },
+    "White": { "description": "Elinizi göğsünüze koyun ve öne çekin.", "tips": ["Parmaklar göğse değerek başlayın.", "Eli yavaşça öne alın.", "Parmakları hafif açık tutun."] },
+    "Pink": { "description": "P şeklini yapın ve çenenize hafifçe vurun.", "tips": ["P şeklini net tutun.", "Çeneye hafifçe dokunun.", "Büyük hareketlerden kaçının."] },
+    "Purple": { "description": "P el şeklini yapın ve hafifçe sallayın.", "tips": ["P şeklini sabit tutun.", "Bilekten nazikçe sallayın.", "Parmaklar belirgin kalmalı."] },
+    "Orange": { "description": "Ağzınızın yanında pençe şekli yapın ve sıkın.", "tips": ["Hafif kıvrık başlayın.", "Parmakları başparmağa doğru kapatın.", "Eli ağza yakın tutun."] },
+    "Gray": {
+  "description": "Her iki el göğsün yanında parmaklar gevşek başlar, sonra hafifçe açılarak dışarıya hareket eder.",
+  "tips": ["Elleri göğsün üst kısmının yanında gevşek başlatın.", "Başlangıçta parmakları doğal olarak birlikte tutun.", "Elleri hafifçe açarak dışarıya doğru akıcıca hareket ettirin.", "Sert parmak hareketlerinden kaçının ve hareketi yumuşak tutun.", "Başparmak pozisyonuna dikkat edin ve rahat tutun."]
+}
+  },
+
+  "numbers": {
+    "0": { "description": "Parmak uçlarını birleştirerek O şekli oluşturun.", "tips": ["Tüm uçlar değiyor.", "El rahat.", "Avuç öne bakıyor."] },
+    "1": { "description": "İşaret parmağını yukarı uzatın.", "tips": ["Diğerleri kapalı.", "Avuç öne.", "Parmak düz."] },
+    "2": { "description": "İşaret ve orta parmağı yukarı uzatın.", "tips": ["Hafif ayrık.", "Avuç öne.", "Diğerleri kapalı."] },
+    "3": { "description": "Başparmak, işaret ve orta parmağı uzatın.", "tips": ["Yüzük ve serçe kapalı.", "Avuç öne.", "Parmaklar görünür."] },
+    "4": { "description": "Dört parmak yukarı, başparmak içeride.", "tips": ["Başparmak avuç içinde.", "Parmaklar hafif açık.", "Avuç öne."] },
+    "5": { "description": "Beş parmak yukarı uzatılmış.", "tips": ["Doğal açın.", "Avuç öne.", "El sabit."] },
+    "6": { "description": "Başparmak serçeye değiyor, diğerleri uzatılmış.", "tips": ["İşaret, orta ve yüzük yukarı.", "Başparmak açıkça değiyor.", "Avuç öne."] },
+    "7": { "description": "Başparmak yüzük parmağına değiyor.", "tips": ["İşaret ve orta yukarı.", "Açıkça değiyor.", "Avuç öne."] },
+    "8": { "description": "Başparmak orta parmağa değiyor.", "tips": ["İşaret, yüzük ve serçe uzatılmış.", "Açıkça değiyor.", "Avuç öne."] },
+    "9": { "description": "Başparmak işaret parmağına değiyor.", "tips": ["Yüzük, orta ve serçe uzatılmış.", "Net O şekli.", "Avuç öne."] },
+    "10": { "description": "Başparmak yukarı uzatılmış yumruk, hafif sallama.", "tips": ["Parmaklar sıkıca kapalı.", "Başparmak yukarı.", "Küçük bilek sallama."] }
+  },
+  "socialWords": {
+    "I love you": { "description": "Bir elinizi avuç öne bakacak şekilde kaldırın. Başparmak, işaret ve serçeyi uzatın.", "tips": ["Avuç dışarıya bakıyor.", "Orta ve yüzük kıvrık.", "İşareti sabit tutun."] },
+    "Thank you": { "description": "Parmak uçlarını çenenize yakın tutun sonra öne hareket ettirin.", "tips": ["Çeneden başlayın.", "Parmakları birleşik tutun.", "Kişiye doğru hareket edin.", "Hareket çeneden dışarıya."] },
+    "Hello": {
+  "description": "Sağ düz elinizi alnınıza veya şakağınıza getirin, sonra selamlama gibi dışarıya doğru süpürün.",
+  "tips": ["Parmak uçlarıyla alna yakın başlayın.", "Dışarıya süpürme akıcı ve güvenli olmalıdır.", "Bileğin dışarıya hareketi vurgulayın.", "Parmakları düz ve birlikte tutun."]
+},
+"Goodbye": {
+  "description": "Sağ elinizi baş hizasına parmaklar yukarı bakacak şekilde kaldırın, sonra parmakları tekrar tekrar aşağı ve yukarı katlayın.",
+  "tips": ["Dalga parmakların eklemlerden katlanmasından gelir.", "Avucu öne ve eli kaldırılmış tutun.", "Bileğin sabit kalmasını vurgulayın.", "İki üç katlama yeterlidir."]
+},
+"Please": {
+  "description": "Sağ düz elinizi parmaklar birlikte göğsünüze koyun, sonra göğüste dairesel hareketle ovun.",
+  "tips": ["El göğüsle tam temas halinde kalır.", "Daire bilekten döndürerek yapılır.", "Bilek güdümlü dairesel hareketi vurgulayın.", "Eli düz ve parmakları birlikte tutun."]
+},
+"Sorry": {
+  "description": "Sağ elinizle başparmak uzatılmış yumruk yapın ve göğsünüze koyun, sonra dairesel ovun.",
+  "tips": ["Lütfen'den farklı olarak Özür'de düz el değil yumruk kullanılır.", "Bilek dönüşünü vurgulayın.", "Yumruğu göğüsle temas halinde sıkı tutun."]
+},
+"No": {
+  "description": "İşaret ve orta parmağı başparmak içeride uzatın, sonra hızla aşağı kıstırın.",
+  "tips": ["İşaret ve orta parmak açıkça yukarı uzatılmış başlayın.", "Aşağı kıstırma hızlı ve keskin olmalıdır.", "Bileğin aşağı şaklamasını vurgulayın.", "Hareket iki kez tekrarlanabilir."]
+},
+"Yes": {
+  "description": "Sağ elinizle yumruk yapın ve bilekten yukarı aşağı sallayın, evet diyen başı taklit edin.",
+  "tips": ["Hareket tamamen bilekten gelir.", "Sallama sırasında yumruğu sıkı tutun.", "Net ve kasıtlı bilek sallama vurgulayın.", "İki sallama standarttır."]
+},
+"Thank You": {
+  "description": "Düz elinizin parmak uçlarını çenenize dokundurun, sonra elinizi öne ve dışarıya savurun.",
+  "tips": ["Hareket çeneden başlar ve dışarıya akar.", "El uzaklaşırken bilek dönüşünü vurgulayın.", "Parmakları birlikte ve eli düz tutun.", "Avuç yukarı bakacak şekilde bitirin."]
+},
+"I Love You": {
+  "description": "Sağ elinizi başparmak, işaret ve serçe uzatılmış, orta ve yüzük kıvrık tutun. Küçük bir bükme yapın.",
+  "tips": ["Eli çene veya dudakların yanında başlatın.", "Parmakları birlikte ve hareketi akıcı tutun.", "Eli sağdan sola hareket ettirin."]
+},
+"Deaf": {
+  "description": "Sağ işaret parmağını kulağınıza doğrultun, sonra ağzın köşesine doğru aşağı ve öne hareket ettirin.",
+  "tips": ["Hareket kulak ile ağız köşesi arasında düz bir yoldur.", "Bilek yönelim değişimini vurgulayın.", "Her iki yön de kabul edilebilir.", "İşaret parmağını hareket boyunca uzatılmış tutun."]
+},
+"Hearing Person": {
+  "description": "Sağ işaret parmağını uzatın ve ağzınızın önünde tutun, sonra küçük bir ileri dairesel hareket yapın.",
+  "tips": ["Daire ağzın önünde yapılır.", "Hareket bilekten gelir.", "İşaret parmağını öne bakacak şekilde tutun.", "Daire küçük ve sıkıdır."]
+}
+  },
+  "pronouns": {
+    "Me/I": {
+      "description": "Göğsünüzün yanında işaret parmağıyla kendinizi gösterin.",
+      "tips": ["Göğsünüzün merkezine dokunun veya işaret edin.", "Hareketi küçük ve doğal tutun.", "Rahat bir el kullanın.", "Kendinize doğru açık bir yön koruyun."]
+    },
+    "My/Mine": {
+      "description": "Açık bir eli göğse düz olarak yerleştirin.",
+      "tips": ["Parmakları birlikte ve avucu açık tutun.", "Avuçla göğse hafifçe dokunun.", "Parmakları çok fazla bükmeyin.", "Hareketi sakin ve akıcı tutun."]
+    },
+    "You": {
+      "description": "İşaret parmağıyla diğer kişiye doğru dışarıyı gösterin.",
+      "tips": ["İşaret parmağını öne doğru açıkça uzatın.", "Kişiye doğal olarak yönelin.", "Bileği rahat tutun.", "Abartılı kol hareketinden kaçının."]
+    },
+    "Your/Yours": {
+      "description": "Açık avucu diğer kişiye doğru dışarıya hareket ettirin.",
+      "tips": ["Avucu parmaklar birlikte açık tutun.", "Avucu kişiye doğru yöneltin.", "Eli nazikçe dışarıya itin.", "Hareketi akıcı ve kontrollü tutun."]
+    },
+    "He/She/It": {
+      "description": "Referans alınan kişi veya nesneye doğru işaret edin.",
+      "tips": ["Net bir işaret yönü kullanın.", "İşaret parmağını düz tutun.", "Hedefe doğal yüz odağı kullanın.", "Hızlı veya belirsiz hareketlerden kaçının."]
+    },
+    "His/Her/Its": {
+      "description": "Kişi veya nesneye yöneltilmiş açık bir avuç kullanın.",
+      "tips": ["Eli açık ve rahat tutun.", "Referans alınan konuya doğru hafifçe hareket edin.", "Netlik için parmakları birlikte tutun.", "Nazik bir dışarı hareketi koruyun."]
+    },
+    "We": {
+      "description": "İşaret parmağını kendiniz ile diğerleri arasında küçük bir yay içinde hareket ettirin.",
+      "tips": ["Önce kendinizi göstererek başlayın.", "Hareketi gruba doğru akıcıca süpürün.", "Hareketi küçük ve kontrollü tutun.", "Rahat bilek hareketi kullanın."]
+    },
+    "Our/Ours": {
+      "description": "Açık avucu grup alanı boyunca küçük bir yay içinde hareket ettirin.",
+      "tips": ["Avucu açık ve parmakları birlikte tutun.", "Eli akıcıca hareket ettirin.", "Nazik bir süpürme hareketiyle dahil etmeyi gösterin.", "Ani veya aceleyle yapılan hareketlerden kaçının."]
+    },
+    "They": {
+      "description": "Birden fazla kişiye veya gruba doğru dışarıyı gösterin.",
+      "tips": ["Gruplar için hafif bir süpürme işareti kullanın.", "Eli rahat ve doğal tutun.", "Kişilerin yönüne açıkça bakın.", "Hareketi takip etmesi kolay yapın."]
+    },
+    "Their/Theirs": {
+      "description": "Referans alınan gruba doğru açık avucu hareket ettirin.",
+      "tips": ["Avucu açık ve rahat tutun.", "Hareketi gruba doğru açıkça yöneltin.", "Akıcı bir dışarı hareketi kullanın.", "Parmak konumlandırmasını düzenli tutun."]
+    }
+  },
+  "verbs": {
+    "Like": {
+      "description": "Sağ elinizi göğsünüze koyun, başparmak ve orta parmak kısık, ardından elinizi çekin ve parmakları dışarı uzatın.",
+      "tips": ["Orta parmak ve başparmakla göğse hafifçe dokunarak başlayın.", "Çekilme akıcıdır, parmaklar öne doğru uzanır.", "Başparmak ve orta parmakla bitirin."]
+    },
+    "Cut": {
+      "description": "Sağ işaret ve orta parmağı V şeklinde uzatın, sonra makas gibi kapayın.",
+      "tips": ["V parmaklarla tamamen açık başlayın.", "Kapanma hızlı ve keskin, makas gibi.", "Bilek güdümlü makas hareketini vurgulayın.", "Hareket iki kez tekrarlanabilir."]
+    },
+    "Drop": {
+      "description": "Sağ elinizi önünüzde parmaklar gevşek yayılmış tutun, sonra bileği aşağı düşürün.",
+      "tips": ["Eli kaldırılmış ve parmaklar gevşek açık başlayın.", "Düşüş ani bir aşağı bilek düşmesidir.", "Düşüşten sonra parmaklar gevşek sarkık biter."]
+    },
+    "Need": {
+      "description": "Sağ işaret parmağını öne uzatın, sonra bilekten aşağı doğru keskin şekilde kıvırın.",
+      "tips": ["İşaret parmağı tamamen uzatılmış başlayın.", "Kıvrılma keskin aşağı kancadır.", "Parmak aşağı kıvrılmış biter."]
+    },
+    "Hear": {
+      "description": "Sağ elinizi kulağınızın yanına koyun, başparmak yanında, sonra işaret ve orta parmağı içeri dışarı kıvırın.",
+      "tips": ["Başparmak kulak yakınında kalır.", "Sadece işaret ve orta parmak hareket eder.", "Nabız hareketi yumuşak ve naziktir."]
+    },
+    "Talk": {
+      "description": "Sağ elinizi ağzınıza yakın tutun, parmaklar birlikte yukarı bakıyor, sonra parmakları tekrar tekrar açıp kapayın.",
+      "tips": ["Parmaklar eklemlerden açılıp kapanır.", "Eli ağzınıza yakın tutun.", "Tekrarlayan parmak hareketini vurgulayın.", "Tekrarlama anahtardır."]
+    },
+    "Eat": {
+      "description": "Sağ elin parmak uçlarını düz O şekli oluşturarak bir araya getirin ve ağza doğru tekrar tekrar vurun.",
+      "tips": ["Parmak uçları ve başparmak birlikte kısık.", "Vurma hareketi bilekten ağza doğru.", "Tekrarlayan hareketi vurgulayın.", "Hareketi küçük ve doğal tutun."]
+    },
+    "Drink": {
+      "description": "Sağ elinizle C şekli yapın sanki bir bardak tutuyorsunuz, sonra elinizi ağzınıza doğru yukarı eğin.",
+      "tips": ["C şekli görünmez bir bardak tutuyormuş gibi.", "Eğme hareketi bilekten ağza doğru döner.", "El ağzın yanında ve bilek tamamen eğilmiş biter."]
+    },
+    "Help": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ elinizi başparmak yukarı şeklinde üstüne koyun, sonra her iki eli birlikte yukarı kaldırın.",
+      "tips": ["Düz taban el platform görevi görür.", "Her iki el birlikte hareket eder.", "Başparmağı açıkça yukarı uzatılmış tutun.", "Yukarı hareket akıcı ve kasıtlı olmalıdır."]
+    },
+    "See": {
+      "description": "Sağ elinizi V şeklinde tutun, parmaklar gözlerinize bakıyor, sonra bileği döndürün ve V parmaklarını dışarı doğru işaret ettirin.",
+      "tips": ["V parmaklarla gözlerinize bakarak başlayın.", "Bileğin öne dönmesi anahtar harekettir.", "V'nin her iki parmağını da uzatılmış tutun.", "V parmakları açıkça öne bakarak biter."]
+    },
+    "Go": {
+      "description": "Her iki işaret parmağını öne uzatın, sonra her ikisini de aynı anda dışarı ve uzağa doğru ark yapın.",
+      "tips": ["Her iki el merkezden başlar ve dışarı süpürür.", "Dışarı ark bileklerden gelir.", "Dışa hareketi vurgulayın.", "Her iki işaret parmağı öne bakarak biter."]
+    },
+    "Come": {
+      "description": "Her iki işaret parmağını yukarı veya dışarı uzatın, sonra her ikisini de içeriye doğru ark yapın.",
+      "tips": ["Her iki işaret parmağı dışa bakarak başlar ve içe kıvrılır.", "Ark hareketi bileklerden gelir.", "İçe arkı vurgulayın.", "Hareket doğal olarak 'buraya gel' şeklinde okunur."]
+    },
+    "Sit": {
+      "description": "Her iki elinizi önünüzde tutun, işaret ve orta parmaklar birlikte uzatılmış. Sağ el parmaklarını sol parmakların üzerine koyun.",
+      "tips": ["Her iki el aynı iki parmak şeklini kullanır.", "Sağ el parmakları sol elin üzerine sarkar.", "Bileğin aşağı sarkmasını vurgulayın.", "Pozisyonu kısa süre tutun."]
+    },
+    "Stand": {
+      "description": "Sağ elinizi avuç yukarı bakacak şekilde düz tutun. Sağ V parmaklarını aşağı bakacak şekilde taban avucuna yerleştirin.",
+      "tips": ["V parmaklar ayakta duran bacakları temsil eder.", "Zıplamanın aksine V parmaklar sabit kalır.", "V parmaklarının sıkıca yerleştirilmesini vurgulayın.", "Pozisyonu sabit tutun."]
+    },
+    "Wake Up": {
+      "description": "Her iki elinizi yüzünüzün yanına koyun, parmak uçları gözlerin yanında kısık, sonra hızla açın.",
+      "tips": ["Her iki el parmak uçları her gözün yanında kısık başlar.", "Açılma hızlı ve eş zamanlıdır.", "Geniş açık gözler ve şaşkın ifadeyle eşleştirin."]
+    },
+    "Sleep": {
+      "description": "Her iki düz elinizi parmaklar yukarı bakacak şekilde birbirine bastırın, sonra yanlamasına yanağa doğru eğin.",
+      "tips": ["Her iki avuç düz birbirine bastırılır.", "Baş elleri karşılamak için eğilir.", "Bileğin yanlamasına eğilmesini vurgulayın."]
+    },
+    "Stop": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ düz elinizi sol avuca sertçe indirin.",
+      "tips": ["Taban el tamamen hareketsiz kalır.", "Darbe keskin ve kesindir.", "Bileğin aşağı şaklamasını vurgulayın.", "Sağ el taban ele dik iner."]
+    },
+    "Clean": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ düz elinizi bilekten parmak uçlarına kadar üzerinde kaydırın.",
+      "tips": ["Sol el temizlenen yüzey, hareketsiz tutun.", "Silme işlemi taban avucun tüm uzunluğunu kapsar.", "Hareket iki kez tekrarlanabilir."]
+    },
+    "Want": {
+      "description": "Her iki elinizi önünüzde parmaklar açık ve avuçlar yukarı bakacak şekilde tutun, sonra parmakları pençe şekline kıvırarak içe çekin.",
+      "tips": ["Her iki el açık ve öne uzatılmış başlar.", "Çekme hareketi içe doğrudur.", "Parmaklar çekilirken pençe şekline kıvrılır.", "Her iki el simetrik ve eş zamanlı hareket eder."]
+    },
+    "Cook": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ düz elinizi üstüne koyun, sonra ters çevirin.",
+      "tips": ["Sol el tava, düz ve hareketsiz tutun.", "Sağ el düzgünce ters çevrilir.", "Çevirme hareketi bir kez tekrarlanabilir."]
+    },
+    "Write": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ işaret parmağı ve başparmağı kalem tutar gibi kıstırın ve taban avuçta yazma hareketleri yapın.",
+      "tips": ["Kıstırılmış parmak ve başparmak kalem tutar gibi.", "Yazma hareketi küçük ve hızlı.", "Bilek güdümlü yazma hareketini vurgulayın.", "Çizmenin aksine kıstırılmış parmak uçları kullanılır."]
+    },
+    "Draw": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ serçe parmağınızla taban avuçta dalgalı bir çizgi izleyin.",
+      "tips": ["Serçe parmak avuçta çizim yapan kalem gibi.", "Dalgalı hareket bilekten gelir.", "Yazmadan ayırt etmek için hareketi vurgulayın.", "Diğer parmakları gevşek kıvrık tutun."]
+    },
+    "Read": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ V parmaklarını aşağı doğru taban avuca bakacak şekilde tutun ve ileri geri hareket ettirin.",
+      "tips": ["V parmaklar tarayan gözleri temsil eder.", "İleri geri hareket metin okumayı taklit eder.", "Tarama hareketini vurgulayın.", "Taban el düz ve hareketsiz kalır."]
+    },
+    "Cry": {
+      "description": "Her iki işaret parmağını uzatın ve her gözün hemen altına koyun, sonra yanaklar boyunca aşağı çizin.",
+      "tips": ["Her iki işaret parmağı aynı anda gözlerin altından başlar.", "Aşağı çizgi yavaş ve kasıtlıdır.", "Aşağı çizişi vurgulayın.", "Hareket tekrarlanabilir."]
+    },
+    "Laugh": {
+      "description": "Her iki işaret parmağını ağzın köşelerine doğru tutun, sonra dışarı ve yukarı çekerek gülümseme çizin.",
+      "tips": ["Her iki işaret parmağı ağzın köşelerinde başlar.", "Dışarı ve yukarı çekme gülümseme şeklini taklit eder.", "Dışarı fırlatmayı vurgulayın.", "Gerçek gülümseme ifadesiyle eşleştirin."]
+    },
+    "Walk": {
+      "description": "Her iki elinizi önünüzde avuçlar aşağı bakacak şekilde tutun, sonra adım atar gibi dönüşümlü öne hareket ettirin.",
+      "tips": ["Her iki el ayakları temsil eder, dönüşümlü.", "Her el bilekten öne hareket eder.", "Dönüşümlü hareketi vurgulayın.", "Sabit ritim koruyun."]
+    },
+    "Jump": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Sağ elinizi V şeklinde aşağı bakacak şekilde taban avucuna koyun, sonra V parmaklarını yukarı fırlayın.",
+      "tips": ["V parmaklar bacakları temsil eder.", "Fırlama hareketi bilekten gelir.", "Bileğin yukarı fırlamasını vurgulayın.", "Taban el tamamen hareketsiz kalır."]
+    },
+    "Hug": {
+      "description": "Her iki kolunuzu yumruklar kapalı şekilde göğsünüzde çaprazlayın, sonra kolları hafifçe içe sıkın.",
+      "tips": ["Her iki kol bileklerde çaprazlanır.", "İçe sıkma ince ama kasıtlıdır.", "Her iki yumruğu sıkı tutun."]
+    }
+  },
+  "utilityWords": {
+    "Where": {
+      "description": "Sağ işaret parmağını yukarı uzatın ve bilekten yana sallayın.",
+      "tips": ["Sadece işaret parmağı uzatılmış.", "Sallama hareketi bilekten gelir.", "Eli çene ile omuz arasında tutun.", "Soru ifadesi için kaşları çatın."]
+    },
+    "Who": {
+      "description": "Sağ elinizle L şekli yapın, sonra işaret parmağının ucunu çenenize koyun ve hafifçe döndürün.",
+      "tips": ["İşaret parmağı çeneye hafifçe yaslanır.", "Küçük dairesel hareket onu ayırt eder.", "Diğer parmakları rahat tutun.", "Soru ifadesi için kaşları çatın."]
+    },
+    "Why": {
+      "description": "Sağ orta parmağınıza alnınıza dokunun, sonra elinizi öne çekin ve gevşek bükülmüş parmak şekline geçin.",
+      "tips": ["Orta parmak çekilmeden önce alna kısa dokunur.", "El öne hareket ederken parmaklar doğal kıvrılır.", "Hareket kafanızdan çıkan bir düşünceyi temsil eder.", "Soru ifadesi için kaşları çatın."]
+    },
+    "How": {
+      "description": "Her iki elinizi önünüzde boğumlar birbirine değecek şekilde tutun, başparmaklarınız yukarı bakıyor. Her iki eli öne ve yukarı doğru yuvarlayın, avuçlar yukarı bakacak şekilde bitirin.",
+      "tips": ["Her iki elin boğumları birbirine değerek başlayın.", "Yuvarlama hareketi akıcıdır.", "Avuçlar açıkça yukarı bakacak şekilde bitirin.", "Soru ifadesi için kaşları çatın."]
+    },
+    "What": {
+      "description": "Her iki elinizi önünüzde avuçlar yukarı ve parmaklar gevşek açık tutun, sonra hafifçe yana eğin.",
+      "tips": ["Her iki el gevşek, rahat bir harekette hareket eder.", "Parmakları doğal açık tutun.", "Hareket ince, abartılı değil.", "Kaşları çatın ve hafif omuz silkme ekleyin."]
+    },
+    "When": {
+      "description": "Sol işaret parmağını yukarı tutun. Sağ işaret parmağıyla etrafında daire çizin, sonra sol parmağın ucuna dokunun.",
+      "tips": ["Sol parmak taban olarak tamamen hareketsiz kalır.", "Sağ parmak inmeden önce düzgünce döner.", "Her iki parmak birbirine yakın.", "Soru ifadesi için kaşları çatın."]
+    },
+    "Which": {
+      "description": "Her iki elinizi önünüzde başparmaklarınız yukarı bakacak şekilde tutun. İki seçeneği tartan terazi gibi dönüşümlü yukarı aşağı hareket ettirin.",
+      "tips": ["Her iki el dönüşümlü hareketten önce aynı yükseklikte başlar.", "Yukarı aşağı dönüşümlü hareket akıcı ve eşit.", "Başparmaklarını açıkça yukarı uzatılmış tutun.", "Soru ifadesi için kaşları çatın."]
+    }
+  },
+  "timeData": {
+    "Later": {
+      "description": "Sağ elinizle L şekli yapın (başparmak yukarı, işaret parmağı yukarı bakıyor). Sonra elinizi öne ve aşağı döndürün.",
+      "tips": ["L şeklini hareket boyunca sağlam tutun.", "Öne eğim ne kadar büyükse o kadar uzak gelecek anlamına gelir.", "Akıcı bilek dönüşünü pratik yapın."]
+    },
+    "Again": {
+      "description": "Sol elinizi avuç yukarı bakacak şekilde düz tutun. Baskın elinizle kıvrık el yapın, sonra parmak uçları düz avucun ortasına değecek şekilde aşağı ark yapın.",
+      "tips": ["Taban eli hareketsiz ve rahat tutun.", "Hareket eden el akıcıca ark yapar.", "Parmak uçları taban avucun ortasına değer.", "Hareket iki kez tekrarlanabilir."]
+    },
+    "Done": {
+      "description": "Her iki elinizi önünüzde parmaklar bükülmüş ve avuçlar içe bakacak şekilde tutun. Her iki elinizi aynı anda dışarı çevirin.",
+      "tips": ["Çevirme hızlı ve kesin olmalıdır.", "Her iki el aynı anda hareket eder.", "Parmaklar içe doğru gevşek kıvrılmış başlayın.", "Parmaklar tamamen açılmış ve avuçlar dışa bakacak şekilde biter."]
+    },
+    "More": {
+      "description": "Her iki elle düz O şekilleri yapın, parmak uçlarını başparmağa değecek şekilde bir araya getirin. Her iki elin parmak uçlarını vücudun önünde birbirine vurun.",
+      "tips": ["Her iki el kıstırılmış parmak uçlarıyla birbirini yansıtmalıdır.", "Vurma hareketi iki kez yapılabilir.", "Elleri rahat bir göğüs yüksekliğinde tutun.", "Parmak uçlarının değdiğinden emin olun."]
+    },
+    "Now": {
+      "description": "Her iki işaret parmağınızı omuzlarınızın yanında yukarı bakacak şekilde başlayın. Sonra her iki elinizi eş zamanlı aşağı bırakın, Y el şekillerinde bitirin.",
+      "tips": ["Düşüş akıcı olmalıdır.", "Açıkça Y şeklinde bitirin, başparmak ve serçe uzatılmış.", "Her iki el birlikte hareket eder.", "Aşağı hareket şu anki anı temsil eder."]
+    }
+  }
+}

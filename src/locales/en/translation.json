@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "learning": "Learning",
+    "history": "History",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "header": {
+    "welcome": "Welcome Back"
+  },
+  "history": {
+    "title": "Translation History",
+    "subtitle": "View and manage your past translations",
+    "search": "Search translations...",
+    "noResults": "No translations found.",
+    "loading": "Loading history...",
+    "export": "Export",
+    "all": "All"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Customize your sign language translator experience",
+    "profile": "Profile",
+    "languages": "Languages",
+    "help": "Help",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "profilePicture": "Profile Picture",
+    "profilePictureDesc": "Upload a photo to personalize your account",
+    "appLanguage": "App Language",
+    "appLanguageDesc": "Changes the app interface language instantly",
+    "aslOnly": "Currently, only American Sign Language is supported",
+     "translationTip": "Translation Tip",
+"translationTipText": "For best results, ensure your glove is properly connected via Wifi and fitted snugly on your hand for accurate gesture recognition."
+
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "welcomeBack": "Welcome Back",
+    "welcomeTo": "Welcome to",
+    "signInDesc": "Sign in to access your dashboard",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signingIn": "Signing in...",
+    "creating": "Creating...",
+    "createAccount": "Create an account",
+    "startTranslating": "Start translating sign language today",
+    "connectTitle": "Connect Without Barriers",
+    "connectDesc": "Join thousands of users communicating freely with our sign language translation tools.",
+    "breakBarriers": "Break communication barriers with sign language translation",
+    "passwordsNoMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "How do I connect the glove?",
+    "a1": "To connect the glove, turn on Bluetooth on your device, then press the power button on the glove for 3 seconds until the LED blinks blue. Select 'SignGlove' from your device's Bluetooth menu.",
+    "q2": "What if the gesture is not recognized?",
+    "a2": "Ensure the glove is properly fitted and charged. Try repositioning your hand or recalibrating the glove in settings.",
+    "q3": "How can I change the language?",
+    "a3": "Go to the Languages tab in Settings and select your preferred sign language and translation language.",
+    "q4": "How do I enable or disable voice output?",
+    "a4": "Voice output can be toggled in the main translator screen by tapping the speaker icon."
+  },
+  "cards": {
+    "alphabet": "Alphabet",
+    "alphabetDesc": "Learn the ASL alphabet from A to Z",
+    "alphabetBadge": "26 Letters",
+    "basics": "Basics",
+    "basicsDesc": "Alphabet, Numbers and Colors",
+    "basicsBadge": "3 Categories",
+    "numbers": "Numbers",
+    "numbersDesc": "Master counting in ASL from 0 to 10",
+    "numbersBadge": "10 Numbers",
+    "colors": "Colors",
+    "colorsDesc": "Learn the American Sign Language colors",
+    "colorsBadge": "9 Colors",
+    "words": "Words",
+    "wordsDesc": "Social, Utility Words and Verbs",
+    "wordsBadge": "3 Categories",
+    "essentials": "Essentials",
+    "essentialsDesc": "Pronouns, Time and Quantity Words",
+    "essentialsBadge": "3 Categories",
+    "learnBasics": "Learn the Basics",
+    "learnBasicsDesc": "Choose what you'd like to learn",
+    "learnTitle": "Learn Sign Language",
+    "learnSubtitle": "Choose what you'd like to learn today",
+    "whyLearn": "Why Learn Sign Language?",
+    "connect": "Connect with Others",
+    "connectDesc": "Communicate with the deaf and hard-of-hearing community",
+    "boostBrain": "Boost Your Brain",
+    "boostBrainDesc": "Learning sign language improves memory and cognitive skills",
+    "career": "Career Benefits",
+    "careerDesc": "Valuable skill for many professional fields"
+  },
+  "words": {
+    "socialWords": "ASL Social Words",
+    "socialWordsDesc": "Master the American Sign Language social words",
+    "verbs": "ASL Verbs",
+    "verbsDesc": "Learn and Master Basic Verbs in American Sign Language",
+    "verbsBadge": "5 Verbs",
+    "utility": "ASL Utility Words",
+    "utilityDesc": "Master the American Sign Language utility words",
+    "utilityBadge": "7 Utility Words",
+    "wordsCard": "Social",
+    "wordsCardDesc": "Learn Everyday Social Words in American Sign Language",
+    "wordsBadge": "10 Words",
+    "learnWords": "Learn the Words",
+    "learnWordsDesc": "Choose what you'd like to learn"
+  },
+  "essentials": {
+    "title": "Learn the Essentials",
+    "desc": "Choose what you'd like to learn",
+    "pronouns": "Pronouns",
+    "pronounsDesc": "Learn the American Sign Language pronouns",
+    "pronounsBadge": "9 Pronouns",
+    "time": "Time & Quantity",
+    "timeDesc": "Learn the American Sign Language time signs",
+    "timeBadge": "9 Signs"
+  },
+  "toast": {
+    "settingsSaved": "Settings saved",
+    "changesCancelled": "Changes cancelled",
+    "feedbackSubmitted": "Feedback submitted successfully",
+    "feedbackCleared": "Feedback cleared",
+    "pleaseRate": "Please select a rating",
+    "pleaseFeedback": "Please write feedback",
+    "notLoggedIn": "You must be logged in",
+    "feedbackFailed": "Failed to submit feedback",
+    "profileSaved": "Profile updated successfully",
+    "profileCancelled": "Changes reverted"
+  },
+  "profile": {
+    "title": "Profile Picture",
+    "subtitle": "Upload a photo to personalize your account",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "save": "Save Changes",
+    "cancel": "Cancel"
+  },
+  "help": {
+    "title": "Help & Feedback",
+    "subtitle": "Rate your experience and share feedback",
+    "rating": "Your Rating",
+    "feedback": "Your Feedback",
+    "feedbackPlaceholder": "Tell us about your experience...",
+    "submit": "Submit Feedback",
+    "cancel": "Cancel"
+  },
+  "learn": {
+    "title": "Learn Sign Language",
+    "subtitle": "Choose what you'd like to learn today",
+    "basics": "Basics",
+    "basicsDesc": "Alphabet, Numbers and Colors",
+    "words": "Words",
+    "wordsDesc": "Social, Utility Words and Verbs",
+    "essentials": "Essentials",
+    "essentialsDesc": "Pronouns, Time and Quantity Words"
+  },
+  "dashboard": {
+    "aslInput": "ASL Input",
+    "connectGlove": "Connect Glove",
+    "startGlove": "Start Glove",
+    "ready": "Ready to start translating",
+    "translation": "Translation",
+    "translationPlaceholder": "Translation will appear here...",
+    "speak": "Speak",
+   
+    "disconnect": "Disconnect",
+    "quickTip": "Quick Tip",
+  "tipText": "Hold still the sign for half a second until the translation appears. For motion signs, complete the full gesture naturally and wait for the translation to show before continuing. Visit the learning section to gain more knowledge about ASL."
+  },
+  "learning": {
+    "backToCategories": "← Back to Categories",
+    "aslAlphabet": "ASL Alphabet",
+    "aslAlphabetDesc": "Master the American Sign Language alphabet",
+    "holdPosition": "Hold Position",
+    "tipsTitle": "Tips for Success",
+    "previous": "Previous",
+    "next": "Next",
+    "progress": "Progress",
+    "learned": "Learned",
+    "quickReference": "Quick Reference",
+    "learnMode": "Learn Mode",
+    "learnModeDesc": "Study at your own pace with animations",
+    "practiceMode": "Practice Mode",
+    "practiceModeDesc": "Review and reinforce your knowledge"
+  },
+  "numbers": {
+    "title": "ASL Numbers",
+    "desc": "Master counting in ASL from 0 to 10"
+  },
+  "colors": {
+    "title": "ASL Colors",
+    "desc": "Master the American Sign Language colors"
+  }
+}
+ 

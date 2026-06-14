@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 export function ColorsCard() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
@@ -20,16 +22,16 @@ export function ColorsCard() {
         </div>
 
         {/* middle Title of card*/}
-        <p className="text-gray-900 font-bold text-xl">Colors</p>
+        <p className="text-gray-900 font-bold text-xl">{t("cards.colors")}</p>
 
         {/* Description of card */}
         <p className="text-gray-500 text-sm text-center">
-          Learn the American Sign Language colors
+          {t("cards.colorsDesc")}
         </p>
 
         {/* Badge */}
         <span className="bg-blue-50 text-blue-500 text-sm font-medium px-4 py-1 rounded-full">
-          9 Colors
+          {t("cards.colorsBadge")}
         </span>
       </CardContent>
     </Card>

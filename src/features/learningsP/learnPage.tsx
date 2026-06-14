@@ -2,23 +2,25 @@ import { BasicsCard } from "./BasicsCard";
 import { EssentialsCard } from "./EssentialsCard";
 import { CategoryCardWords } from "./CategoryCardSWords";
 import { WhyLearnCard } from "./WhyLearncard";
+import { useTranslation } from "react-i18next";
 
 export function LearnPage() {
+  const { t } = useTranslation();
   return (
-    <div className=" w-full h-full bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center py-12 px-6 gap-8 ">
+    <div className="w-full h-full bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col items-center py-12 px-6 gap-8">
       {/* Main container with light blue background and centered content */}
       {/* Title */}
       <div className="flex flex-col items-center gap-2">
         <h1 className="text-4xl font-bold text-gray-900">
-          Learn Sign Language
+          {t("cards.learnTitle")}
         </h1>
         <p className="text-gray-500 text-sm">
-          Choose what you'd like to learn today
+          {t("cards.learnSubtitle")}
         </p>
       </div>
 
       {/* The 3 cards container*/}
-      <div className="grid grid-cols-3 gap-6 ">
+      <div className="grid grid-cols-3 gap-6">
         <BasicsCard />
         <CategoryCardWords />
         <EssentialsCard />

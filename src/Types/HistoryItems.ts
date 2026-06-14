@@ -1,7 +1,7 @@
 export type HistoryItem = {
-  id: number;
+  id: string;
   language: string;
-  date: string;
+  date: string;        
   aslText: string;
   translation: string;
   starred: boolean;

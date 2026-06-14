@@ -1,32 +1,35 @@
 import { Card, CardContent } from "@/components/ui/card";
-
-const reasons = [
-  {
-    emoji: "🤝",
-    bg: "bg-blue-100",
-    title: "Connect with Others",
-    description: "Communicate with the deaf and hard-of-hearing community",
-  },
-  {
-    emoji: "🧠",
-    bg: "bg-green-100",
-    title: "Boost Your Brain",
-    description: "Learning sign language improves memory and cognitive skills",
-  },
-  {
-    emoji: "💼",
-    bg: "bg-purple-100",
-    title: "Career Benefits",
-    description: "Valuable skill for many professional fields",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function WhyLearnCard() {
+  const { t } = useTranslation();
+
+  const reasons = [
+    {
+      emoji: "🤝",
+      bg: "bg-blue-100",
+      title: t("cards.connect"),
+      description: t("cards.connectDesc"),
+    },
+    {
+      emoji: "🧠",
+      bg: "bg-green-100",
+      title: t("cards.boostBrain"),
+      description: t("cards.boostBrainDesc"),
+    },
+    {
+      emoji: "💼",
+      bg: "bg-purple-100",
+      title: t("cards.career"),
+      description: t("cards.careerDesc"),
+    },
+  ];
+
   return (
     <Card className="border border-gray-200 shadow-sm rounded-2xl">
       <CardContent className="p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Why Learn Sign Language?
+          {t("cards.whyLearn")}
         </h2>
 
         <div className="grid grid-cols-3 gap-6">

@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Hand } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function AlphabetCard() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
@@ -20,16 +22,16 @@ export function AlphabetCard() {
         </div>
 
         {/* middle Title of card*/}
-        <p className="text-gray-900 font-bold text-xl">Alphabet</p>
+        <p className="text-gray-900 font-bold text-xl">{t("cards.alphabet")}</p>
 
         {/* Description of card */}
         <p className="text-gray-500 text-sm text-center">
-          Learn the ASL alphabet from A to Z
+          {t("cards.alphabetDesc")}
         </p>
 
         {/* Badge */}
         <span className="bg-blue-50 text-blue-500 text-sm font-medium px-4 py-1 rounded-full">
-          26 Letters
+       {t("cards.alphabetBadge")}
         </span>
       </CardContent>
     </Card>

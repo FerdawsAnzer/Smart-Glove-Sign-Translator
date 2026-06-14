@@ -1,55 +1,49 @@
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next"; 
 import { HistoryCard } from "@/features/history/Components/historyCrad";
-import type { HistoryItem } from "@/Types/HistoryItems";
-import { historyData } from "@/Data/HistoryData";
-import { useState } from "react";
 import { HistorySearchBar } from "@/features/history/Components/HistorySearshBar";
+import { useHistoryStore } from "@/store/historyStore";
+import { useAuthStore } from "@/store/authStore";
+import type { HistoryItem } from "@/Types/HistoryItems";
 
 export function HistoryPage() {
   const [search, setSearch] = useState("");
-  const [history, setHistory] = useState<HistoryItem[]>(historyData);
+  const { t } = useTranslation(); 
+  const { user } = useAuthStore();
+  const { entries, loading, fetchHistory, toggleStar, deleteEntry } = useHistoryStore();
 
-  const toggleStar = (id: number) => {
-    setHistory((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, starred: !item.starred } : item,
-      ),
-    );
-  };
+  useEffect(() => {
+    if (user) fetchHistory(user.id);
+  }, [user]);
 
-  const deleteItem = (id: number) => {
-    setHistory((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const filtered = history.filter(
-    (item) =>
+  const filtered = entries.filter(
+    (item: HistoryItem) =>
       item.aslText.toLowerCase().includes(search.toLowerCase()) ||
       item.translation.toLowerCase().includes(search.toLowerCase()) ||
-      item.language.toLowerCase().includes(search.toLowerCase()),
+      item.language.toLowerCase().includes(search.toLowerCase())
   );
+  
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-6">
+    <div className="min-h-screen bg-slate-50 p-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-6">
-        {/* Header */}
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
-            Translation History
-          </h1>
-          <p className="text-gray-500 text-sm mt-1">
-            View and manage your past translations
-          </p>
+          <h1 className="text-2xl font-bold text-gray-900">{t("history.title")}</h1>
+          <p className="text-gray-500 text-sm mt-1">{t("history.subtitle")}</p>
         </div>
 
-        {/* Search Bar */}
         <HistorySearchBar search={search} onSearch={setSearch} />
 
-        {/* Cards */}
+        {loading && <p className="text-gray-400 text-sm text-center">{t("history.loading")}</p>}
+        {!loading && filtered.length === 0 && <p className="text-gray-400 text-sm text-center">{t("history.noResults")}</p>}
+
         <div className="flex flex-col gap-3">
-          {filtered.map((item) => (
+          {filtered.map((item: HistoryItem) => (
             <HistoryCard
               key={item.id}
               item={item}
-              onStar={toggleStar}
-              onDelete={deleteItem}
+              onStar={(id) => toggleStar(id, item.starred)}
+              onDelete={deleteEntry}
             />
           ))}
         </div>

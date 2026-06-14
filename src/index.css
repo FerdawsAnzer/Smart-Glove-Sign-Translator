@@ -1,4 +1,72 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* ── brand colors ── */
+  --brand-blue:    #3b82f6;
+  --brand-purple:  #8b5cf6;
+  --brand-indigo:  #6366f1;
+
+  --gradient:      linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --gradient-soft: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+
+  --bg-app:        #f8f9ff;
+  --bg-card:       #ffffff;
+  --bg-sidebar:    #ffffff;
+
+  --text-primary:  #0f172a;
+  --text-secondary:#64748b;
+  --text-muted:    #94a3b8;
+
+  --border:        #e2e8f0;
+  --border-focus:  #3b82f6;
+
+  --shadow-sm:     0 1px 3px rgba(59, 130, 246, 0.08);
+  --shadow-md:     0 4px 16px rgba(59, 130, 246, 0.12);
+  --shadow-lg:     0 8px 32px rgba(99, 102, 241, 0.15);
+
+  --font:          'Outfit', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-app);
+  color: var(--text-primary);
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.btn-primary:hover    { opacity: 0.9; transform: translateY(-1px); }
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-active {
+  background: var(--gradient) !important;
+  color: white !important;
+  border-radius: 10px;
+}
+
+.input-gradient:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #8b5cf6, 0 0 0 1px #3b82f6;
+}

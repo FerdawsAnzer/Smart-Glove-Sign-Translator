@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { QuickAlphReference } from "../learningAlphabet/QuickAlphReference";
-
 import type { Mode } from "@/Types/indexPronouns";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ModeSelector } from "../learningAlphabet/ModeSelector";
 import { ProgressBar } from "../learningAlphabet/ProgressBar";
 import { MainLetterCard } from "../learningAlphabet/MainLetterCard";
@@ -19,6 +19,7 @@ export function SocialWordLearningPage() {
   //this variable to store how many true boolean value we have (depedns on teh learned social words ) so we will display it in teh progress bar
   const learnedCount = learnedSocialWords.filter(Boolean).length;
   const navigate = useNavigate();
+  const { t } = useTranslation();
   //teh function will handle teh state of lerend socialWords to set it to true when the user has learned the number and clicked next button and also will update teh currentIndex to move to the next number
   const handleNext = () => {
     const updated = [...learnedSocialWords];
@@ -48,18 +49,16 @@ export function SocialWordLearningPage() {
       {/* Back button to retun to categories cards */}
       <div className="max-w-6xl mx-auto w-full flex flex-col gap-6">
         <button
-          onClick={() => navigate("/learning/CategoryCardsWordPage")}
+          onClick={() => navigate("/learning/words")}
           className="text-blue-500 text-sm hover:underline self-start"
         >
-          ← Back to Categories
+          {t("learning.backToCategories")}
         </button>
 
         {/* Title + description */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">ASL Social Words</h1>
-          <p className="text-gray-500 text-sm">
-            Master the American Sign Language social words
-          </p>
+          <h1 className="text-3xl font-bold text-gray-900">{t("words.socialWords")}</h1>
+          <p className="text-gray-500 text-sm">{t("words.socialWordsDesc")}</p>
         </div>
 
         {/* Mode Selector , to select which mode you want learn,Practice,quiz using the 3 cards  */}
