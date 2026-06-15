@@ -28,8 +28,9 @@ it never replaces the user's intent. If a gesture is misrecognized, the user sim
   └── /stop       ← REST: end recognition session
         │
         ▼
-[ML Classifier — KNN prototype / KNN+LSTM hybrid in development]
-  Sensor data → IQR filtering → scaling → gesture prediction
+Deep Learning-based Gesture Recognition
+Sensor data → normalization/scaling → window segmentation → deep learning inference (static: 1D CNN + Global Average Pooling,
+dynamic: 1D CNN + LSTM) → gesture prediction
         │
         ▼
 [React / TypeScript Frontend]
