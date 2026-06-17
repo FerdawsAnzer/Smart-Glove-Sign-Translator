@@ -1,5 +1,5 @@
 export type HistoryItem = {
-  id: string;
+  id: number;
   language: string;
   date: string;        
   aslText: string;

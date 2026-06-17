@@ -2,9 +2,10 @@ import { ChevronDown } from "lucide-react";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { useAuthStore } from "@/store/authStore";
 import { useTranslation } from "react-i18next";
+
 export function Header() {
   const { user } = useAuthStore();
-   const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const name = user?.fullName || user?.email?.split("@")[0] || "User";
 
@@ -15,7 +16,6 @@ export function Header() {
       .map((n: string) => n[0])
       .join("")
       .toUpperCase() || "U";
-     
 
   return (
     <header
@@ -49,7 +49,7 @@ export function Header() {
             {initials}
           </AvatarFallback>
         </Avatar>
-        <ChevronDown className="w-5 h-5 text-gray-500" />
+        <span> {""}</span>
       </div>
     </header>
   );

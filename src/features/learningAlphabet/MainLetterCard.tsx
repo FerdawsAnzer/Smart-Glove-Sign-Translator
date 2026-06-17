@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Lightbulb, Check } from "lucide-react";
 import type { MainLetterCardProps } from "@/Types/MainCardProps";
 import { useTranslation } from "react-i18next";
-
+import { getTranslatedContent } from "@/i18n/helpers/translationHelper";
 export function MainLetterCard({
   currentIndex,
   onNext,
@@ -10,91 +10,57 @@ export function MainLetterCard({
   total,
   data,
 }: MainLetterCardProps) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const currentItem = data[currentIndex];
 
-  //  detect category by letter content
-  const getTranslated = () => {
-  const letter = currentItem.letter;
-
-  const isAlphabet = /^[A-Z]$/.test(letter);
-  const isNumber = /^\d+$/.test(letter);
-  const isColor = ["Red","Blue","Green","Yellow","Black","White","Pink","Purple","Orange"].includes(letter);
-  const isSocialWord = ["I Love You","Thank You","Hello","Goodbye","Please","Sorry","No","Yes","Deaf","Hearing Person"].includes(letter);
-  const isPronoun = ["Me/I","My/Mine","You","Your/Yours","He/She/It","His/Her/Its","We","Our/Ours","They","Their/Theirs"].includes(letter);
-  const isVerb = ["Like","Cut","Drop","Need","Hear","Talk","Eat","Drink","Help","See","Go","Come","Sit","Stand","Wake Up","Sleep","Stop","Clean","Want","Cook","Write","Draw","Read","Cry","Laugh","Walk","Jump","Hug"].includes(letter);
-  const isUtility = ["Where","Who","Why","How","What","When","Which"].includes(letter);
-  const isTime = ["Later","Again","Done","More","Now"].includes(letter);
-
-  let category = "";
-  if (isAlphabet)  category = "alphabet";
-  if (isNumber)    category = "numbers";
-  if (isColor)     category = "colors";
-  if (isSocialWord) category = "socialWords";
-  if (isPronoun)   category = "pronouns";
-  if (isVerb)      category = "verbs";
-  if (isUtility)   category = "utilityWords";
-  if (isTime)      category = "timeData";
-
-  if (!category) {
-    return {
-      description: currentItem.description,
-      tips: currentItem.tips,
-    };
-  }
-
-  const description = t(`data.${category}.${letter}.description`, {
-    defaultValue: currentItem.description,
-  });
-
-  const tips = t(`data.${category}.${letter}.tips`, {
-    returnObjects: true,
-    defaultValue: currentItem.tips,
-  }) as string[];
-
-  return { description, tips };
-};
-
-  const { description, tips } = getTranslated();
+  const { description, tips } = getTranslatedContent(currentItem, t);
 
   return (
     <Card className="w-full flex flex-col items-center gap-5 p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+      {/* the hand  sign animation will be displayed here  */}
 
-      {/* image + hold position badge */}
       <div className="flex flex-col items-center gap-3">
         <img
           src={currentItem.image}
           alt={currentItem.letter}
           className="w-44 h-44 object-contain"
         />
+        {/* hold position badge */}
         <span className="bg-blue-100 text-blue-500 text-xs font-medium px-4 py-1 rounded-full">
           {t("learning.holdPosition")}
         </span>
       </div>
 
-      {/* letter stays in English always */}
+      {/*the letter that the user is cuurrently learning will be displayed here */}
       <p className="text-4xl font-bold text-gray-900">{currentItem.letter}</p>
 
       {/* description translated */}
+      {/*the description of how to do the letter in signLanguage */}
       <p className="text-gray-500 text-sm text-center">{description}</p>
+      {/* the tips will be dispalyed here to explain to user what should be done*/}
 
       {/* tips translated */}
+
       <div className="w-full bg-yellow-50 border border-yellow-100 rounded-xl p-4">
         <p className="text-sm font-bold text-gray-800 mb-3 flex items-center gap-2">
           <Lightbulb className="w-4 h-4 text-yellow-500" />
           {t("learning.tipsTitle")}
         </p>
         <ul className="flex flex-col gap-2">
-          {(Array.isArray(tips) ? tips : []).map((tip: string, index: number) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center gap-2">
-              <Check className="w-4 h-4 text-green-500 shrink-0" />
-              {tip}
-            </li>
-          ))}
+          {(Array.isArray(tips) ? tips : []).map(
+            (tip: string, index: number) => (
+              <li
+                key={index}
+                className="text-sm text-gray-600 flex items-center gap-2"
+              >
+                <Check className="w-4 h-4 text-green-500 shrink-0" />
+                {tip}
+              </li>
+            ),
+          )}
         </ul>
       </div>
-
-      {/* navigation */}
+      {/*Footer: will display the Next Previous buttons and the dots that represents the alphabet(pagination) */}
       <div className="flex justify-between w-full items-center mt-2">
         <button
           onClick={onPrevious}
@@ -104,7 +70,7 @@ export function MainLetterCard({
           <ChevronLeft className="w-4 h-4" />
           {t("learning.previous")}
         </button>
-
+        {/*Pagination dots */}
         <div className="flex gap-1 flex-wrap justify-center max-w-xs">
           {Array.from({ length: total }).map((_, index) => (
             <div
@@ -117,7 +83,7 @@ export function MainLetterCard({
             />
           ))}
         </div>
-
+        {/*Next Button */}
         <button
           onClick={onNext}
           className="flex items-center gap-1 text-sm text-white px-4 py-2 rounded-lg transition-colors border-0"

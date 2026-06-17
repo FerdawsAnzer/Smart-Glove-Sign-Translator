@@ -18,6 +18,8 @@ import { CategoryCradPageEss } from "./features/LearningEssentials/CategoryCradP
 import { PronounsLearningPage } from "./features/LearningEssentials/PronounsLearningPage";
 import { TimeLearningPage } from "./features/LearningEssentials/TimeLearningPage";
 import { HistoryPage } from "./pages/historyPage";
+import { Toaster } from "sonner";
+
 import SignIn from "@/pages/registration/signIn";
 import SignUp from "@/pages/registration/signUp";
 import SplashScreen from "@/components/SplashScreen/SplashScreen";
@@ -66,6 +68,7 @@ function App() {
 
   return (
     <TooltipProvider>
+      <Toaster position="top-right" />
       <Routes>
         {/* AUTH ROUTES */}
         <Route path="/signIn" element={<SignIn />} />
@@ -78,32 +81,75 @@ function App() {
             element={
               <div style={{ display: "flex", minHeight: "100vh" }}>
                 <SideBar onLogout={handleLogout} />
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", overflowX: "hidden" }}>
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    overflowX: "hidden",
+                  }}
+                >
                   <Header />
                   <main style={{ flex: 1, overflowX: "hidden" }}>
                     <Routes>
-                      <Route path="/" element={<Navigate to="/dashboard" replace />} />
+                      <Route
+                        path="/"
+                        element={<Navigate to="/dashboard" replace />}
+                      />
 
                       {/* MAIN */}
                       <Route path="/dashboard" element={<DashboardPage />} />
                       <Route path="/learning" element={<LearnPage />} />
 
                       {/* BASICS */}
-                      <Route path="/learning/basics" element={<CategoryCardsPage />} />
-                      <Route path="/learning/alphabet" element={<AlphabetLearningPage />} />
-                      <Route path="/learning/numbers" element={<NumberLearningPage />} />
-                      <Route path="/learning/colors" element={<ColorsLearningPage />} />
+                      <Route
+                        path="/learning/basics"
+                        element={<CategoryCardsPage />}
+                      />
+                      <Route
+                        path="/learning/alphabet"
+                        element={<AlphabetLearningPage />}
+                      />
+                      <Route
+                        path="/learning/numbers"
+                        element={<NumberLearningPage />}
+                      />
+                      <Route
+                        path="/learning/colors"
+                        element={<ColorsLearningPage />}
+                      />
 
                       {/* WORDS */}
-                      <Route path="/learning/words" element={<CategoryCardsWordPage />} />
-                      <Route path="/learning/words/social" element={<SocialWordLearningPage />} />
-                      <Route path="/learning/words/verbs" element={<VerbsLearningPage />} />
-                      <Route path="/learning/words/utility" element={<UtilityWordLearningPage />} />
+                      <Route
+                        path="/learning/words"
+                        element={<CategoryCardsWordPage />}
+                      />
+                      <Route
+                        path="/learning/words/social"
+                        element={<SocialWordLearningPage />}
+                      />
+                      <Route
+                        path="/learning/words/verbs"
+                        element={<VerbsLearningPage />}
+                      />
+                      <Route
+                        path="/learning/words/utility"
+                        element={<UtilityWordLearningPage />}
+                      />
 
                       {/* ESSENTIALS */}
-                      <Route path="/learning/essentials" element={<CategoryCradPageEss />} />
-                      <Route path="/learning/essentials/pronouns" element={<PronounsLearningPage />} />
-                      <Route path="/learning/essentials/time" element={<TimeLearningPage />} />
+                      <Route
+                        path="/learning/essentials"
+                        element={<CategoryCradPageEss />}
+                      />
+                      <Route
+                        path="/learning/essentials/pronouns"
+                        element={<PronounsLearningPage />}
+                      />
+                      <Route
+                        path="/learning/essentials/time"
+                        element={<TimeLearningPage />}
+                      />
 
                       {/* OTHER */}
                       <Route path="/history" element={<HistoryPage />} />

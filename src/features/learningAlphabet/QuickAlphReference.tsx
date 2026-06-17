@@ -1,8 +1,13 @@
 import type { QuickAlphReferenceProps } from "@/Types/QuickAlphReference";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 
-export function QuickAlphReference({ currentIndex, learned, onSelect, data }: QuickAlphReferenceProps) {
+export function QuickAlphReference({
+  currentIndex,
+  learned,
+  onSelect,
+  data,
+}: QuickAlphReferenceProps) {
   const { t } = useTranslation();
 
   return (
@@ -11,7 +16,12 @@ export function QuickAlphReference({ currentIndex, learned, onSelect, data }: Qu
         <p className="text-base font-bold text-gray-900 mb-4">
           {t("learning.quickReference")}
         </p>
-        <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(13, 1fr)" }}>
+
+        {/* A-Z grid */}
+        <div
+          className="grid gap-2"
+          style={{ gridTemplateColumns: "repeat(13, 1fr)" }}
+        >
           {data.map((letter, index) => (
             <button
               key={index}
@@ -19,8 +29,8 @@ export function QuickAlphReference({ currentIndex, learned, onSelect, data }: Qu
                 index === currentIndex
                   ? "bg-blue-500 text-white shadow-md"
                   : learned[index]
-                  ? "bg-green-100 text-black-500"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    ? "bg-green-100 text-black-500"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
               onClick={() => onSelect(index)}
             >

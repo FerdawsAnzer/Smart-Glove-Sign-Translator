@@ -39,10 +39,6 @@ export function PronounsLearningPage() {
   const handleSelectLetter = (index: number) => {
     setCurrentIndex(index);
   };
-  // just to test everything works before building UI
-  console.log("current pronoun:", currentPronoun);
-  console.log("learned count:", learnedCount);
-  console.log("mode:", currentMode);
 
   return (
     <div className="min-h-screen bg-blue-50 p-6 flex flex-col gap-6">
@@ -57,8 +53,12 @@ export function PronounsLearningPage() {
 
         {/* Title + description */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">{t("essentials.pronouns")}</h1>
-          <p className="text-gray-500 text-sm">{t("essentials.pronounsDesc")}</p>
+          <h1 className="text-3xl font-bold text-gray-900">
+            {t("essentials.pronouns")}
+          </h1>
+          <p className="text-gray-500 text-sm">
+            {t("essentials.pronounsDesc")}
+          </p>
         </div>
 
         {/* Mode Selector , to select which mode you want learn,Practice,quiz using the 3 cards  */}

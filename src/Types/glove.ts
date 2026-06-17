@@ -11,7 +11,6 @@ export interface TranslationCardProps {
 }
 
 export interface PredictionData {
-    prediction: string;
-    confidence: number;
-    mode?: "static" | "dynamic";
+    letter: string
+    confidence: number
 }
