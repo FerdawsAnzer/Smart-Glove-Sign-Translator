@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { GloveState, SensorData } from "../Types"; // ✅ only import, no local type
+import type { GloveState, SensorData } from "../Types"; 
 
 export const useGloveStore = create<GloveState>((set) => ({
   sensorData: null,

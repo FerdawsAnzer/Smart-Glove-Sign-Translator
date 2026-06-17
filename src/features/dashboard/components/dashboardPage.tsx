@@ -11,7 +11,7 @@ export function DashboardPage() {
   const { addEntry } = useHistoryStore();
 
   const handlePrediction = async (letter: string) => {
-    setTranslation((prev) => prev + " " + letter);
+    setTranslation(letter);
 
     //  save every real prediction to history
     if (user) {
@@ -20,8 +20,8 @@ export function DashboardPage() {
   };
 
   return (
-    <div className="flex-1 p-6">
-      <div className="grid gap-6 md:grid-cols-2">
+    <div className="flex-1 p-6 h-full bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className=" grid gap-6 md:grid-cols-2">
         <AslInputCard onPrediction={handlePrediction} />
         <TranslationCard translation={translation} />
       </div>

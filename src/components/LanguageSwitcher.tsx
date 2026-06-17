@@ -45,9 +45,7 @@ export function LanguageSwitcher() {
                 ? "linear-gradient(135deg, #6366f1, #8b5cf6)"
                 : "transparent",
               transform: isActive ? "scale(1.05)" : "scale(1)",
-              boxShadow: isActive
-                ? "0 4px 12px rgba(99,102,241,0.35)"
-                : "none",
+              boxShadow: isActive ? "0 4px 12px rgba(99,102,241,0.35)" : "none",
             }}
             onMouseEnter={(e) => {
               if (!isActive) {

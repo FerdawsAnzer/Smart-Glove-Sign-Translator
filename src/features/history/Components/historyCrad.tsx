@@ -4,7 +4,7 @@ import { Calendar, Star, Trash2 } from "lucide-react";
 
 export function HistoryCard({ item, onStar, onDelete }: HistoryCardProps) {
   return (
-    <Card className="border border-gray-200 shadow-sm rounded-xl">
+    <Card className="border border-gray-200 h-full bg-gradient-to-br from-blue-50 to-purple-50 shadow-sm rounded-xl">
       <CardContent className="p-4">
         {/* Top row: language + date + actions */}
         <div className="flex items-center justify-between mb-3">

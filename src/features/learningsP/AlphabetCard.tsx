@@ -16,7 +16,7 @@ export function AlphabetCard() {
 
       {/* Card Content container */}
       <CardContent className="flex flex-col items-center gap-3 p-4">
-        {/* Green box with sparkles icon */}
+        {/*blue box with sparkles icon */}
         <div className="w-full flex items-center justify-center bg-blue-500 rounded-xl py-8">
           <Hand className="w-14 h-14 text-white" />
         </div>
@@ -31,7 +31,7 @@ export function AlphabetCard() {
 
         {/* Badge */}
         <span className="bg-blue-50 text-blue-500 text-sm font-medium px-4 py-1 rounded-full">
-       {t("cards.alphabetBadge")}
+          {t("cards.alphabetBadge")}
         </span>
       </CardContent>
     </Card>

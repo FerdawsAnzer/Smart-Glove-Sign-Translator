@@ -10,6 +10,7 @@ import { socialWords } from "@/Data/SocialWords";
 
 export function SocialWordLearningPage() {
   const [curentIndex, setCurrentIndex] = useState(0);
+
   const [learnedSocialWords, setLearnedSocialWords] = useState<boolean[]>(
     new Array(socialWords.length).fill(false),
   );
@@ -39,10 +40,6 @@ export function SocialWordLearningPage() {
   const handleSelectLetter = (index: number) => {
     setCurrentIndex(index);
   };
-  // just to test everything works before building UI
-  console.log("current social word:", currentSocialWord);
-  console.log("learned count:", learnedCount);
-  console.log("mode:", currentMode);
 
   return (
     <div className="min-h-screen bg-blue-50 p-6 flex flex-col gap-6">
@@ -57,7 +54,9 @@ export function SocialWordLearningPage() {
 
         {/* Title + description */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">{t("words.socialWords")}</h1>
+          <h1 className="text-3xl font-bold text-gray-900">
+            {t("words.socialWords")}
+          </h1>
           <p className="text-gray-500 text-sm">{t("words.socialWordsDesc")}</p>
         </div>
 
