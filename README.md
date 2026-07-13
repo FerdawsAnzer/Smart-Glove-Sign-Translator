@@ -1,4 +1,4 @@
-# 🧤SignBridge — Smart Glove Sign Language Translator
+# 🧤SignBridge-Smart Glove Sign Language Translator
 > A real-time American Sign Language (ASL) recognition system bridging communication between the deaf community and hearing users built as a Human-Centered AI capstone project.
 ---
 
