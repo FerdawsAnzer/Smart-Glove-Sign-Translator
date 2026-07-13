@@ -143,7 +143,7 @@ pytest
 Add a `.env` file in the project root and in `backend/` with your Supabase and any required environment values 
 
 ## 🧑‍🤝‍🧑 Team
-Built by the SignBridge Team at Cyprus International University as a capstone project, supervised by Prof. Dr. Melike Şah Direkoğlu. Six members across hardware, machine learning, backend, and frontend.
+SignBridge is a capstone project developed by a six-member team at Cyprus International University under the supervision of Prof. Dr. Melike Şah Direkoğlu. Team members contributed across hardware, AI, backend, and frontend engineering.
 
 ## 🔗 Related Project
 The public-facing landing page for this project:
