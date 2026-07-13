@@ -49,10 +49,10 @@ Sensor data → normalization/scaling → window segmentation → deep learning 
 
 ## ✨ Highlights
 - ✔️ Real-time gesture recognition over WebSocket (glove ↔ backend ↔ frontend)
-- ✔️ Dual deep learning models — static gestures (CNN) and dynamic gestures (CNN + LSTM)
+- ✔️ Dual deep learning models static gestures (CNN) and dynamic gestures (CNN + LSTM)
 - ✔️ Text-to-speech output for recognized signs
 - ✔️ Full interactive ASL learning platform (alphabet, numbers, colors, pronouns, verbs, phrases)
-- ✔️ Multi-language UI (i18next — EN, AR, FR, TR)
+- ✔️ Multi-language UI (i18next:EN, AR, FR, TR)
 - ✔️ Supabase-backed auth, gesture data, and translation history
 - ✔️ Backend integration tests with pytest
 
