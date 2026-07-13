@@ -79,11 +79,11 @@
     "basicsDesc": "Alphabet, Numbers and Colors",
     "basicsBadge": "3 Categories",
     "numbers": "Numbers",
-    "numbersDesc": "Master counting in ASL from 0 to 10",
+    "numbersDesc": "Master counting in ASL from 1 to 10",
     "numbersBadge": "10 Numbers",
     "colors": "Colors",
     "colorsDesc": "Learn the American Sign Language colors",
-    "colorsBadge": "9 Colors",
+    "colorsBadge": "10 Colors",
     "words": "Words",
     "wordsDesc": "Social, Utility Words and Verbs",
     "wordsBadge": "3 Categories",
@@ -107,7 +107,7 @@
     "socialWordsDesc": "Master the American Sign Language social words",
     "verbs": "ASL Verbs",
     "verbsDesc": "Learn and Master Basic Verbs in American Sign Language",
-    "verbsBadge": "5 Verbs",
+    "verbsBadge": "28 Verbs",
     "utility": "ASL Utility Words",
     "utilityDesc": "Master the American Sign Language utility words",
     "utilityBadge": "7 Utility Words",
@@ -122,10 +122,10 @@
     "desc": "Choose what you'd like to learn",
     "pronouns": "Pronouns",
     "pronounsDesc": "Learn the American Sign Language pronouns",
-    "pronounsBadge": "9 Pronouns",
+    "pronounsBadge": "10 Pronouns",
     "time": "Time & Quantity",
     "timeDesc": "Learn the American Sign Language time signs",
-    "timeBadge": "9 Signs"
+    "timeBadge": "5 Signs"
   },
   "toast": {
     "settingsSaved": "Settings saved",
@@ -198,7 +198,7 @@
   },
   "numbers": {
     "title": "ASL Numbers",
-    "desc": "Master counting in ASL from 0 to 10"
+    "desc": "Master counting in ASL from 1 to 10"
   },
   "colors": {
     "title": "ASL Colors",
