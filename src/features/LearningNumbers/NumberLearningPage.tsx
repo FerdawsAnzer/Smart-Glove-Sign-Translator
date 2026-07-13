@@ -47,7 +47,7 @@ export function NumberLearningPage() {
       {/* Back button to retun to categories cards */}
       <div className="max-w-6xl mx-auto w-full flex flex-col gap-6">
         <button
-          onClick={() => navigate("/learning/CategoryCardsPage")}
+          onClick={() => navigate("/learning/basics")}
           className="text-blue-500 text-sm hover:underline self-start"
         >
           {t("learning.backToCategories")}

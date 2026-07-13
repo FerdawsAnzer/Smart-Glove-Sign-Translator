@@ -9,7 +9,7 @@ export function TimeCard() {
   return (
     <Card
       className="border border-gray-200 shadow-sm w-92 rounded-2xl cursor-pointer hover:shadow-md transition-shadow duration-300 "
-      onClick={() => navigate("/learning/TimeLearningPage")}
+      onClick={() => navigate("/learning/essentials/time")}
     >
       {/* when you clik teh card will navigate you to the learning Greetings Page*/}
 

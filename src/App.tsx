@@ -92,15 +92,14 @@ function App() {
                   <Header />
                   <main style={{ flex: 1, overflowX: "hidden" }}>
                     <Routes>
+                      {" "}
                       <Route
                         path="/"
                         element={<Navigate to="/dashboard" replace />}
                       />
-
                       {/* MAIN */}
                       <Route path="/dashboard" element={<DashboardPage />} />
                       <Route path="/learning" element={<LearnPage />} />
-
                       {/* BASICS */}
                       <Route
                         path="/learning/basics"
@@ -118,7 +117,6 @@ function App() {
                         path="/learning/colors"
                         element={<ColorsLearningPage />}
                       />
-
                       {/* WORDS */}
                       <Route
                         path="/learning/words"
@@ -136,7 +134,6 @@ function App() {
                         path="/learning/words/utility"
                         element={<UtilityWordLearningPage />}
                       />
-
                       {/* ESSENTIALS */}
                       <Route
                         path="/learning/essentials"
@@ -150,7 +147,6 @@ function App() {
                         path="/learning/essentials/time"
                         element={<TimeLearningPage />}
                       />
-
                       {/* OTHER */}
                       <Route path="/history" element={<HistoryPage />} />
                       <Route path="/settings" element={<Settings />} />
