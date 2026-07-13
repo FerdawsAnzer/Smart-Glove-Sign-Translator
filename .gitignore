@@ -28,5 +28,3 @@ storybook-static
 
 # Environment variables
 .env
-.env.local
-.env.*.local
