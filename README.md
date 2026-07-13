@@ -119,7 +119,7 @@ Don't have Supabase credentials? No problem copy `.env.example` to `.env` and se
 VITE_DEMO_MODE=true
 
 ```
-This skips real authentication and drops you straight into the app with a mock user, so you can explore all the features without any setup.
+This skips real authentication and signs you in with a mock user, allowing you to explore all the features of the web app without any additional setup.
 
 **Frontend setup**
 ```bash
