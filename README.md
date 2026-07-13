@@ -24,6 +24,11 @@ The system also includes an **interactive learning platform** for hearing users 
 
 This is a **Human-Centered AI system by design** , the human is always in the loop, the AI assists communication, it never replaces the user's intent. If a gesture is misrecognized, the user simply redoes it. Control stays with the person.
 
+## 📸 Preview
+<img width="1915" height="867" alt="image" src="https://github.com/user-attachments/assets/7f2fbf3e-556f-47ff-980a-2eaae2d8e81f" />
+<img width="1394" height="850" alt="image" src="https://github.com/user-attachments/assets/9891a2a0-a92d-48ae-a002-f5069b4cb01e" />
+
+
 ## 🏗️ System Architecture
 
 ```
