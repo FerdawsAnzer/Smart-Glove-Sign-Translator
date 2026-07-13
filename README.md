@@ -12,7 +12,7 @@
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![ESP32](https://img.shields.io/badge/ESP32--S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
 
-> A real-time American Sign Language (ASL) recognition system bridging communication between the deaf community and hearing users — built as a Human-Centered AI capstone project.
+> A real-time American Sign Language (ASL) recognition system bridging communication between the deaf community and hearing users built as a Human-Centered AI capstone project.
 
 </div>
 
