@@ -138,9 +138,7 @@ uvicorn main_new:app --reload
 ```bash
 cd backend
 pytest
-```
-
-Add a `.env` file in the project root and in `backend/` with your Supabase and any required environment values 
+``` 
 
 ## 🧑‍🤝‍🧑 Team
 SignBridge is a capstone project developed by a six-member team at Cyprus International University under the supervision of Prof. Dr. Melike Şah Direkoğlu. Team members contributed across hardware, AI, backend, and frontend engineering.
